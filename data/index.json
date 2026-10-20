@@ -1,0 +1,34 @@
+{
+  "temas": [
+    {
+      "id": "S1",
+      "nombre": "Fundamentos",
+      "archivo": "S1.json"
+    },
+    {
+      "id": "S2",
+      "nombre": "Gobernanza y procesos",
+      "archivo": "S2.json"
+    },
+    {
+      "id": "S3",
+      "nombre": "Ciclo de vida y adaptación",
+      "archivo": "S3.json"
+    },
+    {
+      "id": "S4",
+      "nombre": "Interesados",
+      "archivo": "S4.json"
+    },
+    {
+      "id": "S5",
+      "nombre": "Alcance",
+      "archivo": "S5.json"
+    },
+    {
+      "id": "S6",
+      "nombre": "Cronograma",
+      "archivo": "S6.json"
+    }
+  ]
+}

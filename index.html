@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiz PGPI</title>
+<meta name="description" content="Cuestionario para preparar los tests de PGPI (PMBOK 8): simulacros configurables y estudio por tema.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2230'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+
+  <section id="loading" class="loading">
+    <h1>PGPI · Quiz</h1>
+    <p id="loadMsg">Cargando preguntas…</p>
+  </section>
+
+  <section id="home" class="hidden">
+    <div class="hero">
+      <h1>PGPI · Quiz</h1>
+      <p id="heroSub"></p>
+    </div>
+    <div class="cables" id="cables"></div>
+
+    <div class="bigbtns">
+      <button type="button" class="bigbtn bsim" id="openSim" aria-haspopup="dialog"><span class="bigt">Simulacro</span><span class="bigm">Examen con nota sobre 10. Eliges temas, fuentes y número de preguntas.</span><span class="bigb" id="simBadge"></span></button>
+      <button type="button" class="bigbtn bstudy" id="openStudy" aria-haspopup="dialog"><span class="bigt">Estudiar</span><span class="bigm">Por tema, con la corrección y la explicación al momento.</span><span class="bigb" id="studyBadge"></span></button>
+    </div>
+
+    <dialog id="dlgSim" aria-labelledby="dlgSimT"><div class="dlgbody">
+    <div class="dlghead"><h2 id="dlgSimT">Simulacro</h2><button type="button" class="iconbtn" data-close>Cerrar</button></div>
+    <div class="sim" id="sim">
+      <div class="simstep" id="stepTemas"><p class="ct">1 · Temas</p><div class="chips" id="simTemas" role="group" aria-label="Temas"></div></div>
+      <div class="simstep" id="stepFuentes"><p class="ct">2 · Fuentes</p><div class="chips" id="simFuentes" role="group" aria-label="Fuentes"></div></div>
+      <div class="simstep" id="stepNum"><p class="ct">3 · Número de preguntas</p><div class="chips" id="simNum" role="group" aria-label="Número de preguntas"></div></div>
+      <div class="simfoot"><p id="simInfo"></p>
+        <div class="gobar"><button type="button" class="btn primary" id="simGo">Empezar</button><label class="gochk"><input type="checkbox" id="simInstant"><span>Autocheck</span></label></div>
+      </div>
+    </div>
+    </div></dialog>
+
+    <dialog id="dlgStudy" aria-labelledby="dlgStudyT"><div class="dlgbody">
+    <div class="dlghead"><h2 id="dlgStudyT">Estudiar</h2><button type="button" class="iconbtn" data-close>Cerrar</button></div>
+    <p class="dlgsub">Elige un tema. Cada respuesta se corrige al momento y te explica por qué no valen las otras.</p>
+    <div id="topicRows"></div>
+    </div></dialog>
+
+    <div class="tips">
+      <p>Atajos: <kbd>A</kbd>–<kbd>D</kbd> o <kbd>1</kbd>–<kbd>4</kbd> para responder, <kbd>←</kbd> <kbd>→</kbd> para moverte, <kbd>Enter</kbd> para seguir. En examen, <kbd>0</kbd> o volver a pulsar la opción marcada la deja en blanco.</p>
+      <p>La mejor nota de cada tema cambia de color: rojo por debajo de 5, naranja de 5 a 6, verde oscuro de 6 a 7, verde más claro de 7 a 8, verde amarillento de 8 a 9 y amarillo de 9 a 10. Con un 10 la fila entera se pone dorada: tema dominado. Tu progreso se guarda solo en este navegador.</p>
+      <p>Nota sobre 10: cada fallo resta 1/3 de acierto y los blancos no restan. Las opciones salen siempre en el mismo orden y las preguntas se barajan en cada intento. En el simulacro, la mejor nota se guarda para cada combinación de temas, fuentes y número de preguntas.</p>
+      <p><button type="button" class="linkbtn" id="resetMiss">Borrar mi historial de fallos</button></p>
+    </div>
+  </section>
+
+  <section id="quiz" class="hidden">
+   <div class="qlayout">
+    <aside class="top">
+      <div class="topline">
+        <button type="button" class="iconbtn" id="exitBtn" aria-label="Volver al inicio">← Inicio</button>
+        <div class="counter" id="counter"></div>
+        <button type="button" class="iconbtn" id="mapBtn" aria-expanded="false">Mapa</button>
+      </div>
+      <div class="bar" id="bar"><i class="bok"></i><i class="bko"></i></div>
+      <div class="map hidden" id="map"></div>
+    </aside>
+
+    <div class="qmain">
+    <article class="card" id="card">
+      <div class="qhead"><span class="tag" id="qtag"></span><span class="kind" id="qkind"></span></div>
+      <h2 class="qtext" id="qtext"></h2>
+      <div class="opts" id="opts"></div>
+      <button type="button" class="blankbtn hidden" id="blankBtn">Dejar en blanco</button>
+      <div id="fb"></div>
+    </article>
+
+    <div class="nav">
+      <button type="button" class="btn" id="prevBtn">Anterior</button>
+      <button type="button" class="btn primary" id="nextBtn">Siguiente</button>
+    </div>
+    <div class="ask hidden" id="ask" role="alertdialog" aria-live="assertive">
+      <p id="askMsg"></p>
+      <div class="nav" style="margin-top:10px">
+        <button type="button" class="btn" id="askNo">Volver</button>
+        <button type="button" class="btn primary" id="askYes"></button>
+      </div>
+    </div>
+    </div>
+   </div>
+  </section>
+
+  <section id="results" class="hidden">
+    <div class="hero" style="padding-bottom:0"><h1 id="resTitle">Resultado</h1></div>
+    <div class="score"><span class="big" id="resNota"></span><span class="of">sobre 10</span></div>
+    <p class="sub" id="resSub"></p>
+    <div class="ring" id="resRing"><i class="bok"></i><i class="bko"></i></div>
+    <div class="breakdown" id="resBreak"></div>
+    <div class="stack">
+      <button type="button" class="btn primary" id="retryWrongBtn">Repetir las que he fallado</button>
+      <button type="button" class="btn" id="reviewBtn">Revisar mis respuestas</button>
+      <button type="button" class="btn" id="retryBtn">Repetir la sección</button>
+      <button type="button" class="btn" id="homeBtn">Volver al inicio</button>
+    </div>
+  </section>
+
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Lexend:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <main class="wrap">
@@ -75,8 +75,8 @@
     </div></dialog>
 
     <div class="tips">
-      <p>Atajos: <kbd>A</kbd>–<kbd>D</kbd> o <kbd>1</kbd>–<kbd>4</kbd> para responder, <kbd>←</kbd> <kbd>→</kbd> para moverte, <kbd>Enter</kbd> para seguir. En examen, <kbd>0</kbd> o volver a pulsar la opción marcada la deja en blanco.</p>
-      <p>Fuentes de las preguntas: <b>oficiales</b>, sacadas de las presentaciones o de documentos oficiales; <b>práctica</b>, generadas con IA para abarcar más parte de cada tema; y <b>banco de alumnos</b>, preguntas que ya han aparecido en tests.</p>
+      <p>Atajos: <kbd>A</kbd>–<kbd>D</kbd> o <kbd>1</kbd>–<kbd>4</kbd> para responder, <kbd>←</kbd> <kbd>→</kbd> para moverte, <kbd>Enter</kbd> para seguir, <kbd>E</kbd> para abrir o cerrar la explicación. En examen, <kbd>0</kbd> o volver a pulsar la opción marcada la deja en blanco.</p>
+      <p>Fuentes de las preguntas: <b>oficiales</b>, sacadas de las presentaciones o de documentos oficiales; <b>práctica</b>, generadas con IA para abarcar más parte de cada tema; y <b>test real</b>, preguntas que ya han salido en tests (su respuesta está comprobada con la teoría, no confirmada por la profesora).</p>
       <p>Nota sobre 10: cada fallo resta 1/3 de acierto y los blancos no restan. Las opciones salen siempre en el mismo orden y las preguntas se barajan en cada intento. En el simulacro, la mejor nota se guarda para cada combinación de temas, fuentes y número de preguntas. Tu progreso se guarda solo en este navegador.</p>
       <p><button type="button" class="linkbtn" id="resetMiss">Borrar mi historial de fallos</button></p>
     </div>
@@ -92,28 +92,37 @@
       </div>
       <div class="bar" id="bar"><i class="bok"></i><i class="bko"></i></div>
       <div class="map hidden" id="map"></div>
+      <p class="mapinfo" id="mapInfo"></p>
     </aside>
 
     <div class="qmain">
+    <div class="qrow">
     <article class="card" id="card">
       <div class="qhead"><span class="tag" id="qtag"></span><span class="kind" id="qkind"></span></div>
       <h2 class="qtext" id="qtext"></h2>
       <div class="opts" id="opts"></div>
       <button type="button" class="blankbtn hidden" id="blankBtn">Dejar en blanco</button>
-      <div id="fb" aria-live="polite"></div>
+      <button type="button" class="expbtn hidden" id="expBtn" aria-controls="exp" aria-expanded="false">Ver explicación <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></button>
     </article>
+    <aside class="exp hidden" id="exp" aria-labelledby="expVerdict">
+      <div class="exphead"><div class="verdict" id="expVerdict" role="status"></div><button type="button" class="iconbtn expx" id="expClose" aria-label="Cerrar explicación"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
+      <div class="expbody" id="expBody"></div>
+      <button type="button" class="btn primary expclose2" id="expClose2">Cerrar</button>
+    </aside>
+    </div>
+    <button type="button" class="expback hidden" id="expBack" aria-label="Cerrar explicación" tabindex="-1"></button>
 
     <div class="nav">
       <button type="button" class="btn" id="prevBtn">Anterior</button>
       <button type="button" class="btn primary" id="nextBtn">Siguiente</button>
     </div>
-    <div class="ask hidden" id="ask" role="alertdialog" aria-live="assertive">
+    <dialog class="askdlg" id="ask" role="alertdialog" aria-labelledby="askMsg"><div class="dlgbody">
       <p id="askMsg"></p>
-      <div class="nav" style="margin-top:10px">
+      <div class="nav">
         <button type="button" class="btn" id="askNo">Volver</button>
         <button type="button" class="btn primary" id="askYes"></button>
       </div>
-    </div>
+    </div></dialog>
     </div>
    </div>
   </section>
@@ -133,6 +142,6 @@
   </section>
 
 </main>
-<script src="app.js" defer></script>
+<script src="app.js?v=5" defer></script>
 </body>
 </html>

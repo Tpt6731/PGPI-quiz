@@ -3,7 +3,7 @@
 Cuestionario para preparar los tests de **Planificación y Gestión de Proyectos Informáticos** (PMBOK 8.ª ed.).
 Es una web estática: HTML, CSS y JavaScript sin dependencias, con las preguntas en archivos JSON.
 
-- **Simulacro:** eliges temas, fuentes (oficiales, práctica, banco de alumnos) y número de preguntas. Corrige al entregar, con nota sobre 10 penalizada (−1/3 por fallo). Con **Autocheck** corrige cada pregunta al momento.
+- **Simulacro:** eliges temas, fuentes (oficiales, práctica, test real) y número de preguntas. Corrige al entregar, con nota sobre 10 penalizada (−1/3 por fallo). Con **Autocheck** corrige cada pregunta al momento.
 - **Estudiar:** por tema, con la corrección, el «por qué no son las otras», la trampa y la fuente de cada pregunta.
 - El progreso (mejores notas, fallos, última configuración) se guarda **solo en el navegador de cada uno**.
 
@@ -67,9 +67,9 @@ Añade la pregunta al final del archivo de su tema (`data/S5.json`, por ejemplo)
 
 | Campo | Obligatorio | Qué es |
 |---|---|---|
-| `id` | sí | Único en todo el banco. Convenio: `S5-E60` práctica, `P04-6` batería de grupo, `S6-7` profesora, `B1-1` banco de alumnos |
+| `id` | sí | Único en todo el banco. Convenio: `S5-E60` práctica, `P04-6` batería de grupo, `S6-7` profesora, `B1-1` y `S5-T2G2-10` test real |
 | `tema` | sí | El id del tema, igual que en `data/index.json` y que el archivo donde está |
-| `fuente` | sí | `oficial` (profesora o batería de un grupo), `practica` (no oficial) o `banco` (banco de alumnos) |
+| `fuente` | sí | `oficial` (profesora o batería de un grupo), `practica` (no oficial) o `banco` (test real: ha salido en un test; en la web se muestra como «Test real») |
 | `p` | sí | Enunciado |
 | `o` | sí | Exactamente 4 opciones |
 | `c` | sí | Posición de la correcta: `0`=A, `1`=B, `2`=C, `3`=D |
@@ -92,7 +92,7 @@ Consejos para preguntas nuevas:
    - salta las que ya están en el banco (y avisa si lo que marcaste no coincide con su respuesta);
    - pide a Gemini (capa gratuita) la respuesta correcta usando **solo** los PDF de `theory/`, sin enseñarle lo que marcaste, con una cita literal que la respalde. Van varias preguntas por petición para gastar poca cuota;
    - comprueba la cita contra los PDF (sin IA): si no aparece tal cual, o la teoría no basta, la pregunta **se descarta**;
-   - la guarda en el `data/Sx.json` de la sesión del documento citado, con `fuente: "banco"`, id `S5-T2G2-3` (sesión, test 2, grupo 2, pregunta 3) y `s` con la diapositiva o página;
+   - la guarda en el `data/Sx.json` de la sesión del documento citado, con `fuente: "banco"`, id `S5-T2G2-10` (sesión, test 2, grupo 2 y número seguido dentro de ese test: si ya hay hasta el 9, la siguiente es la 10, sea de la sesión que sea) y `s` con la diapositiva o página;
    - pasa `validar.js` y abre un **pull request** con el informe: confirmadas, corregidas (marcaste X, la teoría dice Y), descartadas y duplicadas.
 4. Revisa el pull request (sobre todo las corregidas) y pulsa **Merge**: «Validar y publicar» lo publica. Si no lo quieres, ciérralo.
 

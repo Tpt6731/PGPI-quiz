@@ -125,13 +125,16 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 .bar{height:8px;background:var(--line);border-radius:4px;margin-top:10px;overflow:hidden;display:flex}
 .bar i{display:block;height:100%;transition:width .25s}
 .bar .bok{background:var(--ok)} .bar .bko{background:var(--ko)}
-.map{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px;margin-top:12px;max-height:40vh;overflow:auto;padding:2px}
-.map button{height:38px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);cursor:pointer;font-size:14px;font-weight:700;position:relative}
+.map{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:5px;margin-top:12px;max-height:55vh;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;padding:2px}
+.map button{height:32px;min-width:0;padding:0;border-radius:7px;border:1.5px solid var(--line);background:var(--surface);cursor:pointer;font-size:13px;font-weight:700;position:relative;font-variant-numeric:tabular-nums;letter-spacing:-.2px}
 .map button.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
 .map button.ko{background:var(--kobg);border-color:var(--ko);color:var(--ko)}
 .map button.done{background:var(--hover);border-color:var(--ink)}
 .map button.cur{outline:3px solid var(--ink);outline-offset:1px}
-.map button::after{content:"";position:absolute;left:6px;right:6px;bottom:3px;height:3px;border-radius:2px;background:var(--c)}
+.map button::after{content:"";position:absolute;left:5px;right:5px;bottom:2px;height:3px;border-radius:2px;background:var(--c)}
+.mapinfo{display:flex;flex-wrap:wrap;gap:4px 12px;margin:10px 0 0;padding-top:8px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+.mapinfo b{color:var(--ink)} .mapinfo b.gok{color:var(--ok)} .mapinfo b.gko{color:var(--ko)}
+.map.hidden + .mapinfo{display:none}
 
 .card{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:20px 20px 22px;margin-top:8px;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
@@ -178,8 +181,10 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 .btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .btn.primary:hover:not([disabled]){opacity:.9;background:var(--ink)}
 .btn[disabled]{opacity:.4;cursor:default}
-.ask{margin-top:14px;background:var(--surface);border:2px solid var(--ink);border-radius:14px;padding:14px 16px}
-.ask p{margin:0;font-family:"Lexend";font-weight:600}
+dialog.askdlg{max-width:440px;border:1.5px solid var(--line)}
+.askdlg .dlgbody{padding:22px 20px 20px}
+.askdlg p{margin:0 0 18px;font-family:"Lexend";font-weight:600;font-size:18px;line-height:1.35}
+.askdlg .nav{margin-top:0}
 
 /* ---------- resultados ---------- */
 .score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:16px 0 4px}
@@ -228,12 +233,9 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 .card.answered .qtext{font-size:clamp(16px,2.4vw,18px);margin-bottom:12px;color:var(--soft)}
 .card.answered .opts{gap:8px}
 .opt .ot{display:flex;flex-direction:column;gap:4px;min-width:0}
-.opt .why1{font-size:14.5px;line-height:1.4;color:var(--ink);border-top:1px dashed var(--line);padding-top:6px;margin-top:2px}
-.opt .badge{align-self:flex-start;display:inline-block;font-family:"Lexend";font-weight:700;font-size:12px;letter-spacing:.2px;padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:1px}
-.opt.right .badge{background:var(--ok);color:var(--surface)}
-.opt.wrong .badge{background:var(--ko);color:var(--surface)}
-.opt.wrong .why1{border-top-color:var(--ko)}
-.opt.right .why1{border-top-color:var(--ok)}
+.opt .mk{flex:none;margin-left:auto;align-self:center;display:flex}
+.opt.right .mk{color:var(--ok)} .opt.wrong .mk{color:var(--ko)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .card.answered .opt.dim{opacity:1}
 .card.answered .opt.dim .otxt{color:var(--soft)}
 .card.answered .opt{padding:10px 12px}
@@ -255,7 +257,12 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
   .qlayout .counter{text-align:right}
   #mapBtn{display:none}
   #map.hidden{display:grid !important}
-  .map{max-height:calc(100vh - 220px)}
+  .qlayout .top{max-height:calc(100vh - 48px);display:flex;flex-direction:column}
+  .map{flex:1 1 auto;min-height:0;max-height:none;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:28px;gap:4px;align-content:start}
+  .map button{height:28px;font-size:12px;border-radius:6px}
+  .map button::after{left:4px;right:4px;height:2px}
+  .map button.cur{outline-width:2px}
+  .qlayout .mapinfo{display:flex !important}
   .card{padding:28px 30px 30px}
   #results{max-width:900px;margin:0 auto}
   .stack{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -302,3 +309,32 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 .addest.ko{border-color:var(--ko);background:var(--kobg)}
 .addest.run p::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--focus);border-right-color:transparent;border-radius:50%;animation:gira .8s linear infinite;vertical-align:-1px}
 @keyframes gira{to{transform:rotate(360deg)}}
+
+/* ---------- explicación: hoja inferior (móvil y tablet) / panel lateral (escritorio ancho) ---------- */
+.expbtn{margin-top:14px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 16px;font-family:"Lexend";font-weight:600;font-size:16px;cursor:pointer;border:2px solid var(--ink);background:var(--surface);color:var(--ink)}
+.expbtn:hover{background:var(--hover)}
+.expbtn svg{transform:rotate(-90deg)}
+.expback{position:fixed;inset:0;z-index:30;border:0;padding:0;margin:0;background:rgba(10,14,20,.5);cursor:pointer}
+.exp{position:fixed;left:0;right:0;bottom:0;z-index:31;box-sizing:border-box;max-width:760px;margin:0 auto;max-height:80vh;overflow:auto;background:var(--surface);color:var(--ink);border-radius:20px 20px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:0 -12px 40px rgba(0,0,0,.28);display:flex;flex-direction:column;gap:12px}
+.exp::before{content:"";align-self:center;flex:none;width:44px;height:5px;border-radius:3px;background:var(--line)}
+.exphead{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.exp .verdict{margin:0}
+.exp .verdict.ok{color:var(--ok)} .exp .verdict.ko{color:var(--ko)} .exp .verdict.blank{color:var(--soft)}
+.expx{flex:none;width:40px;height:40px;padding:0;display:flex;align-items:center;justify-content:center}
+.expbody{display:flex;flex-direction:column;gap:12px;font-size:15.5px;line-height:1.45}
+.expbody p{margin:0}
+.expbody .why{margin-top:0}
+.expbody .why li.mine{background:var(--kobg)}
+.expbody .trap,.expbody .src{margin-top:0 !important}
+.expbody .trap{background:var(--hover)}
+.expclose2{flex:none}
+body.sheet-open{overflow:hidden}
+@media (min-width:1200px){
+  .wrap.wide{max-width:1440px}
+  .qrow{display:flex;gap:20px;align-items:flex-start}
+  .qrow .card{flex:1 1 auto;min-width:0}
+  .exp{position:sticky;top:24px;left:auto;right:auto;bottom:auto;z-index:auto;flex:none;width:380px;margin:8px 0 0;max-height:calc(100vh - 48px);border:1.5px solid var(--line);border-radius:16px;padding:18px 20px 20px;box-shadow:none}
+  .exp::before,.expclose2,.expback{display:none !important}
+  .expbtn{width:auto;display:inline-flex}
+  .expbtn svg{transform:none}
+}

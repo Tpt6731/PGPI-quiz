@@ -102,6 +102,14 @@ function codigoTest(nombre, subido) {
   return "T" + String(subido || new Date().toISOString()).slice(0, 10).replace(/-/g, "");
 }
 
+// Último número usado por un test, en cualquier sesión (S1-T2G2-9 → 9). Las preguntas nuevas siguen desde ahí.
+function ultimoNumero(ids, cod) {
+  const re = new RegExp(`^S\\d+-${cod}-(\\d+)[a-z]*$`);
+  let max = 0;
+  for (const id of ids) { const m = String(id).match(re); if (m) max = Math.max(max, Number(m[1])); }
+  return max;
+}
+
 /* ---------- IA ---------- */
 const INSTRUCCIONES = `Eres el verificador de preguntas de un quiz de la asignatura Planificación y Gestión de Proyectos Informáticos (PGPI).
 Las preguntas vienen de tests reales de la asignatura, pero no se sabe cuál es la opción correcta. Tu trabajo es decidirlo.
@@ -330,7 +338,8 @@ async function procesar(opts) {
       aResolver.push(base);
     }
 
-    // 2. IA por lotes
+    // 2. IA por lotes. Ids: {sesión}-{test}-{número}, con numeración seguida por test (S5-T2G2-10, S4-T2G2-11…)
+    let siguiente = ultimoNumero(ids, cod);
     for (let i = 0; i < aResolver.length; i += POR_LOTE) {
       const grupo = aResolver.slice(i, i + POR_LOTE);
       const sol = await resolverLote(grupo, test, ctx);
@@ -338,8 +347,8 @@ async function procesar(opts) {
         const r = sol.get(base.n);
         if (r.estado === "descartada") { res.push({ ...base, ...r }); console.log(`  P${base.n}: descartada — ${r.motivo}`); continue; }
         const tema = r.doc.sesion;
-        let id = `${tema}-${cod}-${base.n}`;
-        for (let k = 1; ids.has(id); k++) id = `${tema}-${cod}-${base.n}${String.fromCharCode(97 + k)}`;
+        let id;
+        do id = `${tema}-${cod}-${++siguiente}`; while (ids.has(id));
         ids.add(id);
         const ref = `${r.doc.titulo}, ${r.doc.unidad} ${r.pagina}`;
         const nueva = { id, tema, fuente: FUENTE, p: base.p, o: base.o, c: r.c, e: r.e, w: r.w };
@@ -375,4 +384,4 @@ if (require.main === module) {
   }
   procesar(opts).catch(e => { console.error("✗ " + e.message); process.exit(1); });
 }
-module.exports = { procesar, leerTeoria, localizarCita, buscarDuplicado, codigoTest, comprobar, llamarIA, norm };
+module.exports = { procesar, leerTeoria, localizarCita, buscarDuplicado, codigoTest, ultimoNumero, comprobar, llamarIA, norm };

@@ -20,7 +20,7 @@ let miss = new Set(store("pgpi-test1-fallos") || []);
 const saveMiss = () => store("pgpi-test1-fallos", [...miss]);
 
 /* ---------- secciones ---------- */
-const KIND = {oficial:"oficial", practica:"no oficial", banco:"banco de alumnos"};
+const KIND = {oficial:"oficial", practica:"no oficial", banco:"test real"};
 const kindOf = q => KIND[q.fuente] || q.fuente;
 let TOPICROWS = [];
 
@@ -28,7 +28,7 @@ let TOPICROWS = [];
 const SRC = {
   off: {name:"Oficiales", f:q=>q.fuente==="oficial"},
   prac:{name:"Práctica (no oficial)", f:q=>q.fuente==="practica"},
-  alu: {name:"Banco de alumnos", f:q=>q.fuente==="banco"}
+  alu: {name:"Test real", f:q=>q.fuente==="banco"}
 };
 const NUMS = [10, 20, 40, "all"];
 let SIM = {temas:[], src:[], n:20, inst:false};
@@ -125,7 +125,7 @@ function bestOf(id){ const b = store("pgpi-best-"+id); return typeof b==="number
 function renderHome(){
   const nOff = Q.filter(q=>q.fuente==="oficial").length, nAlu = Q.filter(q=>q.fuente==="banco").length;
   const tl = Object.keys(TEMAS);
-  $("heroSub").textContent = `${tl.length} temas (${tl[0]}–${tl[tl.length-1]}), ${Q.length} preguntas: ${nOff} oficiales, ${Q.length-nOff-nAlu} de práctica no oficiales y ${nAlu} del banco de alumnos. Al estudiar se corrige cada respuesta al momento; el simulacro se corrige al entregar, con nota.`;
+  $("heroSub").textContent = `${tl.length} temas (${tl[0]}–${tl[tl.length-1]}), ${Q.length} preguntas: ${nOff} oficiales, ${Q.length-nOff-nAlu} de práctica no oficiales y ${nAlu} de test real. Al estudiar se corrige cada respuesta al momento; el simulacro se corrige al entregar, con nota.`;
   const mk = (s, meta) => {
     const b = document.createElement("button"); b.type = "button";
     const best = bestOf(s.id);
@@ -147,7 +147,7 @@ function renderHome(){
 }
 $("resetMiss").onclick = () => { miss = new Set(); saveMiss(); renderHome(); };
 
-function show(id){ closeDialogs(); ["loading","home","quiz","results"].forEach(x=>$(x).classList.toggle("hidden", x!==id)); window.scrollTo(0,0); }
+function show(id){ closeDialogs(); document.body.classList.remove("sheet-open"); document.querySelector(".wrap").classList.toggle("wide", id==="quiz"); ["loading","home","quiz","results"].forEach(x=>$(x).classList.toggle("hidden", x!==id)); window.scrollTo(0,0); }
 
 /* ---------- sesión ---------- */
 let S = null;
@@ -163,7 +163,8 @@ function start(sec, list, opts){
 const examOpen = () => S.exam && !S.review;
 
 function renderQ(){
-  $("ask").classList.add("hidden");
+  hideAsk();
+  sheetOpen = false;
   const it = S.items[S.cur], q = Q[it.qi];
   const showRes = !examOpen() && (it.ans!==null || S.review);
   $("card").className = "card " + TC(q.tema) + (showRes ? " answered" : "");
@@ -177,15 +178,13 @@ function renderQ(){
     const b = document.createElement("button"); b.type = "button"; b.className = "opt";
     b.innerHTML = `<span class="l">${LETTERS[i]}</span><span class="ot"><span class="otxt"></span></span>`;
     b.querySelector(".otxt").textContent = t;
-    if (showRes){
-      // Al corregir: etiqueta en la correcta y en la tuya, y el «por qué no» dentro de cada opción incorrecta.
-      const ot = b.querySelector(".ot");
-      if (i===q.c || i===it.ans){
-        const bd = document.createElement("span"); bd.className = "badge";
-        bd.textContent = i===q.c ? (i===it.ans ? "✓ Tu respuesta" : "✓ Correcta") : "✗ Tu respuesta";
-        ot.insertBefore(bd, ot.firstChild);
-      }
-      if (i!==q.c && q.w && q.w[i]){ const w = document.createElement("span"); w.className = "why1"; w.textContent = q.w[i]; ot.appendChild(w); }
+    if (showRes && (i===q.c || i===it.ans)){
+      // Al corregir, solo color e icono: ✓ en la correcta y ✗ en la tuya si fallaste. La explicación va aparte.
+      const mk = document.createElement("span"); mk.className = "mk";
+      mk.innerHTML = i===q.c ? MARK_OK : MARK_KO; b.appendChild(mk);
+      const sr = document.createElement("span"); sr.className = "sr";
+      sr.textContent = i===q.c ? (i===it.ans ? " (tu respuesta, correcta)" : " (correcta)") : " (tu respuesta)";
+      b.appendChild(sr);
     }
     b.onclick = () => answer(i);
     if (examOpen()){ if (i===it.ans) b.classList.add("sel"); b.setAttribute("aria-pressed", i===it.ans); }
@@ -196,28 +195,61 @@ function renderQ(){
     opts.appendChild(b);
   });
   $("blankBtn").classList.toggle("hidden", !(examOpen() && it.ans!==null));
-  renderFb(showRes);
+  renderExp(showRes);
   renderTop();
   $("prevBtn").disabled = S.cur===0;
   const last = S.cur===S.items.length-1;
   $("nextBtn").textContent = last ? (examOpen() ? "Entregar examen" : "Ver resultados") : "Siguiente";
 }
 
-function renderFb(showRes){
-  const it = S.items[S.cur], q = Q[it.qi], fb = $("fb");
-  fb.innerHTML = "";
+/* ---------- explicación ----------
+   Al corregir, la explicación no ocupa la tarjeta: se abre con «Ver explicación» (o la tecla E).
+   Por debajo de 1200 px es una hoja que sube desde abajo y empieza cerrada en cada pregunta;
+   a partir de 1200 px es un panel a la derecha de la tarjeta, y se recuerda si lo dejaste abierto. */
+const MARK_OK = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>';
+const MARK_KO = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>';
+const SIDE = window.matchMedia("(min-width:1200px)");
+let sheetOpen = false;
+const expIsOpen = () => SIDE.matches ? store("pgpi-exp")===true : sheetOpen;
+function renderExp(showRes){
+  const it = S.items[S.cur], q = Q[it.qi];
+  const open = showRes && expIsOpen();
+  $("expBtn").classList.toggle("hidden", !showRes || open);
+  $("expBtn").setAttribute("aria-expanded", open);
+  $("exp").classList.toggle("hidden", !open);
+  $("expBack").classList.toggle("hidden", !open || SIDE.matches);
+  document.body.classList.toggle("sheet-open", open && !SIDE.matches);
   if (!showRes) return;
-  const blank = it.ans===null, ok = it.ans===q.c;
-  const box = document.createElement("div");
-  box.className = "fb " + (blank ? "blank" : ok ? "ok" : "ko"); box.setAttribute("role","status");
-  const v = document.createElement("div"); v.className = "verdict";
+  const blank = it.ans===null, ok = it.ans===q.c, v = $("expVerdict");
+  v.className = "verdict " + (blank ? "blank" : ok ? "ok" : "ko");
   v.textContent = blank ? `En blanco. La respuesta es la ${LETTERS[q.c]}.` : ok ? "Correcto." : `Incorrecto. La respuesta es la ${LETTERS[q.c]}.`;
-  box.appendChild(v);
-  const e = document.createElement("p"); e.textContent = q.e; box.appendChild(e);
-  if (q.t){ const t = document.createElement("p"); t.className = "trap"; t.innerHTML = "<b>Trampa:</b> "; t.appendChild(document.createTextNode(q.t)); box.appendChild(t); }
-  if (q.s){ const s = document.createElement("p"); s.className = "src"; s.textContent = "Fuente: " + q.s; box.appendChild(s); }
-  fb.appendChild(box);
+  const body = $("expBody"); body.innerHTML = "";
+  const e = document.createElement("p"); e.textContent = q.e; body.appendChild(e);
+  if (q.w && q.w.some((x, i) => i!==q.c && x)){
+    const w = document.createElement("div"); w.className = "why";
+    w.innerHTML = "<h3>Por qué no las otras</h3><ul></ul>";
+    q.o.forEach((_, i) => {
+      if (i===q.c || !q.w[i]) return;
+      const li = document.createElement("li"); if (i===it.ans) li.className = "mine";
+      li.innerHTML = `<span class="l">${LETTERS[i]}</span><span></span>`;
+      li.lastChild.textContent = q.w[i];
+      if (i===it.ans){ const em = document.createElement("em"); em.textContent = " (tu respuesta)"; li.lastChild.appendChild(em); }
+      w.lastChild.appendChild(li);
+    });
+    body.appendChild(w);
+  }
+  if (q.t){ const t = document.createElement("p"); t.className = "trap"; t.innerHTML = "<b>Trampa:</b> "; t.appendChild(document.createTextNode(q.t)); body.appendChild(t); }
+  if (q.s){ const s = document.createElement("p"); s.className = "src"; s.textContent = "Fuente: " + q.s; body.appendChild(s); }
 }
+function setExp(open){
+  if (SIDE.matches) store("pgpi-exp", open); else sheetOpen = open;
+  renderExp(true);
+  if (open && !SIDE.matches) $("expClose").focus();
+  else if (!open) $("expBtn").focus();
+}
+$("expBtn").onclick = () => setExp(true);
+$("expClose").onclick = $("expClose2").onclick = $("expBack").onclick = () => setExp(false);
+SIDE.addEventListener("change", () => { if (S && !$("quiz").classList.contains("hidden")) renderQ(); });
 
 function renderTop(){
   const n = S.items.length;
@@ -227,6 +259,10 @@ function renderTop(){
   const bar = $("bar").children;
   if (examOpen()){ const d = S.items.filter(i=>i.ans!==null).length; bar[0].style.width = "0%"; bar[1].style.width = (d/n*100)+"%"; bar[1].style.background = "var(--soft)"; }
   else { bar[1].style.background = ""; bar[0].style.width = (okN/n*100)+"%"; bar[1].style.width = (koN/n*100)+"%"; }
+  const blankN = n - okN - koN;
+  $("mapInfo").innerHTML = examOpen()
+    ? `<span><b>${n-blankN}</b> respondidas</span><span><b>${blankN}</b> sin responder</span>`
+    : `<span><b class="gok">${okN}</b> bien</span><span><b class="gko">${koN}</b> mal</span><span><b>${blankN}</b> sin responder</span>`;
   if (WIDE.matches || !$("map").classList.contains("hidden")) renderMap();
 }
 function renderMap(){
@@ -249,15 +285,21 @@ function answer(i){
   it.ans = i;
   if (i===q.c) miss.delete(q.id); else miss.add(q.id);
   saveMiss(); renderQ();
-  $("fb").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"nearest"});
+  $(expIsOpen() ? "exp" : "expBtn").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"nearest"});
 }
 function next(){ if (S.cur < S.items.length-1){ S.cur++; renderQ(); window.scrollTo(0,0); } else finish(); }
 function prev(){ if (S.cur>0){ S.cur--; renderQ(); window.scrollTo(0,0); } }
 WIDE.addEventListener("change", () => { if (S && !$("quiz").classList.contains("hidden")) renderTop(); });
 
 let askCb = null;
-function ask(msg, yes, cb){ $("askMsg").textContent = msg; $("askYes").textContent = yes; askCb = cb; $("ask").classList.remove("hidden"); $("ask").scrollIntoView({block:"nearest"}); $("askYes").focus(); }
-function hideAsk(){ $("ask").classList.add("hidden"); askCb = null; }
+// Confirmaciones (salir del test, entregar con preguntas en blanco): ventana centrada en la pantalla.
+function ask(msg, yes, cb){
+  const d = $("ask"); $("askMsg").textContent = msg; $("askYes").textContent = yes; askCb = cb;
+  if (!d.open){ if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", ""); }
+  $("askYes").focus();
+}
+function hideAsk(){ const d = $("ask"); askCb = null; if (d.open){ if (typeof d.close === "function") d.close(); else d.removeAttribute("open"); } }
+$("ask").addEventListener("close", () => { askCb = null; });
 $("askNo").onclick = hideAsk;
 $("askYes").onclick = () => { const cb = askCb; hideAsk(); if (cb) cb(); };
 
@@ -326,6 +368,9 @@ document.addEventListener("keydown", e => {
   const it = S.items[S.cur], k = e.key.toLowerCase();
   if (k==="arrowright" || (k==="enter" && (it.ans!==null || S.review) && e.target.tagName!=="BUTTON")){ e.preventDefault(); next(); return; }
   if (k==="arrowleft"){ e.preventDefault(); prev(); return; }
+  const showRes = !examOpen() && (it.ans!==null || S.review);
+  if (k==="escape" && showRes && expIsOpen()){ e.preventDefault(); setExp(false); return; }
+  if (k==="e" && showRes){ e.preventDefault(); setExp(!expIsOpen()); return; }
   if (examOpen() && (k==="backspace" || k==="0")){ e.preventDefault(); it.ans = null; renderQ(); return; }
   const map = {a:0,b:1,c:2,d:3,"1":0,"2":1,"3":2,"4":3};
   if (k in map) answer(map[k]);

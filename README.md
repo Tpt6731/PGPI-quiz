@@ -12,11 +12,14 @@ Es una web estática: HTML, CSS y JavaScript sin dependencias, con las preguntas
 ```
 index.html            página
 styles.css            estilos (responsive: móvil, tablet y escritorio; modo claro y oscuro)
-app.js                lógica
+app.js                lógica (al final, el modal «Añadir preguntas»)
 data/index.json       lista de temas y el archivo de cada uno
 data/S1.json … S6.json  preguntas de cada tema
 tools/validar.js      comprueba las preguntas (lo ejecuta GitHub Actions)
+tools/procesar.js     verifica con la teoría las preguntas subidas desde el modal (lo ejecuta GitHub Actions)
+theory/               teoría de la asignatura en PDF (no se publica en la web)
 .github/workflows/pages.yml  valida y publica en GitHub Pages
+.github/workflows/anadir-preguntas.yml  verifica las preguntas del modal y abre un pull request
 ```
 
 ## Probar en local
@@ -79,6 +82,30 @@ Consejos para preguntas nuevas:
 - Que la correcta **no sea siempre la opción más larga** (ni siempre la más corta). El validador avisa si lo es claramente.
 - Reparte las correctas entre A, B, C y D.
 - Pregunta conceptos, no datos sueltos de un caso concreto.
+
+### Desde un test de Blackboard (botón «Añadir preguntas»)
+
+1. En Blackboard abre la revisión del test («Comentarios sobre la evaluación»), baja hasta la última pregunta y guárdala con <kbd>Ctrl</kbd>+<kbd>S</kbd>.
+2. En la web, **+ Añadir preguntas de un test** → elige el `.html` (solo admite `.html`, uno cada vez) → **Enviar a revisión**.
+   Del archivo solo se envían los enunciados, las opciones y la que marcaste; ni la nota ni nada más de la página.
+3. La web crea la rama `preguntas/<test>-<fecha>` con `incoming/<test>.json`. La Action **Añadir preguntas** (`tools/procesar.js`):
+   - salta las que ya están en el banco (y avisa si lo que marcaste no coincide con su respuesta);
+   - pide a Gemini (capa gratuita) la respuesta correcta usando **solo** los PDF de `theory/`, sin enseñarle lo que marcaste, con una cita literal que la respalde. Van varias preguntas por petición para gastar poca cuota;
+   - comprueba la cita contra los PDF (sin IA): si no aparece tal cual, o la teoría no basta, la pregunta **se descarta**;
+   - la guarda en el `data/Sx.json` de la sesión del documento citado, con `fuente: "banco"`, id `S5-T2G2-3` (sesión, test 2, grupo 2, pregunta 3) y `s` con la diapositiva o página;
+   - pasa `validar.js` y abre un **pull request** con el informe: confirmadas, corregidas (marcaste X, la teoría dice Y), descartadas y duplicadas.
+4. Revisa el pull request (sobre todo las corregidas) y pulsa **Merge**: «Validar y publicar» lo publica. Si no lo quieres, ciérralo.
+
+Configuración (una sola vez):
+- **Secret** `GEMINI_API_KEY`: crea una clave gratis (sin tarjeta) en [aistudio.google.com](https://aistudio.google.com) → *Get API key*, y guárdala en Settings → Secrets and variables → Actions → New repository secret. Usa la capa gratuita: si un día se agota la cuota, la Action falla con un aviso y basta con relanzarla al día siguiente (*Re-run all jobs*).
+- Opcional, **variable** `GEMINI_MODEL` en la misma pantalla (pestaña Variables) para cambiar el modelo (por defecto `gemini-3.8-flash`; `gemini-3.5-flash-lite` tiene más cuota pero razona peor).
+- Settings → Actions → General → Workflow permissions → marca **Allow GitHub Actions to create and approve pull requests**.
+- En tu navegador, un **token fine-grained** (Settings → Developer settings → Fine-grained tokens) con acceso solo a este repo y permisos *Contents: Read and write*, *Pull requests: Read-only* y *Actions: Read-only*. Se pega en el modal la primera vez y se guarda solo en ese navegador.
+
+La teoría está en `theory/`: la sesión de cada PDF sale de su nombre (`PresentacionS3.pdf`, `Memoria P04 (S5).pdf`). Para que la IA resuelva más preguntas de un tema, añade sus PDF ahí. Para probar en local sin escribir nada:
+```bash
+GEMINI_API_KEY=… node tools/procesar.js --seco incoming/mi-test.json
+```
 
 ### Añadir un tema nuevo
 

@@ -29,6 +29,7 @@
     <div class="bigbtns">
       <button type="button" class="bigbtn bsim" id="openSim" aria-haspopup="dialog"><span class="bigt">Simulacro</span><span class="bigm">Examen con nota sobre 10. Eliges temas, fuentes y número de preguntas.</span><span class="bigb" id="simBadge"></span></button>
       <button type="button" class="bigbtn bstudy" id="openStudy" aria-haspopup="dialog"><span class="bigt">Estudiar</span><span class="bigm">Por tema, con la corrección y la explicación al momento.</span><span class="bigb" id="studyBadge"></span></button>
+      <button type="button" class="addbtn" id="openAdd" aria-haspopup="dialog">+ Añadir preguntas de un test</button>
     </div>
 
     <dialog id="dlgSim" aria-labelledby="dlgSimT"><div class="dlgbody">
@@ -47,6 +48,30 @@
     <div class="dlghead"><h2 id="dlgStudyT">Estudiar</h2><button type="button" class="iconbtn" data-close>Cerrar</button></div>
     <p class="dlgsub">Elige un tema. Cada respuesta se corrige al momento y te explica por qué no valen las otras.</p>
     <div id="topicRows"></div>
+    </div></dialog>
+    <dialog id="dlgAdd" aria-labelledby="dlgAddT"><div class="dlgbody">
+    <div class="dlghead"><h2 id="dlgAddT">Añadir preguntas</h2><button type="button" class="iconbtn" data-close>Cerrar</button></div>
+    <p class="dlgsub">Sube la revisión de un test de Blackboard guardada como página web (Ctrl+S). Solo se envían los enunciados, las opciones y la que marcaste. La IA decide la respuesta correcta con la teoría de la asignatura, asigna la sesión y abre un pull request para que lo revises antes de publicar.</p>
+    <label class="drop" id="addDrop"><input type="file" id="addFile" accept=".html,.htm,text/html"><span class="dropt">Elegir archivo .html</span><span class="dropm">o arrástralo aquí · uno cada vez</span></label>
+    <div class="addfile hidden" id="addLoaded"><div><b id="addTest"></b><span id="addCount"></span></div><button type="button" class="iconbtn" id="addQuitar">Quitar archivo</button></div>
+    <p class="addmsg" id="addMsg" aria-live="polite"></p>
+    <div id="addPrev"></div>
+    <div class="addtok hidden" id="addTokBox">
+      <p class="ct">Token de GitHub para <span id="addRepo"></span></p>
+      <p class="hidden" id="addTokSaved">Guardado en este navegador. <button type="button" class="linkbtn" id="addTokForget">Olvidarlo</button></p>
+      <div class="hidden" id="addTokNew">
+        <input type="password" id="addTok" placeholder="github_pat_…" autocomplete="off" spellcheck="false" aria-label="Token de GitHub">
+        <label class="addrem"><input type="checkbox" id="addTokRem" checked> Recordar en este navegador</label>
+        <details><summary>Cómo crear el token</summary><ol>
+          <li>En GitHub: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Settings → Developer settings → Fine-grained tokens → Generate new token</a>.</li>
+          <li>Repository access: <b>Only select repositories</b> → este repo.</li>
+          <li>Permissions: <b>Contents</b> Read and write, <b>Pull requests</b> Read-only y <b>Actions</b> Read-only.</li>
+          <li>Ponle caducidad y pégalo aquí. Solo se guarda en este navegador.</li>
+        </ol></details>
+      </div>
+    </div>
+    <button type="button" class="btn primary addsend hidden" id="addSend" disabled>Enviar a revisión</button>
+    <div class="addest" id="addEstado" aria-live="polite"></div>
     </div></dialog>
 
     <div class="tips">
@@ -75,7 +100,7 @@
       <h2 class="qtext" id="qtext"></h2>
       <div class="opts" id="opts"></div>
       <button type="button" class="blankbtn hidden" id="blankBtn">Dejar en blanco</button>
-      <div id="fb"></div>
+      <div id="fb" aria-live="polite"></div>
     </article>
 
     <div class="nav">

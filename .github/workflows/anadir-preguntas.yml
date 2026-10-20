@@ -1,0 +1,63 @@
+# Verifica con la teoría las preguntas subidas desde el modal «Añadir preguntas» y abre un pull request.
+# El modal crea una rama preguntas/… con incoming/<test>.json; esta Action:
+#   1. decide la respuesta correcta y la sesión de cada pregunta solo con theory/ (tools/procesar.js),
+#   2. las añade a data/Sx.json y pasa el validador,
+#   3. abre un pull request con el informe. Al fusionarlo, «Validar y publicar» publica la web.
+# Necesita el secret GEMINI_API_KEY (gratis en aistudio.google.com). La variable GEMINI_MODEL (opcional) cambia el modelo.
+name: Añadir preguntas
+
+on:
+  push:
+    branches: ['preguntas/**']
+    paths: ['incoming/**']
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preguntas-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  procesar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar pdftotext
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Verificar con la teoría y clasificar
+        id: procesar
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: node tools/procesar.js --informe "$RUNNER_TEMP/informe.md"
+      - name: Validar preguntas
+        run: node tools/validar.js
+      - name: Informe en el resumen
+        if: always()
+        run: cat "$RUNNER_TEMP/informe.md" >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
+      - name: Commit y pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RAMA: ${{ github.ref_name }}
+          BASE: ${{ github.event.repository.default_branch }}
+          N: ${{ steps.procesar.outputs.anadidas }}
+          TITULO: ${{ steps.procesar.outputs.titulo }}
+        run: |
+          set -euo pipefail
+          if [ "${N:-0}" -eq 0 ]; then
+            echo "Ninguna pregunta nueva: no se abre pull request y se borra la rama."
+            git push origin --delete "$RAMA"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898237+github-actions[bot]@users.noreply.github.com"
+          git add -A data incoming
+          git commit -m "Añade $N preguntas de «$TITULO» verificadas con la teoría"
+          git push origin HEAD:"$RAMA"
+          gh pr create --base "$BASE" --head "$RAMA" --title "Preguntas: $TITULO ($N nuevas)" --body-file "$RUNNER_TEMP/informe.md"

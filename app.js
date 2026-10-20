@@ -165,18 +165,28 @@ const examOpen = () => S.exam && !S.review;
 function renderQ(){
   $("ask").classList.add("hidden");
   const it = S.items[S.cur], q = Q[it.qi];
-  $("card").className = "card " + TC(q.tema);
+  const showRes = !examOpen() && (it.ans!==null || S.review);
+  $("card").className = "card " + TC(q.tema) + (showRes ? " answered" : "");
   $("qtag").textContent = `${q.tema} · ${TEMAS[q.tema]}`;
   $("qkind").innerHTML = `<b></b> · <span></span>`;
   $("qkind").firstChild.textContent = q.id;
   $("qkind").lastChild.textContent = kindOf(q) + (examOpen() ? " · puedes cambiarla hasta entregar" : "");
   $("qtext").textContent = q.p;
   const opts = $("opts"); opts.innerHTML = "";
-  const showRes = !examOpen() && (it.ans!==null || S.review);
   q.o.forEach((t, i) => {
     const b = document.createElement("button"); b.type = "button"; b.className = "opt";
-    b.innerHTML = `<span class="l">${LETTERS[i]}</span><span></span>`;
-    b.lastChild.textContent = t;
+    b.innerHTML = `<span class="l">${LETTERS[i]}</span><span class="ot"><span class="otxt"></span></span>`;
+    b.querySelector(".otxt").textContent = t;
+    if (showRes){
+      // Al corregir: etiqueta en la correcta y en la tuya, y el «por qué no» dentro de cada opción incorrecta.
+      const ot = b.querySelector(".ot");
+      if (i===q.c || i===it.ans){
+        const bd = document.createElement("span"); bd.className = "badge";
+        bd.textContent = i===q.c ? (i===it.ans ? "✓ Tu respuesta" : "✓ Correcta") : "✗ Tu respuesta";
+        ot.insertBefore(bd, ot.firstChild);
+      }
+      if (i!==q.c && q.w && q.w[i]){ const w = document.createElement("span"); w.className = "why1"; w.textContent = q.w[i]; ot.appendChild(w); }
+    }
     b.onclick = () => answer(i);
     if (examOpen()){ if (i===it.ans) b.classList.add("sel"); b.setAttribute("aria-pressed", i===it.ans); }
     else if (showRes){
@@ -204,19 +214,6 @@ function renderFb(showRes){
   v.textContent = blank ? `En blanco. La respuesta es la ${LETTERS[q.c]}.` : ok ? "Correcto." : `Incorrecto. La respuesta es la ${LETTERS[q.c]}.`;
   box.appendChild(v);
   const e = document.createElement("p"); e.textContent = q.e; box.appendChild(e);
-  if (q.w){
-    const w = document.createElement("div"); w.className = "why";
-    w.innerHTML = "<h3>Por qué no las demás</h3><ul></ul>";
-    q.o.forEach((_, i) => {
-      if (i===q.c) return;
-      const li = document.createElement("li"); if (i===it.ans) li.className = "mine";
-      li.innerHTML = `<span class="l">${LETTERS[i]}</span><span></span>`;
-      li.lastChild.textContent = q.w[i];
-      if (i===it.ans){ const em = document.createElement("em"); em.textContent = " (tu respuesta)"; li.lastChild.appendChild(em); }
-      w.lastChild.appendChild(li);
-    });
-    box.appendChild(w);
-  }
   if (q.t){ const t = document.createElement("p"); t.className = "trap"; t.innerHTML = "<b>Trampa:</b> "; t.appendChild(document.createTextNode(q.t)); box.appendChild(t); }
   if (q.s){ const s = document.createElement("p"); s.className = "src"; s.textContent = "Fuente: " + q.s; box.appendChild(s); }
   fb.appendChild(box);
@@ -361,3 +358,256 @@ async function boot(){
   }
 }
 boot();
+
+/* ---------- añadir preguntas ----------
+   PGPI · Quiz — «Añadir preguntas».
+   1) Lee la página de revisión de un test de Blackboard guardada como .html y extrae, de cada pregunta,
+      el enunciado, las 4 opciones y la opción marcada. Del archivo no sale nada más (ni la nota, ni su nombre).
+   2) Con un token de GitHub guardado solo en este navegador, crea una rama preguntas/… y sube incoming/<test>.json.
+   3) La GitHub Action «Añadir preguntas» (tools/procesar.js) decide la respuesta correcta con la teoría de
+      theory/, clasifica cada pregunta por sesión, la añade a data/Sx.json y abre un pull request para revisarlo. */
+(() => {
+  const REPO_FIJO = { owner: "Tpt6731", repo: "PGPI-quiz" };
+  const REPO = (() => {
+    // En GitHub Pages (usuario.github.io/repo) se deduce de la URL; en local se usa el fijo.
+    const h = location.hostname, seg = location.pathname.split("/").filter(Boolean)[0];
+    return h.endsWith(".github.io") && seg ? { owner: h.split(".")[0], repo: seg } : REPO_FIJO;
+  })();
+  const R = `${REPO.owner}/${REPO.repo}`;
+  const API = "https://api.github.com";
+  const WORKFLOW = "anadir-preguntas.yml";
+  const MAX_BYTES = 15 * 1024 * 1024;
+  const TOKEN_KEY = "pgpi-gh-token";
+  const LETRAS = ["A", "B", "C", "D"];
+  const $ = id => document.getElementById(id);
+  const limpiar = t => (t || "").replace(/[ ​]/g, " ").replace(/\s+/g, " ").trim();
+  const dormir = ms => new Promise(r => setTimeout(r, ms));
+
+  /* ---------- extracción ---------- */
+  // Texto de un bloque del editor de Blackboard: quita lo oculto y separa los párrafos con un espacio.
+  function textoRico(el) {
+    if (!el) return "";
+    const c = el.cloneNode(true);
+    c.querySelectorAll('script,style,[aria-hidden="true"],[contenteditable="true"],[id^="sr-only-option-text"]').forEach(n => n.remove());
+    c.querySelectorAll("p,div,li,br,h1,h2,h3,h4,h5,h6,tr,td").forEach(n => n.after(" "));
+    return limpiar(c.textContent);
+  }
+  function subirHasta(el, ok) { for (let n = el; n && n.nodeType === 1; n = n.parentElement) if (ok(n)) return n; return null; }
+
+  function extraer(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html");   // no ejecuta los scripts de la página
+    const marcas = [...doc.querySelectorAll('[data-testid="question-number"]')];
+    if (!marcas.length) throw new Error("No encuentro preguntas: no parece la página de revisión de un test de Blackboard («Comentarios sobre la evaluación»).");
+    const test = limpiar((doc.querySelector('[aria-current="page"]') || {}).textContent)
+      || limpiar((doc.querySelector("h1") || {}).textContent) || "Test sin nombre";
+    const preguntas = [], avisos = [], vistos = new Set();
+    for (const m of marcas) {
+      const n = parseInt(m.textContent, 10);
+      const raiz = m.closest("[data-index]") || subirHasta(m, r => r.querySelector('[data-testid="question-header.questionPrompt"]') && r.querySelector("input"));
+      if (!raiz || !Number.isInteger(n) || vistos.has(n)) continue;
+      vistos.add(n);
+      const pre = `Pregunta ${n}`;
+      const enun = raiz.querySelector('[data-testid="question-header.questionPrompt"]');
+      const cont = enun && (enun.querySelector('[contenteditable="false"]') || enun);
+      const lis = [...raiz.querySelectorAll("li")].filter(li => li.querySelector('input[type="radio"],input[type="checkbox"]'));
+      if (lis.some(li => li.querySelector('input[type="checkbox"]'))) { avisos.push(`${pre}: es de respuesta múltiple; se omite.`); continue; }
+      if (lis.length !== 4) { avisos.push(`${pre}: tiene ${lis.length} opciones y el quiz usa 4; se omite.`); continue; }
+      const conts = lis.map(li => li.querySelector('[contenteditable="false"]') || li.querySelector("label") || li);
+      if ([cont, ...conts].some(x => x && x.querySelector("img,svg,math,video,audio,iframe,canvas,object"))) { avisos.push(`${pre}: tiene imágenes o fórmulas; se omite.`); continue; }
+      const p = textoRico(cont), o = conts.map(textoRico);
+      if (!p || o.some(x => !x)) { avisos.push(`${pre}: enunciado u opciones vacíos; se omite.`); continue; }
+      const marcada = lis.findIndex(li => li.querySelector("input").hasAttribute("checked"));
+      preguntas.push({ n, p, o, marcada: marcada >= 0 ? marcada : null });
+    }
+    const ns = [...vistos].sort((a, b) => a - b), faltan = [];
+    for (let k = 1; k <= (ns[ns.length - 1] || 0); k++) if (!vistos.has(k)) faltan.push(k);
+    if (faltan.length) avisos.unshift(`No están en el archivo las preguntas ${faltan.join(", ")}. Puede que no estuvieran cargadas al guardar: baja hasta el final de la revisión y vuelve a guardar la página.`);
+    if (!preguntas.length) throw new Error("He encontrado el test, pero ninguna pregunta se puede usar. " + avisos.join(" "));
+    preguntas.sort((a, b) => a.n - b.n);
+    return { test, preguntas, avisos };
+  }
+  window.PGPIExtraer = extraer;
+
+  async function leerArchivo(file) {
+    if (!/\.html?$/i.test(file.name) || (file.type && !/^(text\/html|application\/xhtml\+xml)$/.test(file.type)))
+      throw new Error("Solo se admiten archivos .html: la página de revisión del test guardada desde el navegador.");
+    if (file.size > MAX_BYTES) throw new Error("El archivo pesa más de 15 MB.");
+    const txt = await file.text();
+    if (!/<!doctype html|<html[\s>]/i.test(txt.slice(0, 5000))) throw new Error("El archivo no es HTML.");
+    return txt;
+  }
+
+  /* ---------- GitHub ---------- */
+  const token = {
+    get() { try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } },
+    set(v) { try { localStorage.setItem(TOKEN_KEY, v); } catch (e) {} },
+    del() { try { localStorage.removeItem(TOKEN_KEY); } catch (e) {} }
+  };
+  async function gh(tk, method, ruta, body) {
+    const r = await fetch(API + ruta, {
+      method, cache: "no-store",
+      headers: { Accept: "application/vnd.github+json", Authorization: `Bearer ${tk}`, "X-GitHub-Api-Version": "2022-11-28", ...(body ? { "Content-Type": "application/json" } : {}) },
+      body: body ? JSON.stringify(body) : undefined
+    });
+    let j = null; try { j = await r.json(); } catch (e) {}
+    if (!r.ok) { const e = new Error((j && j.message) || `HTTP ${r.status}`); e.status = r.status; throw e; }
+    return j;
+  }
+  function b64(s) {
+    const bytes = new TextEncoder().encode(s); let bin = "";
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(bin);
+  }
+  const slug = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "test";
+  function errorGitHub(e, paso) {
+    if (e.status === 401) return "El token no es válido o ha caducado.";
+    if (e.status === 403 || e.status === 404) return `El token no tiene permiso para ${paso} en ${R}. Revisa que tenga acceso a ese repo y «Contents: Read and write».`;
+    return `GitHub ha respondido con un error al ${paso}: ${e.message}`;
+  }
+
+  /* ---------- modal ---------- */
+  let datos = null;      // { test, preguntas, avisos }
+  let gen = 0;           // sube al quitar el archivo, para cortar el seguimiento anterior
+  let enviado = false;
+
+  function abrir() { pintar(); const d = $("dlgAdd"); if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", ""); }
+
+  function pintar() {
+    $("addDrop").classList.toggle("hidden", !!datos);
+    $("addFile").disabled = !!datos;
+    $("addLoaded").classList.toggle("hidden", !datos);
+    const prev = $("addPrev"); prev.innerHTML = "";
+    if (datos) {
+      $("addTest").textContent = datos.test;
+      $("addCount").textContent = `${datos.preguntas.length} pregunta${datos.preguntas.length === 1 ? "" : "s"}`;
+      if (datos.avisos.length) {
+        const ul = document.createElement("ul"); ul.className = "addwarn";
+        datos.avisos.forEach(a => { const li = document.createElement("li"); li.textContent = a; ul.appendChild(li); });
+        prev.appendChild(ul);
+      }
+      const ol = document.createElement("ol"); ol.className = "addlist";
+      datos.preguntas.forEach(q => {
+        const li = document.createElement("li");
+        li.innerHTML = `<b></b><span class="tx"></span><span class="mk"></span>`;
+        li.children[0].textContent = "P" + q.n;
+        li.children[1].textContent = q.p.length > 150 ? q.p.slice(0, 147) + "…" : q.p;
+        li.children[2].textContent = q.marcada === null ? "sin marcar" : "marcaste " + LETRAS[q.marcada];
+        ol.appendChild(li);
+      });
+      prev.appendChild(ol);
+    }
+    const tk = token.get();
+    $("addTokSaved").classList.toggle("hidden", !tk);
+    $("addTokNew").classList.toggle("hidden", !!tk);
+    $("addTokBox").classList.toggle("hidden", !datos || enviado);
+    $("addSend").classList.toggle("hidden", !datos || enviado);
+    $("addSend").disabled = !datos || enviado;
+  }
+
+  function mensaje(txt, tipo) {
+    const m = $("addMsg"); m.className = "addmsg" + (tipo ? " " + tipo : ""); m.textContent = txt || "";
+  }
+  function estado(txt, tipo, enlace, textoEnlace) {
+    const e = $("addEstado"); e.className = "addest" + (tipo ? " " + tipo : ""); e.innerHTML = "";
+    if (!txt) return;
+    const p = document.createElement("p"); p.textContent = txt; e.appendChild(p);
+    if (enlace) { const a = document.createElement("a"); a.href = enlace; a.target = "_blank"; a.rel = "noopener"; a.textContent = textoEnlace || "Ver en GitHub"; e.appendChild(a); }
+  }
+
+  async function cargar(files) {
+    if (datos) return;                                   // ya hay un archivo: hay que quitarlo antes
+    if (!files || !files.length) return;
+    if (files.length > 1) { mensaje("Sube un solo archivo.", "err"); return; }
+    mensaje("Leyendo el archivo…");
+    try {
+      datos = extraer(await leerArchivo(files[0]));
+      mensaje("");
+    } catch (e) { datos = null; mensaje(e.message, "err"); $("addFile").value = ""; }
+    pintar();
+  }
+
+  function quitar() {
+    gen++; datos = null; enviado = false;
+    $("addFile").value = ""; mensaje(""); estado("");
+    pintar();
+  }
+
+  async function enviar() {
+    if (!datos || enviado) return;
+    let tk = token.get();
+    if (!tk) {
+      tk = $("addTok").value.trim();
+      if (!tk) { estado("Pega tu token de GitHub para poder subir las preguntas.", "ko"); $("addTok").focus(); return; }
+    }
+    const g = gen;
+    $("addSend").disabled = true;
+    estado("Comprobando el token…", "run");
+    let paso = "leer el repo";
+    try {
+      const repo = await gh(tk, "GET", `/repos/${R}`);
+      if (!token.get() && $("addTokRem").checked) token.set(tk);
+      const base = repo.default_branch;
+      const ref = await gh(tk, "GET", `/repos/${R}/git/ref/heads/${encodeURIComponent(base)}`);
+      const sello = new Date().toISOString().replace(/[-:]/g, "").replace("T", "-").slice(0, 15);
+      const nombre = `${slug(datos.test)}-${sello}`, rama = `preguntas/${nombre}`;
+      paso = "crear la rama"; estado("Creando la rama " + rama + "…", "run");
+      await gh(tk, "POST", `/repos/${R}/git/refs`, { ref: `refs/heads/${rama}`, sha: ref.object.sha });
+      paso = "subir las preguntas"; estado("Subiendo las preguntas…", "run");
+      const lote = { version: 1, test: datos.test, subido: new Date().toISOString(), preguntas: datos.preguntas };
+      await gh(tk, "PUT", `/repos/${R}/contents/incoming/${nombre}.json`, {
+        message: `Preguntas de «${datos.test}» para verificar`, branch: rama, content: b64(JSON.stringify(lote, null, 2) + "\n")
+      });
+      enviado = true; pintar();
+      seguir(tk, rama, repo.owner.login, g);
+    } catch (e) {
+      if (g !== gen) return;
+      if (e.status === 401 && token.get()) { token.del(); pintar(); }
+      estado(errorGitHub(e, paso), "ko");
+      $("addSend").disabled = false;
+    }
+  }
+
+  // Sigue la Action hasta que abre el pull request (o termina sin abrirlo).
+  async function seguir(tk, rama, owner, g) {
+    const t0 = Date.now(), web = `https://github.com/${R}`;
+    estado("Subidas. La Action va a comprobar cada pregunta con la teoría; tarda unos minutos.", "run", `${web}/actions/workflows/${WORKFLOW}`, "Ver la Action");
+    while (Date.now() - t0 < 15 * 60 * 1000) {
+      await dormir(8000);
+      if (g !== gen) return;
+      let run;
+      try {
+        const j = await gh(tk, "GET", `/repos/${R}/actions/workflows/${WORKFLOW}/runs?branch=${encodeURIComponent(rama)}&per_page=1`);
+        run = (j.workflow_runs || [])[0];
+      } catch (e) {
+        if (g !== gen) return;
+        if (e.status === 403 || e.status === 404) { estado("Subidas. El token no puede leer las Actions (permiso «Actions: Read-only»), así que no puedo seguir el proceso desde aquí. Cuando termine verás el pull request en GitHub.", "info", `${web}/pulls`, "Ver pull requests"); return; }
+        continue;
+      }
+      if (g !== gen) return;
+      const min = Math.max(1, Math.round((Date.now() - t0) / 60000));
+      if (!run) { estado("Esperando a que arranque la Action…", "run", `${web}/actions/workflows/${WORKFLOW}`, "Ver la Action"); continue; }
+      if (run.status !== "completed") { estado(`La IA está comprobando las preguntas con la teoría (${min} min)…`, "run", run.html_url, "Ver la Action"); continue; }
+      if (run.conclusion !== "success") { estado("La Action ha fallado y no se ha añadido nada. Mira el registro para ver el motivo.", "ko", run.html_url, "Ver el registro"); return; }
+      try {
+        const prs = await gh(tk, "GET", `/repos/${R}/pulls?state=all&head=${encodeURIComponent(owner + ":" + rama)}`);
+        if (g !== gen) return;
+        if (prs.length) { estado(`Listo: pull request #${prs[0].number}. Revísalo y, si está bien, pulsa «Merge» para publicarlas.`, "ok", prs[0].html_url, "Abrir el pull request"); return; }
+      } catch (e) { if (g !== gen) return; }
+      estado("La Action ha terminado sin abrir pull request: ninguna pregunta nueva ha pasado la verificación (ya estaban o la teoría no las resuelve). El informe está en el resumen de la ejecución.", "info", run.html_url, "Ver el informe");
+      return;
+    }
+    if (g === gen) estado("Sigue en marcha. Puedes cerrar esto y mirarlo en GitHub.", "info", `${web}/actions/workflows/${WORKFLOW}`, "Ver la Action");
+  }
+
+  /* ---------- eventos ---------- */
+  $("openAdd").onclick = abrir;
+  $("addFile").onchange = e => cargar(e.target.files);
+  $("addQuitar").onclick = quitar;
+  $("addSend").onclick = enviar;
+  $("addTokForget").onclick = () => { token.del(); pintar(); };
+  const drop = $("addDrop");
+  ["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave", "drop"].forEach(t => drop.addEventListener(t, () => drop.classList.remove("over")));
+  drop.addEventListener("drop", e => { e.preventDefault(); cargar(e.dataTransfer && e.dataTransfer.files); });
+  $("addRepo").textContent = R;
+})();

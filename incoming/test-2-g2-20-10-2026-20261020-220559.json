@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "test": "Test 2 G2 20/10/2026",
+  "subido": "2026-10-20T22:06:00.284Z",
+  "preguntas": [
+    {
+      "n": 1,
+      "p": "Se ha aprobado un cambio de alcance en el proyecto predictivo de Marcy. Todos los siguientes elementos deben actualizarse para reflejar el cambio, EXCEPTO:",
+      "o": [
+        "El diccionario de la EDT",
+        "La EDT/WBS",
+        "La revisión de reparación de defectos",
+        "La declaración del alcance del proyecto"
+      ],
+      "marcada": 2
+    },
+    {
+      "n": 2,
+      "p": "Complete la siguiente frase: La gestión del alcance del proyecto se ocupa principalmente de definir y controlar ____________________.",
+      "o": [
+        "Lo que está y lo que no está incluido en el producto",
+        "Los cambios en el sistema de gestión de la configuración",
+        "Lo que está y lo que no está incluido en el proyecto",
+        "Los cambios en el alcance del proyecto"
+      ],
+      "marcada": 2
+    },
+    {
+      "n": 3,
+      "p": "Mary ha creado una lista de actividades con su equipo de proyecto y ha incluido atributos de actividad para cada una de ellas. De los siguientes, ¿cuál NO es un ejemplo de atributo de actividad que Mary probablemente haya incluido?",
+      "o": [
+        "Validación del alcance",
+        "Área geográfica donde debe llevarse a cabo el trabajo",
+        "Adelantos y retrasos",
+        "Actividades predecesoras"
+      ],
+      "marcada": 0
+    },
+    {
+      "n": 4,
+      "p": "Durante las iteraciones técnicas de desarrollo del pipeline de datos y replicación, los ingenieros sufren continuos cuellos de botella por sobrecarga cognitiva y demoras al alternar entre múltiples tareas abiertas a la vez. Según las prácticas de gestión de flujo del PMBOK y Lean, ¿cuál es la mejor medida correctiva?",
+      "o": [
+        "Eliminar las retrospectivas de mejora continua para ganar horas directas de desarrollo técnico.",
+        "Asignar simultáneamente más actividades a cada ingeniero para maximizar la ocupación teórica.",
+        "Imponer límites de trabajo en curso (WIP Limits) sobre el tablero visual de flujo de trabajo.",
+        "Ampliar los ciclos de iteración a 3 meses para dar tiempo suficiente a cerrar todas las tareas."
+      ],
+      "marcada": 2
+    },
+    {
+      "n": 5,
+      "p": "Gary comprende ahora el propósito de las lecciones aprendidas, pero sigue confundido sobre por qué recomendó que el equipo del proyecto también participe en la documentación de estas. ¿Por qué el equipo del proyecto debe completar la documentación de lecciones aprendidas?",
+      "o": [
+        "Para mostrar a la gerencia lo que han logrado en el proyecto",
+        "Para ayudar a que futuros equipos de proyecto completen sus proyectos con mayor precisión",
+        "Para garantizar el cierre del proyecto",
+        "Para mostrar a los interesados del proyecto lo que han logrado"
+      ],
+      "marcada": 1
+    },
+    {
+      "n": 6,
+      "p": "Es el director del proyecto KLN. Tenía 19 interesados en este proyecto y ha añadido tres miembros al equipo. ¿Cuántos canales de comunicación adicionales tiene ahora en comparación con antes?",
+      "o": [
+        "171",
+        "60",
+        "1",
+        "231"
+      ],
+      "marcada": 1
+    },
+    {
+      "n": 7,
+      "p": "Al evaluar el nivel de participación mediante la Matriz de Evaluación del Nivel de Participación de los Interesados, el director de proyecto detecta una brecha entre el estado \"Actual\" (C) y el estado \"Deseado\" (D). ¿Qué indica esta diferencia?",
+      "o": [
+        "La necesidad de ajustar las estrategias de participación y comunicación para cerrar la brecha entre el apoyo actual del interesado y el nivel requerido.",
+        "Que el interesado debe ser excluido inmediatamente del comité de seguimiento.",
+        "Un incumplimiento automático de la línea base que exige la cancelación del proyecto.",
+        "Un fallo en la calidad técnica de los entregables del proyecto."
+      ],
+      "marcada": 0
+    },
+    {
+      "n": 8,
+      "p": "Al diseñar el Plan de Comunicaciones del subproyecto P10 para los médicos y facultativos de planta, colectivo en el que se concentra el riesgo de boicot pasivo, el equipo propone limitarse a enviar correos masivos (push) con las novedades del sistema. Según la Guía PMBOK, ¿por qué es necesario incorporar además canales interactivos con ciclos rápidos de retroalimentación?",
+      "o": [
+        "Porque la comunicación push solo es adecuada para interesados externos al hospital, no para el personal interno.",
+        "Porque los canales interactivos reducen el volumen total de comunicaciones y, con ello, el coste del plan de comunicaciones.",
+        "Porque permiten confirmar que el mensaje se ha comprendido correctamente y detectar resistencias ocultas que el envío push no revela.",
+        "Porque el correo masivo no deja constancia documental de que el mensaje se haya enviado a cada uno de los facultativos."
+      ],
+      "marcada": 2
+    },
+    {
+      "n": 9,
+      "p": "Usted tiene una excelente idea para un nuevo proyecto que puede aumentar la productividad en un 20 por ciento en su organización. Sin embargo, la dirección se niega a aprobar el proyecto propuesto porque ya hay demasiados recursos dedicados a otros proyectos. ¿Qué acaba de experimentar?",
+      "o": [
+        "Gestión de portafolio de proyectos",
+        "Modelado paramétrico",
+        "Gestión por excepción",
+        "Reserva de la dirección"
+      ],
+      "marcada": 0
+    },
+    {
+      "n": 10,
+      "p": "Usted es el director del Proyecto HBH para instalar 40 nuevos servidores para la red de su empresa. Recomienda, como parte de la planificación de su proyecto, utilizar la elaboración progresiva. Algunos miembros del equipo del proyecto están confundidos sobre este concepto. De las siguientes opciones, ¿cuál es el mejor ejemplo de elaboración progresiva?",
+      "o": [
+        "Es el proceso de llevar un proyecto desde el concepto hasta su finalización.",
+        "Es el proceso de identificar las necesidades del negocio de un proyecto potencial.",
+        "Es el proceso de descomponer el trabajo en tareas pequeñas y manejables.",
+        "Es el proceso de llevar el concepto de un proyecto a un presupuesto de proyecto."
+      ],
+      "marcada": 0
+    }
+  ]
+}

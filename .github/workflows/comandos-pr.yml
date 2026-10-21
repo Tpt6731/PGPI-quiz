@@ -1,0 +1,97 @@
+# Comandos en los comentarios de un pull request de preguntas (rama preguntas/…):
+#   /incluir P5 C   añade la pregunta 5 del test con la C como correcta
+#   /incluir P5     añade la pregunta 5 y la IA decide la respuesta (teoría o PMBOK 8)
+#   /corregir P3 B  cambia la respuesta de una pregunta añadida en el PR
+#   /quitar P3      quita del PR una pregunta añadida en él
+# Solo hacen caso los comentarios del dueño del repo o de colaboradores. Detalles: tools/comandos.js
+name: Comandos del PR
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: comandos-pr-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  comandos:
+    if: >-
+      github.event.issue.pull_request &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association) &&
+      (contains(github.event.comment.body, '/incluir') || contains(github.event.comment.body, '/corregir') || contains(github.event.comment.body, '/quitar'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PR: ${{ github.event.issue.number }}
+      REPO: ${{ github.repository }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    steps:
+      - name: Rama del PR
+        id: pr
+        run: |
+          set -euo pipefail
+          gh api "repos/$REPO/issues/comments/${{ github.event.comment.id }}/reactions" -f content=eyes >/dev/null || true
+          info=$(gh pr view "$PR" -R "$REPO" --json headRefName,state,baseRefName)
+          rama=$(jq -r '.headRefName' <<<"$info"); estado=$(jq -r '.state' <<<"$info"); base=$(jq -r '.baseRefName' <<<"$info")
+          if [ "$estado" != "OPEN" ] || [[ "$rama" != preguntas/* ]]; then
+            echo "El PR no está abierto o no es de una rama preguntas/: no se hace nada."
+            echo "rama=" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "rama=$rama" >> "$GITHUB_OUTPUT"; echo "base=$base" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.pr.outputs.rama != ''
+        with:
+          ref: ${{ steps.pr.outputs.rama }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        if: steps.pr.outputs.rama != ''
+        with:
+          node-version: 20
+      - name: Instalar pdftotext
+        if: steps.pr.outputs.rama != ''
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Aplicar los comandos
+        id: cmd
+        if: steps.pr.outputs.rama != ''
+        env:
+          COMENTARIO: ${{ github.event.comment.body }}
+          BASE: ${{ steps.pr.outputs.base }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: node tools/comandos.js --respuesta "$RUNNER_TEMP/respuesta.md"
+      - name: Validar preguntas
+        id: validar
+        if: steps.pr.outputs.rama != ''
+        run: node tools/validar.js
+      - name: Commit
+        if: steps.pr.outputs.rama != '' && steps.cmd.outputs.cambios != '0'
+        env:
+          RAMA: ${{ steps.pr.outputs.rama }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898237+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Comandos del PR #$PR"
+          git push origin HEAD:"$RAMA"
+      - name: Responder en el PR
+        if: always() && steps.pr.outputs.rama != ''
+        env:
+          CMD: ${{ steps.cmd.outcome }}
+          VALIDAR: ${{ steps.validar.outcome }}
+        run: |
+          f="$RUNNER_TEMP/respuesta.md"
+          if [ "$CMD" != "success" ]; then
+            printf '❌ No se han podido aplicar los comandos y no se ha cambiado nada. Motivo en el registro: %s\n' "$RUN_URL" > "$f"
+          elif [ "$VALIDAR" != "success" ]; then
+            printf '❌ Los cambios no pasan el validador, así que no se han guardado. Detalles: %s\n' "$RUN_URL" > "$f"
+          fi
+          gh pr comment "$PR" -R "$REPO" --body-file "$f"

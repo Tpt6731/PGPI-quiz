@@ -384,4 +384,4 @@ if (require.main === module) {
   }
   procesar(opts).catch(e => { console.error("✗ " + e.message); process.exit(1); });
 }
-module.exports = { procesar, leerTeoria, localizarCita, buscarDuplicado, codigoTest, ultimoNumero, comprobar, llamarIA, norm };
+module.exports = { procesar, leerTeoria, teoriaComoTexto, localizarCita, buscarDuplicado, huella, codigoTest, ultimoNumero, comprobar, llamarIA, anadirAlArchivo, norm, MODELO };

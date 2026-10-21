@@ -17,9 +17,11 @@ data/index.json       lista de temas y el archivo de cada uno
 data/S1.json … S6.json  preguntas de cada tema
 tools/validar.js      comprueba las preguntas (lo ejecuta GitHub Actions)
 tools/procesar.js     verifica con la teoría las preguntas subidas desde el modal (lo ejecuta GitHub Actions)
+tools/comandos.js     comandos /incluir, /corregir y /quitar en los pull requests de preguntas
 theory/               teoría de la asignatura en PDF (no se publica en la web)
 .github/workflows/pages.yml  valida y publica en GitHub Pages
 .github/workflows/anadir-preguntas.yml  verifica las preguntas del modal y abre un pull request
+.github/workflows/comandos-pr.yml       aplica los comandos que escribes en los comentarios del pull request
 ```
 
 ## Probar en local
@@ -95,6 +97,19 @@ Consejos para preguntas nuevas:
    - la guarda en el `data/Sx.json` de la sesión del documento citado, con `fuente: "banco"`, id `S5-T2G2-10` (sesión, test 2, grupo 2 y número seguido dentro de ese test: si ya hay hasta el 9, la siguiente es la 10, sea de la sesión que sea) y `s` con la diapositiva o página;
    - pasa `validar.js` y abre un **pull request** con el informe: confirmadas, corregidas (marcaste X, la teoría dice Y), descartadas y duplicadas.
 4. Revisa el pull request (sobre todo las corregidas) y pulsa **Merge**: «Validar y publicar» lo publica. Si no lo quieres, ciérralo.
+
+#### Corregir el pull request con comentarios
+
+Antes de fusionar, escribe un comentario en el pull request con uno o varios comandos. `P5` es el número de la pregunta en el test subido (el mismo que sale en el informe):
+
+| Comando | Qué hace |
+|---|---|
+| `/incluir P5 C` | Añade la pregunta 5 (por ejemplo, una descartada) con la C como correcta. La IA escribe las explicaciones y elige la sesión. |
+| `/incluir P5` | Igual, pero la IA decide la respuesta: con la teoría si basta y, si no, con el PMBOK 8. Queda indicado para que la revises. |
+| `/corregir P3 B` | Cambia a B la respuesta de una pregunta que ya está en el PR y rehace sus explicaciones. |
+| `/quitar P3` | Quita del PR una pregunta añadida en él. |
+
+Se pueden poner varios a la vez (`/incluir P1 D, P9 C`) o uno por línea. En un minuto o dos la Action **Comandos del PR** hace el commit en la rama y responde con un comentario de lo que ha hecho. Solo hace caso a los comentarios del dueño del repo y de los colaboradores. Las duplicadas no se pueden incluir: ya están en el banco.
 
 Configuración (una sola vez):
 - **Secret** `GEMINI_API_KEY`: crea una clave gratis (sin tarjeta) en [aistudio.google.com](https://aistudio.google.com) → *Get API key*, y guárdala en Settings → Secrets and variables → Actions → New repository secret. Usa la capa gratuita: si un día se agota la cuota, la Action falla con un aviso y basta con relanzarla al día siguiente (*Re-run all jobs*).

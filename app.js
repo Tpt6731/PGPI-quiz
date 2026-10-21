@@ -421,7 +421,7 @@ boot();
   const R = `${REPO.owner}/${REPO.repo}`;
   const API = "https://api.github.com";
   const WORKFLOW = "anadir-preguntas.yml";
-  const MAX_BYTES = 15 * 1024 * 1024;
+  const MAX_BYTES = 40 * 1024 * 1024;
   const TOKEN_KEY = "pgpi-gh-token";
   const LETRAS = ["A", "B", "C", "D"];
   const $ = id => document.getElementById(id);
@@ -473,12 +473,40 @@ boot();
   }
   window.PGPIExtraer = extraer;
 
+  // .mht / .mhtml (página guardada «en un solo archivo»): es un MIME multipart con la página y sus recursos.
+  // Se saca la parte text/html que tiene las preguntas, decodificando quoted-printable o base64 si hace falta.
+  function htmlDeMht(bytes) {
+    let bin = "";                                         // 1 carácter = 1 byte, para trocear sin perder nada
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    const b = bin.slice(0, 5000).match(/boundary="?([^";\r\n]+)"?/i);
+    if (!b) throw new Error("El archivo .mht no tiene el formato esperado (falta el separador de partes).");
+    let primero = null;
+    for (const parte of bin.split("--" + b[1])) {
+      const sep = parte.search(/\r?\n\r?\n/);
+      if (sep < 0) continue;
+      const cab = parte.slice(0, sep);
+      if (!/content-type:\s*text\/html/i.test(cab)) continue;
+      let cuerpo = parte.slice(sep).replace(/^\r?\n\r?\n/, "");
+      const enc = (cab.match(/content-transfer-encoding:\s*([\w-]+)/i) || [])[1] || "";
+      const cs = (cab.match(/charset="?([\w-]+)/i) || [])[1] || "utf-8";
+      if (/quoted-printable/i.test(enc)) cuerpo = cuerpo.replace(/=\r?\n/g, "").replace(/=([0-9A-F]{2})/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
+      else if (/base64/i.test(enc)) cuerpo = atob(cuerpo.replace(/[^A-Za-z0-9+/=]/g, ""));
+      const u8 = Uint8Array.from(cuerpo, c => c.charCodeAt(0) & 0xff);
+      let html; try { html = new TextDecoder(cs).decode(u8); } catch (e) { html = new TextDecoder("utf-8").decode(u8); }
+      if (html.includes('data-testid="question-number"')) return html;
+      if (primero === null) primero = html;
+    }
+    if (primero !== null) return primero;
+    throw new Error("El archivo .mht no contiene ninguna página HTML.");
+  }
+
   async function leerArchivo(file) {
-    if (!/\.html?$/i.test(file.name) || (file.type && !/^(text\/html|application\/xhtml\+xml)$/.test(file.type)))
-      throw new Error("Solo se admiten archivos .html: la página de revisión del test guardada desde el navegador.");
-    if (file.size > MAX_BYTES) throw new Error("El archivo pesa más de 15 MB.");
-    const txt = await file.text();
-    if (!/<!doctype html|<html[\s>]/i.test(txt.slice(0, 5000))) throw new Error("El archivo no es HTML.");
+    const mht = /\.mht(ml)?$/i.test(file.name);
+    if (!(mht || /\.html?$/i.test(file.name)) || (file.type && !/^(text\/html|application\/xhtml\+xml|message\/rfc822|multipart\/related|application\/x-mimearchive|application\/octet-stream)$/.test(file.type)))
+      throw new Error("Solo se admiten archivos .html o .mht: la página de revisión del test guardada desde el navegador.");
+    if (file.size > MAX_BYTES) throw new Error("El archivo pesa más de 40 MB.");
+    const txt = mht ? htmlDeMht(new Uint8Array(await file.arrayBuffer())) : await file.text();
+    if (!/<!doctype html|<html[\s>]/i.test(txt.slice(0, 5000))) throw new Error(mht ? "El archivo .mht no contiene una página HTML válida." : "El archivo no es HTML.");
     return txt;
   }
 

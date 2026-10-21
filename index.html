@@ -51,8 +51,8 @@
     </div></dialog>
     <dialog id="dlgAdd" aria-labelledby="dlgAddT"><div class="dlgbody">
     <div class="dlghead"><h2 id="dlgAddT">Añadir preguntas</h2><button type="button" class="iconbtn" data-close>Cerrar</button></div>
-    <p class="dlgsub">Sube la revisión de un test de Blackboard guardada como página web (Ctrl+S). Solo se envían los enunciados, las opciones y la que marcaste. La IA decide la respuesta correcta con la teoría de la asignatura, asigna la sesión y abre un pull request para que lo revises antes de publicar.</p>
-    <label class="drop" id="addDrop"><input type="file" id="addFile" accept=".html,.htm,text/html"><span class="dropt">Elegir archivo .html</span><span class="dropm">o arrástralo aquí · uno cada vez</span></label>
+    <p class="dlgsub">Sube la revisión de un test de Blackboard guardada desde el navegador (Ctrl+S, como .html o .mht). Solo se envían los enunciados, las opciones y la que marcaste. La IA decide la respuesta correcta con la teoría de la asignatura, asigna la sesión y abre un pull request para que lo revises antes de publicar.</p>
+    <label class="drop" id="addDrop"><input type="file" id="addFile" accept=".html,.htm,.mht,.mhtml,text/html,message/rfc822,multipart/related"><span class="dropt">Elegir archivo .html o .mht</span><span class="dropm">o arrástralo aquí · uno cada vez</span></label>
     <div class="addfile hidden" id="addLoaded"><div><b id="addTest"></b><span id="addCount"></span></div><button type="button" class="iconbtn" id="addQuitar">Quitar archivo</button></div>
     <p class="addmsg" id="addMsg" aria-live="polite"></p>
     <div id="addPrev"></div>
@@ -142,6 +142,6 @@
   </section>
 
 </main>
-<script src="app.js?v=5" defer></script>
+<script src="app.js?v=6" defer></script>
 </body>
 </html>

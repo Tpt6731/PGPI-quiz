@@ -29,6 +29,11 @@
       "id": "S6",
       "nombre": "Cronograma",
       "archivo": "S6.json"
+    },
+    {
+      "id": "S7",
+      "nombre": "Recursos y Finanzas",
+      "archivo": "S7.json"
     }
   ]
 }

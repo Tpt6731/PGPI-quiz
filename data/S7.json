@@ -113,7 +113,7 @@
   "id": "S7-E1",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué abarca el alcance del dominio de desempeño de los Recursos?",
+  "p": "¿Qué abarca el alcance del dominio de desempeño de los Recursos?",
   "o": [
    "Disponibilidad, tasa de utilización y mantenimiento de los recursos",
    "Solo la contratación del personal y su evaluación anual de desempeño",
@@ -135,7 +135,7 @@
   "id": "S7-E2",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un equipo usa entornos de pruebas en la nube y licencias de un IDE. ¿Cómo los clasifica S7?",
+  "p": "Un equipo usa entornos de pruebas en la nube y licencias de un IDE. ¿Qué tipo de recursos son?",
   "o": [
    "Como recursos humanos, porque los usa el equipo",
    "Como recursos físicos o virtuales",
@@ -157,7 +157,7 @@
   "id": "S7-E3",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué principio clave destaca S7 al definir el dominio de Recursos?",
+  "p": "¿Por qué el dominio de Recursos separa la gestión de las personas de la de los recursos materiales?",
   "o": [
    "Dirigir personas exige competencias distintas a gestionar materiales",
    "Los recursos humanos y materiales se gestionan con las mismas técnicas",
@@ -168,9 +168,9 @@
   "e": "Principio clave de S7: la gestión de personas requiere habilidades y competencias distintas a las de administrar recursos materiales o lógicos. Por eso el dominio separa Liderar el equipo de Monitorear los recursos físicos.",
   "w": [
    "",
-   "Es justo lo contrario de lo que dice S7.",
+   "Es justo lo contrario: personas y materiales piden competencias distintas.",
    "Los virtuales (software, licencias, nube) sí son parte de Recursos.",
-   "S7 dice que no siempre puede (matriz, convenios, subcontratas)."
+   "No siempre puede: la matriz, los convenios o las subcontratas lo limitan."
   ],
   "t": "Personas y cosas se gestionan distinto: de ahí que haya procesos separados.",
   "s": "Presentación S7 de la profesora, diap. 2"
@@ -179,7 +179,7 @@
   "id": "S7-E4",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estos es un factor del entorno que el director debe gestionar en el dominio de Recursos, según S7?",
+  "p": "¿Cuál de estos es un factor del entorno que el director debe gestionar en el dominio de Recursos?",
   "o": [
    "La tasa interna de retorno (TIR) del caso de negocio",
    "El orden de las actividades en el diagrama de red",
@@ -201,7 +201,7 @@
   "id": "S7-E5",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué responsabilidades sobre el equipo recaen directamente en el director de proyecto?",
+  "p": "¿Qué responsabilidades sobre el equipo recaen directamente en el director de proyecto?",
   "o": [
    "Firmar los contratos laborales y fijar los salarios del equipo",
    "Su formación, cohesión, motivación y empoderamiento",
@@ -211,7 +211,7 @@
   "c": 1,
   "e": "El director es responsable directo del liderazgo del equipo (formación, cohesión, motivación y empoderamiento) y de desarrollar sus competencias técnicas y blandas, fomentando una conducta ética y profesional.",
   "w": [
-   "S7 no lo atribuye al director; la autoridad formal suele estar en el gestor de recursos.",
+   "Eso depende de quien tiene la autoridad formal, el gestor de recursos.",
    "",
    "Eso lo aprueba la alta dirección.",
    "La estructura (funcional, matricial…) es del entorno; el director se adapta a ella."
@@ -223,7 +223,7 @@
   "id": "S7-E6",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Por qué, según S7, el director de proyecto no siempre puede elegir libremente a su equipo?",
+  "p": "¿Por qué el director de proyecto no siempre puede elegir libremente a su equipo?",
   "o": [
    "Porque el PMBOK 8 prohíbe al director intervenir en la selección",
    "Porque la selección corresponde siempre en exclusiva al patrocinador",
@@ -236,7 +236,7 @@
    "No lo prohíbe: participa y negocia, aunque no siempre decide.",
    "No es del patrocinador: la autoridad formal la tiene el gestor de recursos.",
    "",
-   "S7 no pone esa condición."
+   "La asignación de personas no está condicionada a cerrar el presupuesto."
   ],
   "t": "El director negocia el equipo; quien tiene la autoridad formal es el gestor de recursos.",
   "s": "Presentación S7 de la profesora, diap. 4"
@@ -267,7 +267,7 @@
   "id": "S7-E8",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué es el gestor de recursos (resource manager) según S7?",
+  "p": "¿Qué es el gestor de recursos (resource manager)?",
   "o": [
    "Quien tiene autoridad formal sobre uno o varios recursos",
    "El miembro del equipo que hace el inventario de hardware y licencias",
@@ -289,7 +289,7 @@
   "id": "S7-E9",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un equipo se autoorganiza y toma sus decisiones técnicas por delegación. ¿Qué estilo de gestión del equipo describe S7?",
+  "p": "Un equipo se autoorganiza y toma sus decisiones técnicas por delegación. ¿Qué estilo de gestión del equipo es?",
   "o": [
    "Descentralizado o distribuido",
    "Centralizado, con liderazgo descendente (top-down)",
@@ -311,7 +311,7 @@
   "id": "S7-E10",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué aporta incluir al equipo en la planificación y en la toma de decisiones?",
+  "p": "¿Qué aporta incluir al equipo en la planificación y en la toma de decisiones?",
   "o": [
    "Conocimiento experto y más compromiso con el proyecto",
    "Que ya no haga falta director, porque el equipo se gestiona solo",
@@ -323,7 +323,7 @@
   "w": [
    "",
    "Participar no elimina el rol del director.",
-   "S7 no relaciona la participación con el coste.",
+   "La participación aporta compromiso y experiencia, no un coste menor.",
    "La RACI sigue siendo útil para fijar responsabilidades."
   ],
   "t": "Participación → experiencia + compromiso, no ausencia de director.",
@@ -355,7 +355,7 @@
   "id": "S7-E12",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿en qué consiste la gestión de capacidad de los recursos no humanos?",
+  "p": "¿En qué consiste la gestión de capacidad de los recursos no humanos?",
   "o": [
    "Medir las horas extra del equipo para prevenir el burnout",
    "Calcular cuánto puede endeudarse el proyecto para comprar hardware",
@@ -377,7 +377,7 @@
   "id": "S7-E13",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué abarca el aprovisionamiento (procurement) de recursos físicos según S7?",
+  "p": "¿Qué abarca el aprovisionamiento (procurement) de recursos físicos?",
   "o": [
    "Solo contratos complejos; las compras simples no cuentan como tal",
    "Desde pedidos básicos (acuerdos marco) hasta contratos complejos",
@@ -387,10 +387,10 @@
   "c": 1,
   "e": "El aprovisionamiento es esencial en proyectos de ingeniería e infraestructura de software y va desde órdenes de compra básicas (p. ej., acuerdos marco) hasta integrar múltiples contratos complejos.",
   "w": [
-   "S7 incluye también las órdenes de compra básicas.",
+   "Las órdenes de compra básicas también son aprovisionamiento.",
    "",
    "Software y servicios también son recursos no humanos que se aprovisionan.",
-   "S7 no prohíbe comprar; CapEx es una clasificación del gasto."
+   "Comprar está permitido; CapEx solo clasifica el tipo de gasto."
   ],
   "t": "Procurement = todo el rango, de un pedido simple a muchos contratos.",
   "s": "Presentación S7 de la profesora, diap. 6"
@@ -399,7 +399,7 @@
   "id": "S7-E14",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál es el beneficio clave de Planificar la gestión de recursos según S7?",
+  "p": "¿Cuál es el beneficio clave de Planificar la gestión de recursos?",
   "o": [
    "Fija el marco y el nivel de esfuerzo de gestión según la complejidad",
    "Identifica el tipo, la cantidad y las características de los recursos",
@@ -421,7 +421,7 @@
   "id": "S7-E15",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué consideración crítica destaca S7 al planificar la gestión de recursos?",
+  "p": "Al planificar la gestión de recursos, ¿qué hay que anticipar de forma crítica?",
   "o": [
    "Convertir todo el gasto del proyecto en OpEx",
    "La competencia y la escasez de recursos críticos",
@@ -443,7 +443,7 @@
   "id": "S7-E16",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estas NO es una herramienta o técnica de Planificar la gestión de recursos según S7?",
+  "p": "¿Cuál de estas NO es una herramienta o técnica de Planificar la gestión de recursos?",
   "o": [
    "Matriz de asignación de responsabilidades (RAM)",
    "Visión basada en recursos (RBV)",
@@ -453,35 +453,13 @@
   "c": 3,
   "e": "Herramientas de Planificar la gestión de recursos en S7: RAM, teoría organizacional, Green HRM, RBV y DAFO/SWOT. El valor ganado (EVM) es una técnica de Monitorear y controlar las finanzas.",
   "w": [
-   "Sí está: es la primera herramienta que cita S7.",
+   "Sí es herramienta de esta planificación: cruza la EDT con el equipo.",
    "Sí está, con su marco VRIO.",
    "Sí está, como herramienta de sostenibilidad.",
    ""
   ],
   "t": "RAM, Teoría org., Green HRM, RBV, DAFO: las cinco de S7. EVM es de Finanzas.",
   "s": "Presentación S7 de la profesora, diap. 8"
- },
- {
-  "id": "S7-E17",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, ¿qué salida produce Planificar la gestión de recursos además del plan de gestión de los recursos?",
-  "o": [
-   "Las asignaciones del equipo y el calendario de recursos",
-   "La estructura de desglose de recursos (RBS)",
-   "Las evaluaciones del desempeño del equipo",
-   "El acta de constitución del equipo (team charter)"
-  ],
-  "c": 3,
-  "e": "La tabla de entradas, herramientas y salidas de la memoria lista como salidas el plan de gestión de los recursos (actualización del plan), el acta de constitución del equipo y actualizaciones de documentos (supuestos, riesgos).",
-  "w": [
-   "Son salidas de Adquirir recursos.",
-   "Es salida de Estimar recursos.",
-   "Son salida de Liderar al equipo.",
-   ""
-  ],
-  "t": "El team charter nace al planificar; luego se usa al liderar.",
-  "s": "Memoria P02 (S7), §1.2.2.1 (pág. 11–12)"
  },
  {
   "id": "S7-E18",
@@ -531,7 +509,7 @@
   "id": "S7-E20",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué objetivo persigue la matriz de asignación de responsabilidades (RAM) según S7?",
+  "p": "¿Qué objetivo persigue la matriz de asignación de responsabilidades (RAM)?",
   "o": [
    "Asignar a cada persona una tarifa horaria para calcular el presupuesto total",
    "Que cada paquete tenga un único responsable, sin vacíos ni duplicidades",
@@ -575,7 +553,7 @@
   "id": "S7-E22",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Para qué sirve la teoría organizacional en la planificación de recursos según S7?",
+  "p": "¿Para qué sirve la teoría organizacional en la planificación de recursos?",
   "o": [
    "Para evaluar con el marco VRIO si un recurso da ventaja competitiva",
    "Para reducir la huella de carbono del equipo con trabajo remoto",
@@ -597,7 +575,7 @@
   "id": "S7-E23",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un PM prevé que, tras formarse, el equipo pasará por una fase de conflictos antes de fijar normas y rendir. ¿Qué modelo, citado en S7, está aplicando?",
+  "p": "Un PM prevé que, tras formarse, el equipo pasará por una fase de conflictos antes de fijar normas y rendir. ¿Qué modelo está aplicando?",
   "o": [
    "El marco VRIO de la visión basada en recursos",
    "El modelo de Tuckman de desarrollo de equipos",
@@ -619,7 +597,7 @@
   "id": "S7-E24",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué persigue la gestión ambiental de RRHH (Green HRM) según S7?",
+  "p": "¿Qué persigue la gestión ambiental de RRHH (Green HRM)?",
   "o": [
    "Reducir el impacto ambiental y la huella de carbono del proyecto",
    "Contratar solo a personal con formación en ciencias ambientales",
@@ -630,9 +608,9 @@
   "e": "Green HRM: integrar políticas de sostenibilidad ambiental y responsabilidad social en la adquisición, el desarrollo y la gestión de los recursos humanos, para reducir el impacto ambiental y la huella de carbono.",
   "w": [
    "",
-   "S7 habla de prácticas de gestión, no de requisitos de titulación.",
+   "La Green HRM son prácticas de gestión, no requisitos de titulación.",
    "Recortar personal no es su objetivo.",
-   "Eso es bienestar del equipo, otra tendencia de S7."
+   "Eso es bienestar del equipo, no sostenibilidad ambiental."
   ],
   "t": "«Green» = medio ambiente, no recortes de personal.",
   "s": "Presentación S7 de la profesora, diap. 11"
@@ -641,7 +619,7 @@
   "id": "S7-E25",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estas prácticas es un ejemplo de Green Computing según S7?",
+  "p": "¿Cuál de estas prácticas es un ejemplo de Green Computing?",
   "o": [
    "Comprar siempre el hardware más potente para no tener que renovarlo",
    "Planificar servidores y nube con criterios de eficiencia energética",
@@ -653,7 +631,7 @@
   "w": [
    "Sobredimensionar el hardware no tiene que ver con la eficiencia energética.",
    "",
-   "S7 promueve entornos sin papel, no imprimir más.",
+   "La práctica sostenible es trabajar sin papel, no imprimir más.",
    "No tiene relación con la sostenibilidad."
   ],
   "t": "Green Computing = eficiencia energética de la infraestructura TI.",
@@ -685,7 +663,7 @@
   "id": "S7-E27",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué sostiene la visión basada en recursos (RBV) según S7?",
+  "p": "¿Qué sostiene la visión basada en recursos (RBV)?",
   "o": [
    "Que conviene externalizar todos los recursos para reducir los costes fijos",
    "Que la ventaja competitiva nace de recursos internos diferenciadores",
@@ -751,7 +729,7 @@
   "id": "S7-E30",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿en qué momento resulta útil aplicar la RBV?",
+  "p": "¿En qué momento resulta útil aplicar la visión basada en recursos (RBV)?",
   "o": [
    "Al cerrar el proyecto, para medir la satisfacción del cliente",
    "Al calcular la reserva de gestión, para fijar su importe",
@@ -817,7 +795,7 @@
   "id": "S7-E33",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estas es una oportunidad en un DAFO aplicado a recursos según S7?",
+  "p": "¿Cuál de estas es una oportunidad en un DAFO aplicado a recursos?",
   "o": [
    "Adoptar herramientas de IA o de automatización",
    "Contar con licencias avanzadas e infraestructura propia",
@@ -839,7 +817,7 @@
   "id": "S7-E34",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál es el beneficio clave de Estimar los recursos según S7?",
+  "p": "¿Cuál es el beneficio clave de Estimar los recursos?",
   "o": [
    "Fijar el marco y el nivel de esfuerzo de gestión según la complejidad",
    "Asignar formalmente cada recurso concreto a su actividad",
@@ -861,7 +839,7 @@
   "id": "S7-E35",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Con qué dominio está estrechamente vinculado el proceso Estimar los recursos según S7?",
+  "p": "¿Con qué dominio está estrechamente vinculado el proceso Estimar los recursos?",
   "o": [
    "Con el dominio de los Interesados",
    "Con el dominio de la Gobernanza",
@@ -871,9 +849,9 @@
   "c": 3,
   "e": "S7, diap. 14: la estimación de recursos está estrechamente vinculada con el dominio del Cronograma (las duraciones dependen de los recursos asignados). La diap. 22 añade que debe coordinarse con la estimación de costes.",
   "w": [
-   "S7 no destaca ese vínculo para este proceso.",
-   "S7 no destaca ese vínculo para este proceso.",
-   "S7 no destaca ese vínculo para este proceso.",
+   "Las duraciones dependen de los recursos: el vínculo directo es con el Cronograma.",
+   "Las duraciones dependen de los recursos: el vínculo directo es con el Cronograma.",
+   "Las duraciones dependen de los recursos: el vínculo directo es con el Cronograma.",
    ""
   ],
   "t": "Estimar recursos ↔ Cronograma (y se coordina con Estimar costes).",
@@ -883,7 +861,7 @@
   "id": "S7-E36",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿cuáles son las entradas principales de Estimar los recursos?",
+  "p": "¿Cuáles son las entradas principales de Estimar los recursos?",
   "o": [
    "El acta de constitución del equipo y las evaluaciones del desempeño",
    "La línea base de costes y la reserva de gestión",
@@ -902,32 +880,10 @@
   "s": "Presentación S7 de la profesora, diap. 14"
  },
  {
-  "id": "S7-E37",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, ¿cuál de estas es una salida de Estimar recursos?",
-  "o": [
-   "El acta de constitución del equipo",
-   "Las evaluaciones del desempeño del equipo",
-   "La estructura de desglose de recursos",
-   "La línea base de costes del proyecto"
-  ],
-  "c": 2,
-  "e": "Salidas de Estimar recursos en la memoria: requisitos de recursos, base de las estimaciones, estructura de desglose de recursos y actualizaciones de documentos.",
-  "w": [
-   "Es salida de Planificar la gestión de recursos.",
-   "Es salida de Liderar al equipo.",
-   "",
-   "Es salida de Desarrollar el presupuesto (Finanzas)."
-  ],
-  "t": "RBS (desglose de recursos) sale al estimar, igual que la EDT sale al crear el alcance.",
-  "s": "Memoria P02 (S7), §1.2.2.2 (pág. 13)"
- },
- {
   "id": "S7-E38",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Con qué frecuencia se ejecuta el proceso Adquirir recursos según S7?",
+  "p": "¿Con qué frecuencia se ejecuta el proceso Adquirir recursos?",
   "o": [
    "Una sola vez, al principio del proyecto",
    "Solo al cierre, cuando se liberan recursos",
@@ -935,7 +891,7 @@
    "Periódicamente, cuando cambian las necesidades"
   ],
   "c": 3,
-  "e": "S7: Adquirir recursos guía la selección y asignación formal de recursos a las actividades y se ejecuta periódicamente según la necesidad. La memoria añade que se repite cuando cambian las necesidades, la disponibilidad o el cronograma.",
+  "e": "Adquirir recursos guía la selección y la asignación formal de recursos a las actividades. No se hace una sola vez: se repite cuando cambian las necesidades, la disponibilidad o el cronograma.",
   "w": [
    "No es único: se repite según la necesidad.",
    "Liberar recursos se vigila al monitorizar, no al adquirir.",
@@ -949,7 +905,7 @@
   "id": "S7-E39",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un recurso crítico no está disponible porque lo usa otro proyecto. Según S7, ¿qué debe hacer el director?",
+  "p": "Un recurso crítico no está disponible porque lo usa otro proyecto. ¿Qué debe hacer el director?",
   "o": [
    "Esperar a que quede libre, aunque se retrase todo el cronograma",
    "Reasignar una alternativa valorando competencias, coste y riesgo",
@@ -959,7 +915,7 @@
   "c": 1,
   "e": "Gestión de alternativas (S7): ante restricciones económicas o de otros proyectos se reasignan recursos alternativos evaluando cambios en competencias, costes y riesgos y garantizando el cumplimiento legal y normativo.",
   "w": [
-   "S7 pide gestionar alternativas, no aceptar el retraso sin más.",
+   "Hay que gestionar alternativas, no aceptar el retraso sin más.",
    "",
    "La alternativa debe evaluarse (competencias, costes, riesgos, legalidad).",
    "La reserva de gestión exige aprobación de la alta dirección."
@@ -971,7 +927,7 @@
   "id": "S7-E40",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿a qué puede llevar, en el peor caso, no conseguir los recursos necesarios?",
+  "p": "¿A qué puede llevar, en el peor caso, no conseguir los recursos necesarios?",
   "o": [
    "Solo a un pequeño retraso en el cronograma",
    "Únicamente a una bajada de la moral del equipo",
@@ -981,7 +937,7 @@
   "c": 2,
   "e": "Impacto del fracaso en la adquisición (S7): la indisponibilidad de recursos afecta al cronograma, los costes, la calidad y la satisfacción, y puede provocar la cancelación del proyecto.",
   "w": [
-   "S7 cita también costes, calidad y satisfacción, e incluso la cancelación.",
+   "El impacto llega a costes, calidad y satisfacción, e incluso a cancelar.",
    "El impacto es mucho más amplio.",
    "",
    "Las reservas no crean recursos que no están disponibles."
@@ -990,32 +946,10 @@
   "s": "Presentación S7 de la profesora, diap. 15"
  },
  {
-  "id": "S7-E41",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, si sustituir un recurso crítico afecta a una línea base o supera los umbrales de autoridad, ¿qué hay que hacer?",
-  "o": [
-   "Tramitar una solicitud de cambio",
-   "Aplicar la sustitución y comunicarla al cierre",
-   "Usar directamente la reserva de gestión",
-   "Reescribir el acta de constitución del proyecto"
-  ],
-  "c": 0,
-  "e": "La memoria indica que, si la sustitución elegida afecta a una línea base o supera los umbrales de autoridad, debe tramitarse una solicitud de cambio. Es coherente con S7: la línea base solo cambia mediante control formal de cambios.",
-  "w": [
-   "",
-   "Si toca una línea base, hay que pasar por control de cambios antes.",
-   "La reserva de gestión requiere aprobación de la alta dirección.",
-   "El acta no se rehace por una sustitución de recursos."
-  ],
-  "t": "¿Toca una línea base? → solicitud de cambio.",
-  "s": "Memoria P02 (S7), §1.2.2.3 (pág. 14)"
- },
- {
   "id": "S7-E42",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿cuál de estas es una actividad de liderazgo y no de gestión?",
+  "p": "¿Cuál de estas es una actividad de liderazgo y no de gestión?",
   "o": [
    "Planificar y coordinar el trabajo",
    "Escuchar y motivar al equipo",
@@ -1045,10 +979,10 @@
    "Teoría organizacional: pasar a una estructura matricial"
   ],
   "c": 2,
-  "e": "Entre las actividades de liderazgo, S7 incluye adaptar el estilo según la madurez del equipo. La memoria lo concreta: ser sensible a la disposición y capacidad de cada integrante.",
+  "e": "Las actividades de liderazgo se centran en las personas, e incluyen adaptar el estilo a la madurez y la capacidad de cada integrante.",
   "w": [
    "Medir y supervisar es gestión; aquí adapta el trato a las personas.",
-   "S7 dice que en alto rendimiento hay que evitar el micromanagement.",
+   "En alto rendimiento hay que evitar el micromanagement.",
    "",
    "No cambia la estructura de la organización."
   ],
@@ -1059,7 +993,7 @@
   "id": "S7-E44",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué pilar del desarrollo del equipo se apoya en el Team Charter según S7?",
+  "p": "¿Qué pilar del desarrollo del equipo se apoya en el Team Charter?",
   "o": [
    "Visión y objetivos: alinear las decisiones del día a día",
    "La operativa del equipo: normas de convivencia",
@@ -1081,7 +1015,7 @@
   "id": "S7-E45",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Se detecta que un desarrollador no domina la tecnología del proyecto. Según los pilares de S7, ¿cómo se cubre esa carencia?",
+  "p": "Se detecta que un desarrollador no domina la tecnología del proyecto. ¿Cómo se cubre esa brecha de competencias?",
   "o": [
    "Sustituyéndolo de inmediato mediante Adquirir recursos",
    "Con una solicitud de cambio de la línea base de costes",
@@ -1089,9 +1023,9 @@
    "Pasándolo a I (informado) en la matriz RACI"
   ],
   "c": 2,
-  "e": "Pilar «Roles y responsabilidades»: detectar brechas competenciales y cubrirlas con formación o mentoría (la memoria añade el coaching).",
+  "e": "Pilar «Roles y responsabilidades»: detectar brechas competenciales y cubrirlas con formación o mentoría.",
   "w": [
-   "El primer recurso de S7 ante una brecha es formar, no sustituir.",
+   "Ante una brecha de competencias, lo primero es formar, no sustituir.",
    "No es un asunto de la línea base.",
    "",
    "Eso esconde el problema, no lo resuelve."
@@ -1103,7 +1037,7 @@
   "id": "S7-E46",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál es el entregable clave asociado a los equipos de alto rendimiento según S7?",
+  "p": "¿Cuál es el entregable clave asociado a los equipos de alto rendimiento?",
   "o": [
    "La matriz de asignación de responsabilidades",
    "El registro de lecciones aprendidas",
@@ -1111,10 +1045,10 @@
    "Las asignaciones físicas de recursos"
   ],
   "c": 2,
-  "e": "S7, diap. 17: el entregable clave son las evaluaciones del desempeño del equipo. La memoria también las da como salida de Liderar al equipo.",
+  "e": "El entregable clave de liderar y desarrollar equipos de alto rendimiento son las evaluaciones del desempeño del equipo.",
   "w": [
    "Es una herramienta de planificación.",
-   "S7 no lo da como entregable clave aquí.",
+   "Las lecciones aprendidas no son el entregable de este proceso.",
    "",
    "Son salida de Adquirir recursos."
   ],
@@ -1125,7 +1059,7 @@
   "id": "S7-E47",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estos rasgos va en contra de un equipo de alto rendimiento según S7?",
+  "p": "¿Cuál de estos rasgos va en contra de un equipo de alto rendimiento?",
   "o": [
    "La co-propiedad del producto, sin silos",
    "La comunicación abierta y la confianza",
@@ -1147,7 +1081,7 @@
   "id": "S7-E48",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un equipo usa los Seis Sombreros para Pensar en sus retrospectivas. ¿Cómo lo enmarca S7?",
+  "p": "Un equipo usa los Seis Sombreros para Pensar en sus retrospectivas. ¿Qué tipo de técnica es?",
   "o": [
    "Como herramienta para estimar costes de forma paramétrica",
    "Como técnica de pensamiento crítico del equipo",
@@ -1169,7 +1103,7 @@
   "id": "S7-E49",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué recursos controla el proceso de monitorizar los recursos?",
+  "p": "¿Qué recursos controla el proceso Monitorear y controlar los recursos?",
   "o": [
    "Solo las personas, mediante evaluaciones de desempeño individuales",
    "Todos, humanos y físicos, con las mismas métricas de utilización",
@@ -1180,7 +1114,7 @@
   "e": "S7, diap. 18: el control abarca recursos físicos y virtuales (equipos, software, licencias, instalaciones, infraestructura, entornos de pruebas). Las personas se gestionan en «Liderar el equipo». Es un proceso continuo.",
   "w": [
    "Las personas se gestionan en Liderar el equipo.",
-   "S7 los separa expresamente.",
+   "Personas y recursos físicos se controlan en procesos distintos.",
    "",
    "Eso es Monitorear y controlar las finanzas."
   ],
@@ -1191,7 +1125,7 @@
   "id": "S7-E50",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué riesgo de un control inadecuado de los recursos describe S7 cuando hay infraestructura ociosa?",
+  "p": "¿Qué riesgo provoca un control inadecuado de los recursos cuando hay infraestructura ociosa?",
   "o": [
    "Sobrecostes e ineficiencia que reducen el margen",
    "Retrasos por falta de equipos críticos",
@@ -1204,7 +1138,7 @@
    "",
    "Eso pasa cuando faltan recursos, no cuando sobran.",
    "Eso viene de suministros inadecuados, no de exceso.",
-   "S7 no lo cita como riesgo."
+   "La autoridad del gestor no depende de que sobre infraestructura."
   ],
   "t": "Falta → retraso; sobra → sobrecoste.",
   "s": "Presentación S7 de la profesora, diap. 18"
@@ -1213,7 +1147,7 @@
   "id": "S7-E51",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estos es un objetivo de Monitorear los recursos según S7?",
+  "p": "¿Cuál de estos es un objetivo de Monitorear y controlar los recursos?",
   "o": [
    "Asignar y liberar a tiempo los recursos para optimizar costes",
    "Evaluar el rendimiento individual de cada programador",
@@ -1232,32 +1166,10 @@
   "s": "Presentación S7 de la profesora, diap. 18"
  },
  {
-  "id": "S7-E52",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, ¿cómo se calcula el indicador de utilización de un recurso?",
-  "o": [
-   "Horas reales menos horas planificadas",
-   "Horas reales entre horas disponibles",
-   "Recursos disponibles a tiempo entre requeridos",
-   "Unidades consumidas frente a unidades previstas"
-  ],
-  "c": 1,
-  "e": "Indicadores que propone la memoria para monitorizar recursos: utilización (horas reales / horas disponibles), desviación de horas (reales − planificadas), disponibilidad a tiempo, consumo de materiales y retrabajo.",
-  "w": [
-   "Esa es la desviación de horas.",
-   "",
-   "Esa es la disponibilidad a tiempo.",
-   "Ese es el consumo de materiales."
-  ],
-  "t": "Utilización es un cociente sobre lo disponible, no una resta.",
-  "s": "Memoria P02 (S7), §1.2.2.5 (pág. 18)"
- },
- {
   "id": "S7-E53",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En un enfoque adaptativo, ¿qué tipo de equipo prioriza S7?",
+  "p": "En un enfoque adaptativo, ¿qué tipo de equipo se prioriza?",
   "o": [
    "Especialistas puros asignados según el cronograma inicial",
    "Equipos centralizados con decisiones descendentes",
@@ -1279,7 +1191,7 @@
   "id": "S7-E54",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En un proyecto con varias subcontratas y una empresa socia, ¿qué recomienda S7 para el equipo?",
+  "p": "En un proyecto con varias subcontratas y una empresa socia, ¿qué conviene hacer con el equipo?",
   "o": [
    "Formalizar roles y crear una mentalidad de «un solo equipo»",
    "Mantener separadas las organizaciones para evitar conflictos",
@@ -1290,7 +1202,7 @@
   "e": "Integración multiorganizacional (S7): en alianzas o subcontratas hace falta un esfuerzo inicial para alinear roles formalizados y construir una mentalidad de «un solo equipo».",
   "w": [
    "",
-   "S7 pide integrar, no separar.",
+   "Hay que integrar a las organizaciones, no separarlas.",
    "Eso deja vacíos y duplicidades de responsabilidad.",
    "Los externos también forman parte del equipo."
   ],
@@ -1301,7 +1213,7 @@
   "id": "S7-E55",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En un enfoque predictivo, ¿cómo se gestionan los requisitos de recursos según S7?",
+  "p": "En un enfoque predictivo, ¿cómo se gestionan los requisitos de recursos?",
   "o": [
    "Los decide en cada iteración el equipo autoorganizado",
    "Se van improvisando según surgen durante la ejecución",
@@ -1314,7 +1226,7 @@
    "Eso es adaptativo.",
    "No es así en ningún enfoque.",
    "",
-   "S7 no dice eso."
+   "Los requisitos los define el propio proyecto al inicio."
   ],
   "t": "Predictivo = todo definido al inicio y atado al cronograma.",
   "s": "Presentación S7 de la profesora, diap. 19"
@@ -1323,7 +1235,7 @@
   "id": "S7-E56",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Dos ingenieros discuten y cada uno intenta imponer su postura técnica. Según S7, ¿qué dinámica es y cuál conviene fomentar?",
+  "p": "Dos ingenieros discuten y cada uno intenta imponer su postura técnica. ¿Qué dinámica es y cuál conviene fomentar?",
   "o": [
    "Es un debate (ganar-perder); conviene pasar al diálogo",
    "Es un diálogo (ganar-ganar), que conviene mantener tal cual",
@@ -1345,7 +1257,7 @@
   "id": "S7-E57",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué implican la transparencia y la integridad del PM?",
+  "p": "¿Qué implican la transparencia y la integridad del director en la cultura del equipo?",
   "o": [
    "Ocultar los riesgos al equipo para que no se desmotive",
    "Explicar sus decisiones, avisar pronto de riesgos y admitir sesgos",
@@ -1358,7 +1270,7 @@
    "Es lo contrario: hay que comunicar los riesgos pronto.",
    "",
    "Eso no es transparencia.",
-   "Delegar no es lo que S7 entiende por transparencia."
+   "Delegar la comunicación no es ser transparente."
   ],
   "t": "Transparencia = mostrar el porqué, los riesgos y los sesgos.",
   "s": "Presentación S7 de la profesora, diap. 20"
@@ -1367,7 +1279,7 @@
   "id": "S7-E58",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿para qué sirve identificar los sesgos conscientes e inconscientes del equipo?",
+  "p": "¿Para qué sirve identificar los sesgos conscientes e inconscientes del equipo?",
   "o": [
    "Para excluir del equipo a quien tenga sesgos",
    "Para calcular la reserva de contingencia",
@@ -1386,32 +1298,10 @@
   "s": "Presentación S7 de la profesora, diap. 19"
  },
  {
-  "id": "S7-E59",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "¿Para qué recomienda S7 celebrar las «victorias rápidas» (quick wins)?",
-  "o": [
-   "Para mantener la motivación del equipo",
-   "Para justificar la liberación de las reservas",
-   "Para cerrar antes los paquetes de trabajo",
-   "Para sustituir las evaluaciones de desempeño"
-  ],
-  "c": 0,
-  "e": "Celebración del éxito (S7): reconocer quick wins y progresos continuos para mantener la motivación.",
-  "w": [
-   "",
-   "No es un mecanismo financiero.",
-   "Celebrar no adelanta el cierre.",
-   "No las sustituye."
-  ],
-  "t": "Quick wins → motivación.",
-  "s": "Presentación S7 de la profesora, diap. 20"
- },
- {
   "id": "S7-E60",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué es la «renuncia silenciosa» (quiet quitting) según S7?",
+  "p": "¿Qué es la «renuncia silenciosa» (quiet quitting)?",
   "o": [
    "Abandonar el proyecto sin avisar al director ni a RRHH",
    "Rechazar el teletrabajo por falta de herramientas",
@@ -1430,32 +1320,10 @@
   "s": "Presentación S7 de la profesora, diap. 21"
  },
  {
-  "id": "S7-E61",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "¿Qué medida propone S7 para prevenir el burnout en el equipo?",
-  "o": [
-   "Aumentar las horas extra antes de cada hito",
-   "Flexibilidad horaria, conciliación y salud mental",
-   "Medir la productividad por líneas de código",
-   "Centralizar todas las decisiones del equipo en el director"
-  ],
-  "c": 1,
-  "e": "Bienestar y prevención del burnout (S7): mitigar la renuncia silenciosa y promover la salud mental, la flexibilidad horaria y la conciliación laboral.",
-  "w": [
-   "Es justo lo que provoca burnout.",
-   "",
-   "No previene el burnout.",
-   "Va contra la autonomía del equipo."
-  ],
-  "t": "Bienestar = flexibilidad + conciliación + salud mental.",
-  "s": "Presentación S7 de la profesora, diap. 21"
- },
- {
   "id": "S7-E62",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿cómo debe ajustarse el nivel de supervisión de los recursos?",
+  "p": "¿Cómo debe ajustarse el nivel de supervisión de los recursos (gobernanza y madurez)?",
   "o": [
    "Siempre al máximo, para evitar cualquier desviación",
    "Igual para todos los equipos de la organización",
@@ -1465,7 +1333,7 @@
   "c": 2,
   "e": "Gobernanza y madurez (S7): ajustar el nivel de supervisión a la madurez técnica del equipo y a la estructura organizativa (centralizada o distribuida).",
   "w": [
-   "S7 pide ajustarla, no maximizarla.",
+   "La supervisión se ajusta a la madurez, no se maximiza.",
    "No es uniforme: depende de cada equipo.",
    "",
    "La reserva de gestión no tiene que ver con esto."
@@ -1477,7 +1345,7 @@
   "id": "S7-E63",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿con qué proceso debe coordinarse estrechamente la estimación de recursos?",
+  "p": "¿Con qué proceso debe coordinarse estrechamente la estimación de recursos?",
   "o": [
    "Con Identificar a los interesados, para elaborar su registro",
    "Con Estimar los costes, para que el presupuesto sea viable",
@@ -1487,41 +1355,19 @@
   "c": 1,
   "e": "S7, diap. 22: la estimación de recursos debe coordinarse directamente con la estimación de costes para asegurar la viabilidad financiera del presupuesto.",
   "w": [
-   "No es la coordinación que destaca S7.",
+   "Lo que necesitas cuesta dinero: la coordinación clave es con los costes.",
    "",
    "Liberar recursos es tarea de Monitorear.",
-   "No es la coordinación que destaca S7."
+   "Lo que necesitas cuesta dinero: la coordinación clave es con los costes."
   ],
   "t": "Recursos y costes se estiman juntos: lo que necesitas cuesta dinero.",
-  "s": "Presentación S7 de la profesora, diap. 22"
- },
- {
-  "id": "S7-E64",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según S7, ¿cuál es la responsabilidad central del director como integrador en el dominio de Recursos?",
-  "o": [
-   "Articular procesos, conocimientos y personas hacia los objetivos",
-   "Ejecutar personalmente las tareas técnicas más críticas del proyecto",
-   "Aprobar el presupuesto final de todo el portafolio",
-   "Fijar los salarios de todo el equipo de proyecto"
-  ],
-  "c": 0,
-  "e": "S7, diap. 22: la responsabilidad central del director como integrador es articular procesos, conocimientos y personas para mantener al equipo enfocado en los objetivos globales del proyecto.",
-  "w": [
-   "",
-   "Integrar no es hacer el trabajo técnico.",
-   "Eso queda fuera del proyecto.",
-   "No es su función según S7."
-  ],
-  "t": "PM integrador = une procesos, conocimiento y personas.",
   "s": "Presentación S7 de la profesora, diap. 22"
  },
  {
   "id": "S7-E65",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué efecto tiene que varios proyectos de una organización compitan por los mismos recursos críticos?",
+  "p": "¿Qué efecto tiene que varios proyectos de una organización compitan por los mismos recursos críticos?",
   "o": [
    "Aumentan los riesgos globales de coste y de plazo",
    "Bajan los costes, porque los recursos se comparten",
@@ -1532,9 +1378,9 @@
   "e": "Competencia de recursos (S7): los proyectos de una misma organización suelen competir por los mismos recursos críticos, lo que aumenta los riesgos globales de coste y tiempo.",
   "w": [
    "",
-   "S7 dice que el riesgo aumenta, no que el coste baje.",
+   "Al competir, los recursos escasean: aumenta el riesgo, no baja el coste.",
    "Las reservas no eliminan la competencia por los recursos.",
-   "S7 no plantea ese efecto."
+   "Competir por recursos escasos genera esperas y conflictos, no más calidad."
   ],
   "t": "Compartir recursos críticos = más riesgo, no más ahorro.",
   "s": "Presentación S7 de la profesora, diap. 22"
@@ -1543,7 +1389,7 @@
   "id": "S7-E66",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿cuál es el principio clave de la medición financiera de un proyecto?",
+  "p": "¿Cuál es el principio clave de la medición financiera de un proyecto?",
   "o": [
    "Recoger el máximo de datos contables posible",
    "Cumplir con los requisitos fiscales del ejercicio",
@@ -1553,8 +1399,8 @@
   "c": 2,
   "e": "Principio clave (S7): el valor de la medición financiera está en facilitar decisiones informadas, no en la mera recolección de datos.",
   "w": [
-   "S7 dice precisamente que no se trata de acumular datos.",
-   "No es el principio que destaca S7.",
+   "Acumular datos sin decidir no aporta valor.",
+   "La medición del proyecto busca decidir, no cumplir con Hacienda.",
    "",
    "Medir sirve para decidir, también cuando hay desviaciones."
   ],
@@ -1565,7 +1411,7 @@
   "id": "S7-E67",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un PM usa las métricas financieras para pronosticar posibles sobrecostes y ahorros futuros. ¿Qué objetivo de las métricas, según S7, cubre?",
+  "p": "Un PM usa las métricas financieras para pronosticar posibles sobrecostes y ahorros futuros. ¿Qué objetivo de las métricas cubre?",
   "o": [
    "Transparencia y gobernanza",
    "Evaluación y seguimiento",
@@ -1587,7 +1433,7 @@
   "id": "S7-E68",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué persigue el dominio de desempeño de las Finanzas según S7?",
+  "p": "¿Qué persigue el dominio de desempeño de las Finanzas?",
   "o": [
    "Reducir el coste al mínimo aunque baje el valor entregado",
    "Asignar y usar el dinero de forma que se optimice el valor",
@@ -1597,9 +1443,9 @@
   "c": 1,
   "e": "Finanzas (S7): gestión de procesos y herramientas para asignar y usar recursos monetarios, internos y externos, con el fin de optimizar el valor generado para la organización.",
   "w": [
-   "S7 dice que maximizar valor va más allá de recortar costes.",
+   "Maximizar valor va más allá de recortar costes.",
    "",
-   "S7 incluye recursos monetarios internos y externos.",
+   "El dominio incluye recursos monetarios internos y externos.",
    "Es contabilidad, no el propósito del dominio."
   ],
   "t": "Finanzas = optimizar valor, no solo gastar poco.",
@@ -1609,7 +1455,7 @@
   "id": "S7-E69",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿cuál de estos es un indicador de valor tangible?",
+  "p": "¿Cuál de estos es un indicador de valor tangible?",
   "o": [
    "La satisfacción del cliente",
    "La capacidad de innovación",
@@ -1631,7 +1477,7 @@
   "id": "S7-E70",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un proyecto de migración de base de datos no aporta beneficio directo por sí solo, pero es imprescindible para un programa futuro. ¿Qué tipo de valor aporta según S7?",
+  "p": "Un proyecto de migración de base de datos no aporta beneficio directo por sí solo, pero es imprescindible para un programa futuro. ¿Qué tipo de valor aporta?",
   "o": [
    "Valor tangible inmediato",
    "Ningún valor, así que habría que cancelarlo",
@@ -1653,7 +1499,7 @@
   "id": "S7-E71",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué implica maximizar el valor según S7?",
+  "p": "¿Qué implica maximizar el valor de un proyecto?",
   "o": [
    "Reducir los costes por encima de cualquier otro criterio del negocio",
    "Maximizar el ROI aunque se ignore el impacto social",
@@ -1663,7 +1509,7 @@
   "c": 2,
   "e": "Maximización del valor (S7): supera la simple contención o reducción de costes y busca alinear cada decisión con la estrategia global y los indicadores de éxito de la organización.",
   "w": [
-   "S7 dice que maximizar valor supera la reducción de costes.",
+   "Maximizar valor va más allá de recortar costes.",
    "El valor también incluye lo intangible.",
    "",
    "Gastar no es crear valor."
@@ -1675,7 +1521,7 @@
   "id": "S7-E72",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuál de estos gastos es OpEx según S7?",
+  "p": "¿Cuál de estos gastos es OpEx?",
   "o": [
    "La compra de servidores para el CPD",
    "La adquisición de las licencias principales",
@@ -1686,7 +1532,7 @@
   "e": "CapEx: inversiones en activos duraderos (propiedades, infraestructura, hardware, licencias principales). OpEx: gastos del día a día (salarios, Cloud/SaaS, mantenimiento, alquileres).",
   "w": [
    "Es CapEx: un activo duradero.",
-   "S7 pone las licencias principales como CapEx.",
+   "Las licencias principales son un activo duradero: CapEx.",
    "",
    "Es CapEx: infraestructura duradera."
   ],
@@ -1705,7 +1551,7 @@
    "Reserva de contingencia del proyecto"
   ],
   "c": 2,
-  "e": "El hardware y la infraestructura duraderos son CapEx. La memoria de P02 añade que el CapEx se amortiza en varios ejercicios y el OpEx se imputa al ejercicio en curso.",
+  "e": "El hardware y la infraestructura duraderos son CapEx: se amortizan a lo largo de varios ejercicios. El OpEx (salarios, SaaS, mantenimiento, alquileres) se imputa al ejercicio en curso.",
   "w": [
    "El hardware duradero es CapEx.",
    "Las reservas no son una clasificación del gasto.",
@@ -1719,7 +1565,7 @@
   "id": "S7-E74",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿En qué se diferencia el modelo presupuestario ágil del tradicional según S7?",
+  "p": "¿En qué se diferencia el modelo presupuestario ágil del tradicional?",
   "o": [
    "Se cierra por ejercicio fiscal, sin posibilidad de traspasar fondos",
    "Se fija una única vez al inicio y no se revisa nunca",
@@ -1741,7 +1587,7 @@
   "id": "S7-E75",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué es la línea base de costes según S7?",
+  "p": "¿Qué es la línea base de costes?",
   "o": [
    "El presupuesto aprobado por fases temporales, sin reserva de gestión",
    "Todas las estimaciones más las dos reservas (contingencia y gestión)",
@@ -1776,7 +1622,7 @@
    "La contingencia es para riesgos identificados.",
    "La línea base no tiene fondos para lo no identificado.",
    "",
-   "No es un mecanismo de S7."
+   "Los imprevistos del proyecto se cubren con la reserva de gestión."
   ],
   "t": "No identificado → reserva de gestión → alta dirección.",
   "s": "Presentación S7 de la profesora, diap. 26"
@@ -1785,7 +1631,7 @@
   "id": "S7-E77",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cómo se compone el presupuesto del proyecto según S7?",
+  "p": "¿Cómo se compone el presupuesto del proyecto?",
   "o": [
    "Estimaciones de los paquetes + contingencia + reserva de gestión",
    "Estimaciones de los paquetes + contingencia, sin la reserva de gestión",
@@ -1829,7 +1675,7 @@
   "id": "S7-E79",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según la memoria de P02, ¿cómo se dimensiona numéricamente la reserva de contingencia?",
+  "p": "¿Con qué técnica se dimensiona numéricamente la reserva de contingencia a partir de los riesgos identificados?",
   "o": [
    "Aplicando siempre un 10 % fijo sobre el presupuesto",
    "Con el índice CPI del último mes de ejecución",
@@ -1837,9 +1683,9 @@
    "Con el valor monetario esperado (EMV = P × I)"
   ],
   "c": 3,
-  "e": "La memoria indica que el análisis de exposición al riesgo (EMV = probabilidad × impacto) da la base numérica para dimensionar la reserva de contingencia: se suma el EMV de los riesgos identificados.",
+  "e": "El valor monetario esperado (EMV = probabilidad × impacto) de cada riesgo identificado da la base numérica de la reserva de contingencia: se suman los EMV. Por eso la contingencia cubre los known-unknowns.",
   "w": [
-   "La memoria no usa un porcentaje fijo.",
+   "La contingencia se calcula a partir de los riesgos, no con un porcentaje fijo.",
    "El CPI mide eficiencia de costes, no tamaño de reservas.",
    "La TIR mide rentabilidad, no exposición al riesgo.",
    ""
@@ -1851,7 +1697,7 @@
   "id": "S7-E80",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Cuándo puede modificarse la línea base de costes según S7?",
+  "p": "¿Cuándo puede modificarse la línea base de costes?",
   "o": [
    "Solo mediante el control formal de cambios",
    "Cada vez que el director detecta una desviación",
@@ -1873,7 +1719,7 @@
   "id": "S7-E81",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué advierte el coste del ciclo de vida (Life Cycle Costing) según S7?",
+  "p": "¿Qué advierte el coste del ciclo de vida (Life Cycle Costing)?",
   "o": [
    "Que el coste solo debe medirse al pagar la factura",
    "Que el diseño condiciona los costes futuros de operación",
@@ -1886,7 +1732,7 @@
    "Eso confunde con los puntos de medición del coste.",
    "",
    "El ágil aplana la curva de gasto.",
-   "S7 dice que las decisiones del proyecto sí afectan a la operación."
+   "Las decisiones del proyecto sí condicionan la operación posterior."
   ],
   "t": "Ahorro en el proyecto ≠ ahorro en el ciclo de vida.",
   "s": "Presentación S7 de la profesora, diap. 28"
@@ -1895,7 +1741,7 @@
   "id": "S7-E82",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿en qué momento puede registrarse un coste?",
+  "p": "¿En qué momento puede registrarse un coste?",
   "o": [
    "Solo cuando se contabiliza la factura real, sin ninguna excepción",
    "Solo al cierre del proyecto, cuando ya se conocen todos los costes",
@@ -1905,7 +1751,7 @@
   "c": 3,
   "e": "Puntos de medición del coste (S7): según el interesado, el coste puede registrarse en el compromiso de gasto, la emisión de la orden de compra, la entrega del bien o la contabilización real de la factura.",
   "w": [
-   "S7 da varios puntos de medición.",
+   "Hay varios puntos de medición, no solo la factura.",
    "Se mide durante el proyecto, no solo al final.",
    "Aprobar la línea base no es un punto de registro del coste.",
    ""
@@ -1917,7 +1763,7 @@
   "id": "S7-E83",
   "tema": "S7",
   "fuente": "practica",
-  "p": "El proveedor da por incurrido un coste al recibir la orden de compra y contabilidad al registrar la factura. Según S7, ¿qué explica esta diferencia?",
+  "p": "El proveedor da por incurrido un coste al recibir la orden de compra y contabilidad al registrar la factura. ¿Qué explica esta diferencia?",
   "o": [
    "Que uno de los dos está midiendo mal el coste",
    "Que hay un error en la línea base de costes",
@@ -1961,7 +1807,7 @@
   "id": "S7-E85",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Con qué frecuencia se realiza Estimar los costes según S7?",
+  "p": "¿Con qué frecuencia se realiza Estimar los costes?",
   "o": [
    "Una única vez, al inicio del proyecto",
    "Solo al cierre, con los costes ya reales",
@@ -1971,7 +1817,7 @@
   "c": 3,
   "e": "Frecuencias en S7: Planificar la gestión financiera (al inicio o en hitos prefijados), Estimar los costes (periódica o iterativa), Desarrollar el presupuesto (al inicio o en puntos de control) y Monitorear y controlar (continuo).",
   "w": [
-   "S7 dice que es periódico o iterativo.",
+   "Estimar costes se repite de forma periódica o iterativa.",
    "Estimar es anticiparse, no registrar costes reales.",
    "No depende de los hitos del patrocinador.",
    ""
@@ -1983,7 +1829,7 @@
   "id": "S7-E86",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué proceso de Finanzas se ejecuta de forma continua durante todo el ciclo de vida?",
+  "p": "¿Qué proceso de Finanzas se ejecuta de forma continua durante todo el ciclo de vida?",
   "o": [
    "Desarrollar el presupuesto",
    "Planificar la gestión financiera del proyecto",
@@ -2005,7 +1851,7 @@
   "id": "S7-E87",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En la figura de procesos de Finanzas de S7, ¿cómo se reparten los cuatro procesos entre los grupos de procesos?",
+  "p": "¿Cómo se reparten los cuatro procesos de Finanzas entre los grupos de procesos?",
   "o": [
    "Dos en Planificación, uno en Ejecución y uno en Monitoreo y control",
    "Uno en Inicio, dos en Planificación y uno en Cierre",
@@ -2013,7 +1859,7 @@
    "Tres en Planificación y uno en Monitoreo y control"
   ],
   "c": 3,
-  "e": "Figura de la diap. 29: Planificación = Planificar la gestión financiera, Estimar los costes y Desarrollar el presupuesto. Monitoreo y control = Monitorear y controlar las finanzas. Inicio, Ejecución y Cierre quedan vacíos.",
+  "e": "Planificación: Planificar la gestión financiera, Estimar los costes y Desarrollar el presupuesto. Monitoreo y control: Monitorear y controlar las finanzas. Inicio, Ejecución y Cierre no tienen procesos de Finanzas.",
   "w": [
    "No hay ningún proceso de Finanzas en Ejecución.",
    "Inicio y Cierre aparecen vacíos en la figura.",
@@ -2027,7 +1873,7 @@
   "id": "S7-E88",
   "tema": "S7",
   "fuente": "practica",
-  "p": "¿Qué incluye Monitorear y controlar las finanzas según S7?",
+  "p": "¿Qué incluye Monitorear y controlar las finanzas?",
   "o": [
    "La agregación de las estimaciones para crear la línea base de costes",
    "La definición de cómo se estimarán los costes",
@@ -2049,7 +1895,7 @@
   "id": "S7-E89",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En un enfoque ágil o iterativo, ¿qué pasa con la curva de gasto según S7?",
+  "p": "En un enfoque ágil o iterativo, ¿qué pasa con la curva de gasto?",
   "o": [
    "Se aplana y exige evaluar la financiación de forma continua",
    "Se concentra en las primeras iteraciones del proyecto",
@@ -2060,7 +1906,7 @@
   "e": "S7: en enfoques iterativos o ágiles la curva de gasto se aplana; requiere un presupuesto distribuido en el tiempo y una evaluación de la financiación continua (continuous funding assessment).",
   "w": [
    "",
-   "Es la trampa de la pregunta oficial S7-5: el gasto se aplana.",
+   "Es la trampa de la pregunta oficial S7-5: en iterativo el gasto se aplana.",
    "En iterativo se entrega y se gasta de forma repartida.",
    "El ágil también necesita presupuesto, distribuido en el tiempo."
   ],
@@ -2071,7 +1917,7 @@
   "id": "S7-E90",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según S7, ¿qué criterio guía la elección entre un contrato de precio fijo y uno de tiempo y materiales?",
+  "p": "¿Qué criterio guía la elección entre un contrato de precio fijo y uno de tiempo y materiales?",
   "o": [
    "La distribución del riesgo y la certeza de coste deseada",
    "El número de interesados que tiene el proyecto",
@@ -2082,9 +1928,9 @@
   "e": "Estrategia de adquisiciones (S7): decisiones de make-or-buy y selección del tipo de contrato (precio fijo frente a tiempo y materiales) según la distribución del riesgo y la certeza de costes deseada.",
   "w": [
    "",
-   "No es el criterio de S7.",
-   "No es el criterio de S7.",
-   "No es el criterio de S7."
+   "El número de interesados no reparte el riesgo económico del contrato.",
+   "La duración de los sprints no reparte el riesgo económico del contrato.",
+   "La utilización del personal no reparte el riesgo económico del contrato."
   ],
   "t": "El tipo de contrato reparte el riesgo entre comprador y proveedor.",
   "s": "Presentación S7 de la profesora, diap. 31"
@@ -2093,7 +1939,7 @@
   "id": "S7-E91",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Un proyecto de banca debe adaptar sus procesos financieros. Según S7, ¿qué exige un sector muy regulado?",
+  "p": "Un proyecto de banca debe adaptar sus procesos financieros. ¿Qué exige un sector muy regulado?",
   "o": [
    "Controles más estrictos sobre integridad y seguridad de datos",
    "Eliminar las reservas para no tener capital inmovilizado",
@@ -2104,9 +1950,9 @@
   "e": "Naturaleza del producto o sector (S7): las industrias muy reguladas (banca, farmacéutica) exigen controles más estrictos para garantizar la integridad y seguridad de los datos.",
   "w": [
    "",
-   "No lo plantea S7.",
-   "No lo plantea S7.",
-   "No lo plantea S7."
+   "En un sector regulado se refuerzan los controles, no se eliminan reservas.",
+   "El sector regulado pide más control, no un modelo presupuestario concreto.",
+   "La línea base sigue siendo la referencia; lo que aumenta es el control."
   ],
   "t": "Regulado → más control.",
   "s": "Presentación S7 de la profesora, diap. 31"
@@ -2115,7 +1961,7 @@
   "id": "S7-E92",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Decidir si desarrollar un módulo internamente o comprárselo a un proveedor es, según S7, una decisión de…",
+  "p": "Decidir si desarrollar un módulo internamente o comprárselo a un proveedor es una decisión de…",
   "o": [
    "Valor diferido de un programa futuro",
    "Liberación de la reserva de gestión del proyecto",
@@ -2137,7 +1983,7 @@
   "id": "S7-E93",
   "tema": "S7",
   "fuente": "practica",
-  "p": "Según la memoria de P02, en un enfoque ágil, ¿qué se fija en cada iteración y qué varía?",
+  "p": "En un enfoque ágil (timeboxing), ¿qué se fija en cada iteración y qué varía?",
   "o": [
    "Coste y tiempo fijos; lo que varía es el alcance",
    "Alcance fijo; el coste y el tiempo varían según el avance",
@@ -2145,7 +1991,7 @@
    "Nada fijo: todo se decide en cada retrospectiva del equipo"
   ],
   "c": 0,
-  "e": "La memoria de P02 compara enfoques: en ágil el presupuesto se fija por capacidad y periodo (timeboxing). Coste y tiempo son fijos por iteración y el alcance varía (triángulo invertido).",
+  "e": "En ágil el presupuesto se fija por capacidad y periodo (timeboxing): coste y tiempo son fijos en cada iteración y el alcance varía (triángulo invertido). En predictivo es al revés: alcance fijo y coste y tiempo estimados.",
   "w": [
    "",
    "Eso es el planteamiento predictivo.",
@@ -2159,7 +2005,7 @@
   "id": "S7-E94",
   "tema": "S7",
   "fuente": "practica",
-  "p": "En Monitorear y controlar las finanzas, un proyecto tiene EV = 48.000 € y AC = 50.000 €. ¿Qué indica el CPI?",
+  "p": "Un proyecto tiene EV = 48.000 € y AC = 50.000 €. ¿Qué indica el CPI?",
   "o": [
    "CPI ≈ 1,04: el proyecto va por debajo del presupuesto",
    "CPI = 0,96: se gasta más de lo que se gana",
@@ -2167,7 +2013,7 @@
    "CPI = 0,96: se gasta menos de lo planificado"
   ],
   "c": 1,
-  "e": "CPI = EV / AC = 48.000 / 50.000 = 0,96. Si CPI < 1, cada euro gastado produce menos de un euro de valor: hay sobrecoste. La memoria de P02 incluye el CPI en las técnicas de valor ganado (EVM). Errata en la memoria: al hablar del CPI ≈ 0,96 escribe «avance al 90 % del ritmo previsto», que es del SPI.",
+  "e": "CPI = EV / AC = 48.000 / 50.000 = 0,96. Si CPI < 1, cada euro gastado produce menos de un euro de valor: hay sobrecoste. No confundir con el SPI (EV/PV), que mide el plazo.",
   "w": [
    "Está invertido: CPI = EV/AC, no AC/EV.",
    "",
@@ -2189,7 +2035,7 @@
    "CV = PV − EV"
   ],
   "c": 2,
-  "e": "Memoria de P02: CV = EV − AC (negativo = sobrecoste) y SV = EV − PV (negativo = retraso). Ambas comparan contra el valor ganado (EV).",
+  "e": "CV = EV − AC (negativo = sobrecoste) y SV = EV − PV (negativo = retraso). Ambas parten del valor ganado (EV).",
   "w": [
    "Esa es la variación del cronograma (SV).",
    "No es ninguna fórmula del EVM.",
@@ -2211,7 +2057,7 @@
    "200.000 €"
   ],
   "c": 0,
-  "e": "EAC = BAC / CPI = 200.000 / 0,80 = 250.000 €. Es la fórmula que usa la memoria de P02. Errata en la memoria: escribe «EAC = BAC/CPI = 294.000 € ≈ 306.250 €» sin el divisor; el cálculo correcto es 294.000 / 0,96 ≈ 306.250 €.",
+  "e": "EAC = BAC / CPI = 200.000 / 0,80 = 250.000 €. Si el CPI es menor que 1, la estimación al finalizar supera el presupuesto (BAC).",
   "w": [
    "",
    "Has multiplicado BAC × CPI en vez de dividir.",
@@ -2220,49 +2066,5 @@
   ],
   "t": "Con CPI < 1 la EAC sale MAYOR que el BAC: se divide, no se multiplica.",
   "s": "Memoria P02 (S7), §1.1.2.4 (pág. 8)"
- },
- {
-  "id": "S7-E97",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, ¿qué salidas produce Desarrollar el presupuesto?",
-  "o": [
-   "Las estimaciones de costos y la base de las estimaciones",
-   "La línea base de costos y los requisitos de financiamiento",
-   "El plan de gestión financiera y la estrategia de financiamiento",
-   "La información de desempeño y los pronósticos de costos"
-  ],
-  "c": 1,
-  "e": "Tablas de la memoria: Planificar → plan de gestión financiera y estrategia de financiamiento; Estimar → estimaciones de costos y base de las estimaciones; Desarrollar el presupuesto → línea base de costos y requisitos de financiamiento; Monitorear → información de desempeño, pronósticos y solicitudes de cambio.",
-  "w": [
-   "Son salidas de Estimar los costos.",
-   "",
-   "Son salidas de Planificar la gestión financiera.",
-   "Son salidas de Monitorear y controlar las finanzas."
-  ],
-  "t": "Línea base de costos = salida de Desarrollar el presupuesto.",
-  "s": "Memoria P02 (S7), §1.1.2 (pág. 4–7)"
- },
- {
-  "id": "S7-E98",
-  "tema": "S7",
-  "fuente": "practica",
-  "p": "Según la memoria de P02, ¿cuáles son técnicas de Estimar los costos?",
-  "o": [
-   "Valor ganado (EVM) y pronósticos (EAC, ETC)",
-   "Agregación de costes y conciliación del límite de financiamiento",
-   "Estimación análoga, paramétrica, ascendente y multipunto",
-   "Coubicación, equipos virtuales y reconocimiento del equipo"
-  ],
-  "c": 2,
-  "e": "La memoria lista para Estimar los costos: juicio de expertos, estimación análoga, paramétrica, ascendente y multipunto, análisis de datos (alternativas, reservas, coste de la calidad), PMIS y toma de decisiones.",
-  "w": [
-   "Son técnicas de Monitorear y controlar las finanzas.",
-   "Son técnicas de Desarrollar el presupuesto.",
-   "",
-   "Son técnicas de Liderar al equipo."
-  ],
-  "t": "Análoga/paramétrica/ascendente/tres puntos = estimar (en costes y en recursos).",
-  "s": "Memoria P02 (S7), §1.1.2.2 (pág. 5)"
  }
 ]

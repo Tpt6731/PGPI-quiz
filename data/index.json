@@ -34,6 +34,11 @@
       "id": "S7",
       "nombre": "Recursos y Finanzas",
       "archivo": "S7.json"
+    },
+    {
+      "id": "S8",
+      "nombre": "Riesgos y Ciberseguridad",
+      "archivo": "S8.json"
     }
   ]
 }

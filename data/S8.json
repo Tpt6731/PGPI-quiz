@@ -1,0 +1,1850 @@
+[
+ {
+  "id": "P09-1",
+  "tema": "S8",
+  "fuente": "oficial",
+  "p": "Durante el despliegue del agente EDR en los puestos de los juzgados, el agente empieza a bloquear una aplicación procesal en varias sedes. Este riesgo estaba identificado en el registro, tenía un propietario asignado y un plan de contingencia aprobado: volver al modo de solo detección en las sedes afectadas. ¿Qué debe hacer primero el director del proyecto?",
+  "o": [
+   "Pedir al propietario del riesgo que ejecute el plan de contingencia acordado.",
+   "Escalar el problema al patrocinador para que decida cómo actuar.",
+   "Repetir el análisis cualitativo del riesgo para recalcular su prioridad.",
+   "Abrir una solicitud de cambio para sustituir el producto EDR."
+  ],
+  "c": 0,
+  "e": "El disparador se ha activado y la respuesta ya estaba planificada, así que corresponde a Implementar la respuesta a los riesgos (Implement Risk Responses): el propietario ejecuta lo acordado. Una respuesta que existe en el documento pero que nadie ejecuta no es una respuesta. Después, en Monitorear los riesgos, se actualiza el registro y se recogen las lecciones aprendidas.",
+  "w": [
+   "",
+   "Retrasa una decisión que ya estaba tomada y no supera la autoridad del PM.",
+   "Vuelve a analizar un riesgo que ya se está materializando.",
+   "Es desproporcionada antes de aplicar la contingencia prevista."
+  ],
+  "t": "Si el plan ya existe y salta el disparador, se ejecuta: no se reanaliza ni se escala.",
+  "s": "Batería P09 (S8), pregunta 1"
+ },
+ {
+  "id": "P09-2",
+  "tema": "S8",
+  "fuente": "oficial",
+  "p": "El director de un subproyecto de ciberseguridad comprueba que otro subproyecto del mismo portafolio, del que depende la red sobre la que debe trabajar, va con varias semanas de retraso. Si no se resuelve, no podrá cumplir su hito. El director no tiene autoridad ni recursos sobre el trabajo del otro subproyecto. ¿Qué estrategia es la más adecuada?",
+  "o": [
+   "Mitigar el riesgo reasignando temporalmente a su propio equipo al otro subproyecto.",
+   "Aceptar el riesgo y reservar parte de su contingencia por si se materializa.",
+   "Escalar el riesgo a la PMO del portafolio, que tiene autoridad sobre ambos subproyectos.",
+   "Transferir el riesgo al otro subproyecto mediante una penalización interna."
+  ],
+  "c": 2,
+  "e": "El PMBOK 8 incluye Escalar entre las estrategias frente a amenazas cuando el riesgo está fuera del alcance del proyecto o la respuesta supera la autoridad del director. El riesgo pasa a gestionarse en el nivel del portafolio, que puede repriorizar el otro subproyecto. Escalar no es desentenderse: el director sigue vigilando el riesgo y adapta su plan mientras tanto.",
+  "w": [
+   "Compromete el alcance propio y usa recursos sin autorización.",
+   "Solo cubre el coste, pero no evita el retraso del hito.",
+   "",
+   "No es una transferencia real: el impacto sigue recayendo sobre el propio proyecto."
+  ],
+  "t": "Fuera de tu autoridad → escalar, no mitigar con recursos que no son tuyos.",
+  "s": "Batería P09 (S8), pregunta 2"
+ },
+ {
+  "id": "P09-3",
+  "tema": "S8",
+  "fuente": "oficial",
+  "p": "Para reducir el riesgo de accesos no autorizados, el equipo planifica activar la autenticación multifactor a todos los usuarios judiciales en una sola semana. Al revisar esta respuesta, un técnico advierte que puede provocar bloqueos masivos de cuentas y saturar el soporte. ¿Cómo debe tratarse este nuevo riesgo?",
+  "o": [
+   "Como riesgo residual: se acepta sin más análisis.",
+   "Como incidencia: se descarta la respuesta original y se busca otra estrategia.",
+   "Como riesgo emergente: se cubre directamente con la reserva de gestión.",
+   "Como riesgo secundario: se registra, se analiza y se planifica su propia respuesta."
+  ],
+  "c": 3,
+  "e": "Un riesgo que surge como consecuencia directa de aplicar una respuesta es un riesgo secundario. Debe identificarse, analizarse y tener su propia respuesta (p. ej., un despliegue escalonado con un procedimiento de desbloqueo). Las respuestas no son decisiones aisladas: cambian el plan y pueden generar riesgos nuevos.",
+  "w": [
+   "Confunde el secundario con el residual, que es lo que queda del riesgo original tras responder.",
+   "Todavía no ha ocurrido nada, así que no es una incidencia.",
+   "El riesgo ya está identificado, por lo que no es un desconocido-desconocido.",
+   ""
+  ],
+  "t": "Residual = lo que queda del original; secundario = lo que provoca la respuesta.",
+  "s": "Batería P09 (S8), pregunta 3"
+ },
+ {
+  "id": "P09-4",
+  "tema": "S8",
+  "fuente": "oficial",
+  "p": "A mitad del proyecto, un cambio normativo que nadie había previsto obliga a repetir el bastionado de cientos de equipos ya configurados. Este riesgo no figuraba en el registro. ¿Con qué fondos se cubre el trabajo adicional?",
+  "o": [
+   "Con la reserva de contingencia, que gestiona directamente el director del proyecto.",
+   "Con la reserva de gestión, previa autorización mediante el control de cambios.",
+   "Con el presupuesto de otro subproyecto del portafolio que use esos equipos.",
+   "Reduciendo el alcance del proyecto para compensar el sobrecoste."
+  ],
+  "c": 1,
+  "e": "Es un riesgo desconocido-desconocido (unknown-unknown). La reserva de contingencia forma parte de la línea base de coste y cubre los riesgos identificados en el registro. La reserva de gestión queda fuera de la línea base, cubre lo no identificado y su uso requiere la autorización del patrocinador o de la PMO a través del control de cambios.",
+  "w": [
+   "Usaría una reserva calculada para otros riesgos que sí estaban identificados.",
+   "",
+   "Mezcla presupuestos de proyectos distintos sin autorización.",
+   "Recorta el valor del proyecto sin pasar por el control de cambios."
+  ],
+  "t": "No estaba en el registro → reserva de gestión, con autorización.",
+  "s": "Batería P09 (S8), pregunta 4"
+ },
+ {
+  "id": "P09-5",
+  "tema": "S8",
+  "fuente": "oficial",
+  "p": "Al valorar un sistema de información judicial según el Esquema Nacional de Seguridad, el equipo obtiene un nivel ALTO en Trazabilidad y un nivel MEDIO en Confidencialidad, Integridad, Autenticidad y Disponibilidad. Un miembro del equipo propone clasificarlo como categoría MEDIA porque es el nivel mayoritario. ¿Qué categoría corresponde al sistema?",
+  "o": [
+   "MEDIA, porque cuatro de las cinco dimensiones tienen nivel medio.",
+   "BÁSICA, porque ninguna dimensión de confidencialidad es alta.",
+   "ALTA, porque la categoría la determina el nivel más alto de cualquier dimensión.",
+   "Depende del resultado del análisis de riesgos con MAGERIT."
+  ],
+  "c": 2,
+  "e": "Según el Anexo I del RD 311/2022, la categoría del sistema es la del nivel más alto alcanzado en cualquiera de sus cinco dimensiones. Basta con que una dimensión sea ALTA para que el sistema sea de categoría ALTA. Eso determina qué medidas del Anexo II son obligatorias y exige una auditoría formal periódica para certificar la conformidad.",
+  "w": [
+   "Aplica una mayoría que el ENS no contempla.",
+   "Se fija en una sola dimensión e ignora las demás.",
+   "",
+   "Confunde la categorización con el análisis de riesgos: MAGERIT se usa una vez categorizado el sistema."
+  ],
+  "t": "Categoría ENS = el máximo, no la mayoría.",
+  "s": "Batería P09 (S8), pregunta 5"
+ },
+ {
+  "id": "S8-E1",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál es el objetivo del dominio de desempeño de los Riesgos?",
+  "o": [
+   "Documentar todos los riesgos en un registro lo más completo posible",
+   "Eliminar toda la incertidumbre del proyecto antes de ejecutarlo",
+   "Hacer el proyecto resiliente ante la incertidumbre",
+   "Trasladar los riesgos al patrocinador para que los gestione él"
+  ],
+  "c": 2,
+  "e": "El objetivo no es solo documentar riesgos, sino que el equipo sea capaz de anticipar, prepararse, responder y adaptarse a la incertidumbre: que el proyecto sea resiliente.",
+  "w": [
+   "Documentar es un medio, no el objetivo.",
+   "La incertidumbre no se elimina: se gestiona.",
+   "",
+   "El equipo gestiona sus riesgos; solo se escala lo que supera su autoridad."
+  ],
+  "t": "Riesgos = resiliencia, no un registro bonito.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E2",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué diferencia un riesgo de una incidencia (issue)?",
+  "o": [
+   "El riesgo siempre es negativo; la incidencia puede ser positiva",
+   "La incidencia es un riesgo de impacto bajo que se acepta",
+   "El riesgo afecta al producto y la incidencia al proyecto",
+   "El riesgo aún no ha ocurrido; la incidencia ya ha ocurrido"
+  ],
+  "c": 3,
+  "e": "Riesgo: evento o condición incierta que, si ocurre, afecta a uno o más objetivos. Incidencia (issue): algo que ya ha ocurrido y exige acción inmediata.",
+  "w": [
+   "Un riesgo puede ser positivo (oportunidad).",
+   "Una incidencia no depende del impacto: es algo que ya ha pasado.",
+   "Ambos pueden afectar a cualquier objetivo.",
+   ""
+  ],
+  "t": "¿Ya ha pasado? → incidencia. ¿Puede pasar? → riesgo.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E3",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estas afirmaciones describe correctamente un riesgo?",
+  "o": [
+   "Un problema que ya se ha producido y exige acción inmediata",
+   "Un evento incierto que solo puede afectar negativamente",
+   "Un evento incierto que puede tener efecto positivo o negativo",
+   "Cualquier preocupación del equipo, aunque no haya un evento concreto"
+  ],
+  "c": 2,
+  "e": "Riesgo: evento o condición incierta que, si ocurre, tiene un efecto positivo (oportunidad) o negativo (amenaza) sobre uno o más objetivos del proyecto.",
+  "w": [
+   "Eso es una incidencia.",
+   "También hay riesgos positivos: las oportunidades.",
+   "",
+   "Sin evento concreto es una preocupación, no un riesgo."
+  ],
+  "t": "Riesgo ≠ solo amenaza: también incluye oportunidades.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E4",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Un técnico apunta en el registro «me preocupa la ciberseguridad en general». ¿Qué problema tiene esa entrada?",
+  "o": [
+   "Ninguno: cualquier inquietud del equipo debe registrarse como riesgo",
+   "Es una preocupación, no un riesgo: no describe un evento concreto",
+   "Es una incidencia, porque la ciberseguridad ya está afectando",
+   "Es un riesgo global y debe ir al registro del portafolio"
+  ],
+  "c": 1,
+  "e": "Al identificar riesgos conviene separar los riesgos reales (un evento concreto que puede ocurrir) de las simples preocupaciones. Cada riesgo se redacta como causa → evento → efecto.",
+  "w": [
+   "El registro no debe convertirse en una lista de inquietudes.",
+   "",
+   "No ha ocurrido nada concreto.",
+   "El riesgo global es otra cosa: el efecto de toda la incertidumbre."
+  ],
+  "t": "Sin evento concreto no hay riesgo.",
+  "s": "Memoria P09 (S8), §1.3, Identify Risks (pág. 6) y §4.3 (pág. 23)"
+ },
+ {
+  "id": "S8-E5",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué es el riesgo global del proyecto?",
+  "o": [
+   "La suma de las puntuaciones P×I de los riesgos individuales",
+   "El efecto de toda la incertidumbre sobre el proyecto entero",
+   "El riesgo individual con mayor puntuación del registro",
+   "Los riesgos que afectan a varios proyectos del portafolio"
+  ],
+  "c": 1,
+  "e": "El riesgo global es el efecto de toda la incertidumbre sobre el proyecto en su conjunto y no es la suma de los riesgos individuales.",
+  "w": [
+   "El riesgo global no es la suma de los individuales.",
+   "",
+   "Un solo riesgo no representa al conjunto.",
+   "Eso son riesgos compartidos o de portafolio."
+  ],
+  "t": "Global ≠ suma.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E6",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Un proyecto tiene muchos riesgos individuales, todos de nivel bajo y manejables. ¿Qué puede decirse de su riesgo global?",
+  "o": [
+   "Puede ser inaceptable aunque cada riesgo sea bajo",
+   "Es necesariamente bajo, porque todos sus riesgos lo son",
+   "Es igual a la suma de sus puntuaciones P×I",
+   "No existe: solo se gestionan los riesgos individuales"
+  ],
+  "c": 0,
+  "e": "Un proyecto con muchos riesgos manejables puede tener un riesgo global inaceptable, porque el riesgo global no es la suma de los individuales.",
+  "w": [
+   "",
+   "El global no se deduce de los individuales.",
+   "El global no es una suma.",
+   "El riesgo global también se gestiona y se valora."
+  ],
+  "t": "Muchos riesgos pequeños pueden sumar un problema grande.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E7",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué principio del PMBOK 8 obliga a mirar el riesgo global y no solo la lista de riesgos individuales?",
+  "o": [
+   "Centrarse en el valor",
+   "Ser un líder responsable",
+   "Adoptar una visión holística",
+   "Integrar la calidad en los procesos"
+  ],
+  "c": 2,
+  "e": "Los 6 principios del PMBOK 8 incluyen adoptar una visión holística, que obliga a mirar el riesgo global del proyecto y no solo la lista de riesgos individuales.",
+  "w": [
+   "Se centra en el valor entregado, no en ver el conjunto de la incertidumbre.",
+   "Trata del liderazgo ético, no del riesgo global.",
+   "",
+   "Trata de la calidad, no del riesgo global."
+  ],
+  "t": "Holístico = ver el todo.",
+  "s": "Memoria P09 (S8), §1.1 (pág. 3)"
+ },
+ {
+  "id": "S8-E8",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el apetito al riesgo del umbral de riesgo?",
+  "o": [
+   "El apetito es un límite medible; el umbral es una actitud general",
+   "Son sinónimos: los dos fijan el máximo de riesgos del registro",
+   "El apetito lo fija el equipo y el umbral lo fija el proveedor",
+   "El apetito es estratégico; el umbral, límites medibles"
+  ],
+  "c": 3,
+  "e": "Apetito: grado de incertidumbre que la organización acepta a cambio de un beneficio (estratégico). Umbral: lo traduce a límites medibles, p. ej. ±5 % de coste (operativo). Exposición: medida agregada en un momento dado.",
+  "w": [
+   "Está al revés.",
+   "Son conceptos distintos.",
+   "Ninguno de los dos lo fija el proveedor.",
+   ""
+  ],
+  "t": "Apetito = actitud; umbral = número.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E9",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "La organización acepta como máximo una desviación del ±5 % en el coste. ¿Qué concepto es ese límite?",
+  "o": [
+   "El apetito al riesgo",
+   "La exposición al riesgo",
+   "Una reserva de gestión",
+   "Un umbral de riesgo"
+  ],
+  "c": 3,
+  "e": "El umbral traduce el apetito a límites medibles, como ±5 % de coste.",
+  "w": [
+   "El apetito es la actitud general; el límite medible es el umbral.",
+   "La exposición es la medida agregada en un momento dado.",
+   "Una reserva son fondos, no un límite de tolerancia.",
+   ""
+  ],
+  "t": "Si lleva un número concreto, es umbral.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E10",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué es la exposición al riesgo?",
+  "o": [
+   "El grado de incertidumbre que la organización acepta",
+   "El límite medible a partir del cual se actúa",
+   "La parte del riesgo que queda tras la respuesta",
+   "La medida agregada del riesgo en un momento dado"
+  ],
+  "c": 3,
+  "e": "Exposición: medida agregada del riesgo en un momento dado (p. ej., la suma de P×I de las amenazas abiertas).",
+  "w": [
+   "Eso es el apetito.",
+   "Eso es el umbral.",
+   "Eso es el riesgo residual.",
+   ""
+  ],
+  "t": "Apetito (acepto) · umbral (límite) · exposición (cuánto hay ahora).",
+  "s": "Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-E11",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cómo se cubre un riesgo conocido-desconocido (known-unknown)?",
+  "o": [
+   "Se registra y se cubre con la reserva de contingencia",
+   "Con la reserva de gestión, porque nadie puede preverlo",
+   "No se cubre: al ser conocido, deja de ser un riesgo",
+   "Con una solicitud de cambio cuando ya se ha producido"
+  ],
+  "c": 0,
+  "e": "Conocido-desconocido: riesgo identificado cuya probabilidad e impacto se pueden estimar; va al registro y se cubre con la reserva de contingencia.",
+  "w": [
+   "",
+   "Si está identificado, no es imprevisible.",
+   "Sigue siendo incierto: es un riesgo.",
+   "Se prepara antes, con la contingencia."
+  ],
+  "t": "Known-unknown → registro + contingencia.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4)"
+ },
+ {
+  "id": "S8-E12",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Con qué se afronta un riesgo desconocido-desconocido (unknown-unknown)?",
+  "o": [
+   "Con la reserva de contingencia del registro",
+   "Con un plan de contingencia ya aprobado",
+   "Con la reserva de gestión y con resiliencia",
+   "Con la estrategia de transferir al proveedor"
+  ],
+  "c": 2,
+  "e": "Desconocido-desconocido: riesgo emergente que nadie puede prever; se cubre con la reserva de gestión y con resiliencia.",
+  "w": [
+   "La contingencia es para riesgos identificados.",
+   "No puede haber plan para algo que nadie ha previsto.",
+   "",
+   "No se puede transferir lo que no se ha identificado."
+  ],
+  "t": "Unknown-unknown → reserva de gestión.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4)"
+ },
+ {
+  "id": "S8-E13",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cómo se calcula la reserva de contingencia cuando el registro tiene amenazas y oportunidades?",
+  "o": [
+   "Suma del EMV de amenazas y oportunidades",
+   "Un porcentaje fijo del presupuesto, sin tener en cuenta el registro",
+   "Suma de las puntuaciones P×I de todas las amenazas",
+   "Suma del EMV de las amenazas menos la de las oportunidades"
+  ],
+  "c": 3,
+  "e": "La reserva de contingencia se calcula como la suma del EMV de las amenazas menos la de las oportunidades del registro. Forma parte de la línea base de coste.",
+  "w": [
+   "Las oportunidades restan, no suman.",
+   "Eso se parece más a cómo se fija la reserva de gestión.",
+   "P×I es una puntuación ordinal, no un importe.",
+   ""
+  ],
+  "t": "Oportunidades restan.",
+  "s": "Memoria P09 (S8), §2.3 (pág. 11)"
+ },
+ {
+  "id": "S8-E14",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué diferencia la reserva de contingencia de la reserva de gestión respecto a la línea base de coste?",
+  "o": [
+   "Las dos están dentro de la línea base de coste",
+   "La de gestión está dentro y la de contingencia, fuera",
+   "Ninguna forma parte del presupuesto del proyecto",
+   "Contingencia dentro de la línea base; gestión, fuera"
+  ],
+  "c": 3,
+  "e": "La contingencia forma parte de la línea base y cubre riesgos identificados. La de gestión queda fuera de la línea base, cubre lo no identificado y su uso requiere autorización (patrocinador o PMO, vía control de cambios).",
+  "w": [
+   "La de gestión queda fuera.",
+   "Está al revés.",
+   "Las dos forman parte del presupuesto.",
+   ""
+  ],
+  "t": "Contingencia dentro, gestión fuera.",
+  "s": "Memoria P09 (S8), §2.3 (pág. 11)"
+ },
+ {
+  "id": "S8-E15",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué es un disparador (trigger) de riesgo?",
+  "o": [
+   "Una señal de que el riesgo va a materializarse",
+   "La causa raíz que origina el riesgo",
+   "La persona responsable de ejecutar la respuesta",
+   "El umbral a partir del cual se acepta un riesgo"
+  ],
+  "c": 0,
+  "e": "Disparador: señal de que un riesgo está a punto de materializarse y que activa el plan de contingencia.",
+  "w": [
+   "",
+   "La causa es el origen, no la señal de aviso.",
+   "Esa es el propietario del riesgo.",
+   "El umbral es un límite de tolerancia."
+  ],
+  "t": "Trigger = aviso que activa la contingencia.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4)"
+ },
+ {
+  "id": "S8-E16",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Al saltar el disparador de un riesgo con respuesta planificada, ¿qué ocurre?",
+  "o": [
+   "Se repite el análisis cualitativo para volver a priorizarlo",
+   "Se activa el plan de contingencia y lo ejecuta el propietario",
+   "Se escala al patrocinador para que decida qué hacer",
+   "Se cierra el riesgo en el registro como una incidencia ya resuelta"
+  ],
+  "c": 1,
+  "e": "El disparador activa el plan de contingencia, y el propietario aplica lo acordado (Implementar la respuesta a los riesgos).",
+  "w": [
+   "No hay que reanalizar: la respuesta ya está decidida.",
+   "",
+   "La decisión ya estaba tomada.",
+   "Antes hay que ejecutar la respuesta."
+  ],
+  "t": "Disparador → contingencia → propietario.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4) y §1.3 (pág. 7)"
+ },
+ {
+  "id": "S8-E17",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué es un riesgo residual?",
+  "o": [
+   "El que aparece como consecuencia directa de aplicar una respuesta",
+   "El que nadie podía prever y cubre la reserva de gestión",
+   "El que se acepta de forma pasiva por su bajo impacto",
+   "El que queda tras aplicar la respuesta al riesgo original"
+  ],
+  "c": 3,
+  "e": "Riesgo residual: el que queda tras aplicar la respuesta. Riesgo secundario: el que aparece como consecuencia directa de aplicarla.",
+  "w": [
+   "Ese es el riesgo secundario.",
+   "Ese es el desconocido-desconocido.",
+   "Eso es una estrategia (aceptar), no un tipo de riesgo.",
+   ""
+  ],
+  "t": "Residual = lo que sobra; secundario = lo que nace de la respuesta.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4)"
+ },
+ {
+  "id": "S8-E18",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Al contratar a precio fijo para transferir un riesgo, surge el riesgo de que el proveedor reduzca la calidad para proteger su margen. ¿Qué tipo de riesgo es?",
+  "o": [
+   "Un riesgo residual",
+   "Un riesgo secundario",
+   "Una incidencia",
+   "Un riesgo desconocido-desconocido"
+  ],
+  "c": 1,
+  "e": "Aparece como consecuencia directa de aplicar una respuesta (transferir), así que es un riesgo secundario: se registra, se analiza y se le planifica su propia respuesta.",
+  "w": [
+   "El residual es lo que queda del riesgo original.",
+   "",
+   "Todavía no ha ocurrido.",
+   "Ya está identificado."
+  ],
+  "t": "Nace de la respuesta = secundario.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4) y §3.7 (pág. 21)"
+ },
+ {
+  "id": "S8-E19",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cómo se trata un riesgo secundario?",
+  "o": [
+   "Se registra, se analiza y se le planifica su propia respuesta",
+   "Se acepta sin análisis, porque ya hay una respuesta en marcha",
+   "Se descarta la respuesta que lo ha provocado",
+   "Se cubre automáticamente con la reserva de gestión"
+  ],
+  "c": 0,
+  "e": "Un riesgo secundario debe identificarse, analizarse y tener su propia respuesta. Las respuestas cambian el plan y pueden generar riesgos nuevos.",
+  "w": [
+   "",
+   "Es un riesgo nuevo y necesita su propio tratamiento.",
+   "No hace falta descartarla: se responde al secundario.",
+   "Está identificado: no es un unknown-unknown."
+  ],
+  "t": "Secundario = riesgo nuevo con ciclo completo.",
+  "s": "Memoria P09 (S8), §1.2 (pág. 4); Batería P09, pregunta 3"
+ },
+ {
+  "id": "S8-E20",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuántos procesos tiene el dominio de Riesgos en el PMBOK 8?",
+  "o": [
+   "Siete: el análisis cualitativo y el cuantitativo son procesos distintos",
+   "Seis: el análisis cualitativo y el cuantitativo son un único proceso",
+   "Cinco: la implementación de respuestas forma parte de monitorear",
+   "Cuatro: planificar, identificar, responder y monitorear"
+  ],
+  "c": 1,
+  "e": "PMBOK 8: Planificar la gestión de riesgos, Identificar los riesgos, Realizar el análisis de riesgos (modos cualitativo y cuantitativo), Planificar la respuesta, Implementar la respuesta y Monitorear los riesgos. La guía de la asignatura enumera siete porque presenta el cualitativo y el cuantitativo por separado.",
+  "w": [
+   "En el PMBOK 8 son dos modos de un mismo proceso (la guía de la asignatura los separa).",
+   "",
+   "Implementar la respuesta es un proceso propio.",
+   "Faltan el análisis y la implementación."
+  ],
+  "t": "PMBOK 8 = 6; la guía del curso cuenta 7 al separar los dos análisis.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 4)"
+ },
+ {
+  "id": "S8-E21",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuándo se aplica el modo cuantitativo del análisis de riesgos?",
+  "o": [
+   "Siempre y para todos los riesgos identificados en el registro",
+   "Cuando el tamaño o la criticidad del proyecto lo justifican",
+   "Solo en proyectos con enfoque ágil",
+   "Solo después de que un riesgo se haya materializado"
+  ],
+  "c": 1,
+  "e": "El modo cuantitativo de Realizar el análisis de riesgos solo se aplica cuando el tamaño o la criticidad del proyecto lo justifican.",
+  "w": [
+   "No siempre: el cualitativo es el que se aplica a todos.",
+   "",
+   "No depende del enfoque.",
+   "El análisis es previo a que ocurra."
+  ],
+  "t": "Cualitativo siempre; cuantitativo si compensa.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 4)"
+ },
+ {
+  "id": "S8-E22",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué proceso del dominio de Riesgos se ejecuta en el área de enfoque de Ejecución (Executing)?",
+  "o": [
+   "Implementar la respuesta a los riesgos",
+   "Planificar la respuesta a los riesgos",
+   "Monitorear los riesgos y las reservas",
+   "Realizar el análisis cuantitativo de riesgos"
+  ],
+  "c": 0,
+  "e": "Planificación: planificar la gestión, identificar, analizar y planificar respuestas. Ejecución: implementar las respuestas. Monitoreo y control: vigilar riesgos, identificar nuevos y gestionar reservas.",
+  "w": [
+   "",
+   "Planificar respuestas va en Planificación.",
+   "Monitorear va en Monitoreo y control.",
+   "El análisis va en Planificación."
+  ],
+  "t": "Ejecutar = implementar respuestas.",
+  "s": "Memoria P09 (S8), §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E23",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estos elementos NO forma parte del plan de gestión de riesgos?",
+  "o": [
+   "La estructura de desglose de riesgos (RBS)",
+   "Las definiciones de probabilidad e impacto",
+   "El apetito al riesgo de los interesados",
+   "El registro de riesgos identificados"
+  ],
+  "c": 3,
+  "e": "El plan de gestión de riesgos define metodología, roles, presupuesto, calendario, categorías (RBS), apetito, definiciones de probabilidad e impacto, matriz P×I y formatos. El registro de riesgos es salida de Identificar los riesgos.",
+  "w": [
+   "Sí forma parte: son las categorías de riesgo.",
+   "Sí forma parte, junto con la matriz P×I.",
+   "Sí forma parte del plan.",
+   ""
+  ],
+  "t": "El plan dice CÓMO; el registro dice QUÉ riesgos hay.",
+  "s": "Memoria P09 (S8), §1.3, Plan Risk Management (pág. 5–6)"
+ },
+ {
+  "id": "S8-E24",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuándo debe empezar y revisarse la planificación de la gestión de riesgos?",
+  "o": [
+   "Al cerrar la fase de planificación, una sola vez y sin revisiones",
+   "Cuando se materializa el primer riesgo",
+   "Desde la concepción, y de nuevo ante cambios importantes",
+   "Solo en cada auditoría externa del proyecto"
+  ],
+  "c": 2,
+  "e": "Planificar la gestión de riesgos debe empezar en la concepción del proyecto y revisarse cuando el proyecto cambia de forma significativa.",
+  "w": [
+   "Debe revisarse cuando el proyecto cambia.",
+   "Eso sería demasiado tarde.",
+   "",
+   "No depende de las auditorías."
+  ],
+  "t": "Empieza pronto y se revisa con los cambios.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E25",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué es la estructura de desglose de riesgos (RBS)?",
+  "o": [
+   "La lista de paquetes de trabajo de la EDT con su riesgo asociado",
+   "Una clasificación de los riesgos por categorías",
+   "Un diagrama que ordena los riesgos por fecha de aparición",
+   "La matriz que cruza probabilidad e impacto"
+  ],
+  "c": 1,
+  "e": "La RBS recoge las categorías de riesgo del plan de gestión de riesgos; sirve de guía para identificar riesgos y clasificarlos.",
+  "w": [
+   "Eso mezcla la RBS con la EDT.",
+   "",
+   "No es cronológica.",
+   "Esa es la matriz P×I."
+  ],
+  "t": "RBS = categorías de riesgo, no paquetes de trabajo.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 5) y §2.5 (pág. 11)"
+ },
+ {
+  "id": "S8-E26",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Por qué Identificar los riesgos es un proceso iterativo?",
+  "o": [
+   "Porque cada riesgo se identifica una sola vez por iteración ágil",
+   "Porque la primera lista siempre sale incompleta",
+   "Porque el registro debe rehacerse desde cero en cada fase",
+   "Porque solo se identifican los riesgos cuando se materializan"
+  ],
+  "c": 1,
+  "e": "Identificar es iterativo: la primera lista siempre está incompleta porque al principio hay poca información.",
+  "w": [
+   "No depende del enfoque ágil.",
+   "",
+   "Se completa, no se rehace.",
+   "Se identifican antes de que ocurran."
+  ],
+  "t": "Identificar no se hace una vez.",
+  "s": "Memoria P09 (S8), §1.3, Identify Risks (pág. 6)"
+ },
+ {
+  "id": "S8-E27",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál es la principal fuente de información para identificar riesgos?",
+  "o": [
+   "El registro de incidencias",
+   "Los informes de desempeño",
+   "Los interesados",
+   "El acta de cierre"
+  ],
+  "c": 2,
+  "e": "Los interesados son la principal fuente de información sobre riesgos.",
+  "w": [
+   "Recoge lo que ya ha ocurrido.",
+   "Se usan sobre todo al monitorear.",
+   "",
+   "Llega al final del proyecto."
+  ],
+  "t": "Pregunta a la gente.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6) y §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E28",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué herramienta menciona expresamente el PMBOK 8 como apoyo para procesar grandes volúmenes de información al identificar riesgos?",
+  "o": [
+   "La inteligencia artificial",
+   "La simulación de Monte Carlo",
+   "El árbol de decisión",
+   "La matriz de probabilidad e impacto"
+  ],
+  "c": 0,
+  "e": "El PMBOK 8 menciona expresamente la inteligencia artificial como herramienta de apoyo para procesar grandes volúmenes de información del proyecto al identificar riesgos.",
+  "w": [
+   "",
+   "Es una técnica de análisis cuantitativo.",
+   "Es una técnica de análisis cuantitativo.",
+   "Es una técnica de análisis cualitativo."
+  ],
+  "t": "IA → identificación de riesgos.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 5–6)"
+ },
+ {
+  "id": "S8-E29",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estas es una técnica de Identificar los riesgos?",
+  "o": [
+   "Simulación de Monte Carlo",
+   "Análisis de reservas",
+   "Análisis de causa raíz",
+   "Matriz de probabilidad e impacto"
+  ],
+  "c": 2,
+  "e": "Técnicas de identificación: tormenta de ideas, entrevistas, listas de verificación, análisis de causa raíz, análisis de supuestos y restricciones, DAFO, análisis de documentos y herramientas de IA.",
+  "w": [
+   "Es del análisis cuantitativo.",
+   "Es de Monitorear los riesgos.",
+   "",
+   "Es del análisis cualitativo."
+  ],
+  "t": "Identificar = descubrir; analizar = puntuar.",
+  "s": "Memoria P09 (S8), §1.3, tabla de procesos (pág. 5)"
+ },
+ {
+  "id": "S8-E30",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué estructura se recomienda para redactar cada riesgo en el registro?",
+  "o": [
+   "Probabilidad → impacto → prioridad",
+   "Propietario → acción → fecha",
+   "Disparador → respuesta → cierre",
+   "Causa → evento → efecto"
+  ],
+  "c": 3,
+  "e": "Cada riesgo se redacta con la estructura causa → evento → efecto. Así se distingue un riesgo real de una simple preocupación.",
+  "w": [
+   "Eso es el análisis, no la redacción.",
+   "Eso es la respuesta.",
+   "Eso es el ciclo de respuesta.",
+   ""
+  ],
+  "t": "Causa-evento-efecto.",
+  "s": "Memoria P09 (S8), §3.2 (pág. 15) y §4.1 (pág. 22)"
+ },
+ {
+  "id": "S8-E31",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué salidas principales produce Identificar los riesgos?",
+  "o": [
+   "El plan de gestión de riesgos",
+   "Las respuestas acordadas y los planes de contingencia",
+   "Las solicitudes de cambio y el registro de incidencias",
+   "El registro de riesgos y el informe de riesgos"
+  ],
+  "c": 3,
+  "e": "Identificar los riesgos produce el registro de riesgos y el informe de riesgos.",
+  "w": [
+   "Es salida de Planificar la gestión de riesgos.",
+   "Son salidas de Planificar la respuesta.",
+   "Son salidas de Implementar la respuesta.",
+   ""
+  ],
+  "t": "Identificar → registro.",
+  "s": "Memoria P09 (S8), §1.3, tabla de procesos (pág. 5)"
+ },
+ {
+  "id": "S8-E32",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Además de probabilidad e impacto, ¿qué otros parámetros puede considerar el análisis cualitativo?",
+  "o": [
+   "El EMV y la simulación de Monte Carlo",
+   "El CPI y el SPI del proyecto",
+   "La tasa interna de retorno (TIR) del caso de negocio del proyecto",
+   "Urgencia, proximidad, manejabilidad o causas comunes"
+  ],
+  "c": 3,
+  "e": "El modo cualitativo evalúa probabilidad e impacto en escalas ordinales y añade parámetros como la urgencia, la proximidad, la manejabilidad o las causas comunes.",
+  "w": [
+   "Son del modo cuantitativo.",
+   "Son índices de valor ganado.",
+   "Es un indicador de valor financiero.",
+   ""
+  ],
+  "t": "Cualitativo = escalas y parámetros, no importes.",
+  "s": "Memoria P09 (S8), §1.3, Perform Risk Analysis (pág. 6)"
+ },
+ {
+  "id": "S8-E33",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál es el resultado principal del análisis cualitativo de riesgos?",
+  "o": [
+   "La priorización de los riesgos en la matriz P×I",
+   "El valor monetario esperado (EMV) de cada riesgo identificado",
+   "El plan de contingencia de cada riesgo",
+   "La reserva de gestión del proyecto"
+  ],
+  "c": 0,
+  "e": "El resultado del análisis cualitativo es la priorización de los riesgos en la matriz P×I.",
+  "w": [
+   "",
+   "El EMV es del modo cuantitativo.",
+   "Sale de Planificar la respuesta.",
+   "No sale del análisis cualitativo."
+  ],
+  "t": "Cualitativo → prioridad.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E34",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "En el análisis cualitativo, ¿qué indica la urgencia de un riesgo?",
+  "o": [
+   "Lo grave que sería su impacto",
+   "Cuándo hay que responder a él",
+   "La probabilidad de que ocurra",
+   "Si el equipo puede controlarlo"
+  ],
+  "c": 1,
+  "e": "Urgencia: cuándo hay que responder al riesgo.",
+  "w": [
+   "Eso es el impacto.",
+   "",
+   "Eso es la probabilidad.",
+   "Eso es la manejabilidad."
+  ],
+  "t": "Urgencia = cuándo; impacto = cuánto.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E35",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Un riesgo tiene un 30 % de probabilidad y un impacto de 20.000 €. ¿Cuál es su EMV?",
+  "o": [
+   "6.000 €",
+   "20.000 €",
+   "600 €",
+   "14.000 €"
+  ],
+  "c": 0,
+  "e": "EMV = P × I, con P en tanto por uno: 0,30 × 20.000 € = 6.000 €.",
+  "w": [
+   "",
+   "Ese es solo el impacto.",
+   "Error de decimales: 0,30 × 20.000 = 6.000.",
+   "Eso es 20.000 − 6.000."
+  ],
+  "t": "P en tanto por uno.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E36",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Una oportunidad tiene un 40 % de probabilidad de ahorrar 5.000 €. ¿Cómo afecta su EMV a la reserva de contingencia?",
+  "o": [
+   "La aumenta en 2.000 €",
+   "La reduce en 2.000 €",
+   "La reduce en 5.000 €",
+   "No le afecta: solo cuentan las amenazas"
+  ],
+  "c": 1,
+  "e": "EMV = 0,40 × 5.000 = 2.000 €. La contingencia = Σ EMV amenazas − Σ EMV oportunidades, así que se reduce en 2.000 €.",
+  "w": [
+   "Las oportunidades restan.",
+   "",
+   "Hay que ponderar por la probabilidad.",
+   "Las oportunidades también cuentan."
+  ],
+  "t": "Oportunidad = EMV que resta.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6) y §2.3 (pág. 11)"
+ },
+ {
+  "id": "S8-E37",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "En un árbol de decisión, ¿cómo se elige la rama?",
+  "o": [
+   "Por el resultado más probable de cada rama, sin ponderar importes",
+   "Por el peor resultado posible de cada rama",
+   "Por el mejor valor esperado, sumando los EMV de sus resultados",
+   "Por la rama con menos nodos de decisión"
+  ],
+  "c": 2,
+  "e": "En un árbol de decisión, el valor esperado de cada rama es la suma de los EMV de sus resultados posibles, y se elige la rama con mejor valor esperado.",
+  "w": [
+   "Hay que ponderar cada resultado.",
+   "No se elige por el peor caso.",
+   "",
+   "La forma del árbol no decide."
+  ],
+  "t": "Rama = Σ EMV; gana el mejor.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E38",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Opción A: contrato fijo de 60.000 €. Opción B: 55.000 € con un 50 % de probabilidad de 12.000 € extra. ¿Qué opción tiene menor coste esperado?",
+  "o": [
+   "A: B tiene un coste esperado de 61.000 €",
+   "B, porque su coste base es menor (55.000 €)",
+   "Son iguales: las dos cuestan 60.000 €",
+   "B, porque el sobrecoste puede no ocurrir"
+  ],
+  "c": 0,
+  "e": "Valor esperado de B = 55.000 + 0,50 × 12.000 = 61.000 €. A cuesta 60.000 €, así que A tiene menor coste esperado.",
+  "w": [
+   "",
+   "Falta sumar el EMV del extra.",
+   "B cuesta 55.000 + 6.000.",
+   "Hay que usar el valor esperado."
+  ],
+  "t": "Coste esperado = base + EMV.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E39",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estas técnicas pertenece al modo cuantitativo del análisis de riesgos?",
+  "o": [
+   "Matriz de probabilidad e impacto",
+   "Simulación de Monte Carlo",
+   "Evaluación de la urgencia",
+   "Categorización por la RBS"
+  ],
+  "c": 1,
+  "e": "Cuantitativo: EMV, árbol de decisión, simulación de Monte Carlo y análisis de sensibilidad.",
+  "w": [
+   "Es cualitativa.",
+   "",
+   "Es cualitativa.",
+   "Es cualitativa."
+  ],
+  "t": "Monte Carlo = cuantitativo.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 5)"
+ },
+ {
+  "id": "S8-E40",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué debe tener cada riesgo prioritario al planificar la respuesta?",
+  "o": [
+   "Solo una estrategia; el resto se decide cuando se materialice el riesgo",
+   "Un importe en la reserva de gestión",
+   "Estrategia, propietario, acciones, disparador y contingencia",
+   "Una solicitud de cambio aprobada"
+  ],
+  "c": 2,
+  "e": "Para cada riesgo prioritario se elige una estrategia, se asigna un propietario y se acuerdan acciones, disparadores y planes de contingencia.",
+  "w": [
+   "Hay que dejarlo preparado antes.",
+   "La reserva de gestión es para lo no identificado.",
+   "",
+   "No todo riesgo exige un cambio."
+  ],
+  "t": "Respuesta completa = quién, qué, cuándo y plan B.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E41",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Por qué la planificación de respuestas suele generar solicitudes de cambio?",
+  "o": [
+   "Porque las respuestas modifican el cronograma y el presupuesto",
+   "Porque toda respuesta exige cambiar el alcance del producto",
+   "Porque el registro de riesgos solo se aprueba mediante cambios",
+   "Porque el patrocinador debe aprobar cada riesgo identificado"
+  ],
+  "c": 0,
+  "e": "Las respuestas no son decisiones aisladas: modifican el cronograma y el presupuesto, por lo que suelen generar solicitudes de cambio.",
+  "w": [
+   "",
+   "No toda respuesta toca el alcance.",
+   "El registro no se aprueba así.",
+   "No aprueba cada riesgo."
+  ],
+  "t": "Responder cambia el plan.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E42",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Para que una amenaza no pueda ocurrir, el equipo cambia el plan y elimina su causa. ¿Qué estrategia aplica?",
+  "o": [
+   "Mitigar",
+   "Transferir",
+   "Evitar",
+   "Aceptar"
+  ],
+  "c": 2,
+  "e": "Evitar: eliminar la causa o cambiar el plan para que la amenaza no pueda ocurrir.",
+  "w": [
+   "Mitigar reduce probabilidad o impacto, no los elimina.",
+   "Transferir traslada el impacto a un tercero.",
+   "",
+   "Aceptar no actúa sobre la causa."
+  ],
+  "t": "Evitar = probabilidad cero.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E43",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Se contrata un seguro que traslada a la aseguradora el impacto económico de un fallo de hardware. ¿Qué estrategia es?",
+  "o": [
+   "Mitigar el impacto",
+   "Evitar",
+   "Compartir",
+   "Transferir"
+  ],
+  "c": 3,
+  "e": "Transferir: trasladar la propiedad y el impacto a un tercero (contrato, seguro, garantía).",
+  "w": [
+   "No reduce la probabilidad ni el impacto, lo traslada.",
+   "El fallo puede seguir ocurriendo.",
+   "Compartir es una estrategia para oportunidades.",
+   ""
+  ],
+  "t": "Seguro o contrato = transferir.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E44",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Reducir la probabilidad o el impacto de una amenaza es…",
+  "o": [
+   "Evitar",
+   "Transferir",
+   "Aceptar",
+   "Mitigar"
+  ],
+  "c": 3,
+  "e": "Mitigar: reducir la probabilidad o el impacto de la amenaza.",
+  "w": [
+   "Evitar la elimina del todo.",
+   "Transferir la traslada a otro.",
+   "Aceptar no la reduce.",
+   ""
+  ],
+  "t": "Mitigar = reducir.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E45",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué diferencia la aceptación activa de la pasiva?",
+  "o": [
+   "La activa reduce la probabilidad; la pasiva reduce el impacto",
+   "La activa se usa con oportunidades y la pasiva con amenazas",
+   "La activa la decide la PMO y la pasiva el director",
+   "La activa reserva fondos; la pasiva solo vigila"
+  ],
+  "c": 3,
+  "e": "Aceptar: activa (con reserva de contingencia) o pasiva (solo vigilar).",
+  "w": [
+   "Eso sería mitigar.",
+   "Las dos se usan con amenazas.",
+   "No depende de quién decide.",
+   ""
+  ],
+  "t": "Activa = con dinero; pasiva = solo mirar.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E46",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Un riesgo depende de otro proyecto sobre el que el director no tiene autoridad. ¿Qué estrategia procede?",
+  "o": [
+   "Transferir al otro proyecto",
+   "Aceptar de forma pasiva",
+   "Escalar al nivel con autoridad",
+   "Evitarlo cancelando el trabajo"
+  ],
+  "c": 2,
+  "e": "Escalar: trasladar el riesgo al nivel que tiene la autoridad (programa, portafolio u organización) cuando queda fuera del alcance o de la autoridad del director.",
+  "w": [
+   "El impacto seguiría recayendo sobre tu proyecto.",
+   "No evita el impacto y se puede actuar.",
+   "",
+   "Es desproporcionado."
+  ],
+  "t": "Fuera de tu autoridad → escalar.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 7)"
+ },
+ {
+  "id": "S8-E47",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Escalar un riesgo significa que el director se desentiende de él?",
+  "o": [
+   "Sí: pasa a ser responsabilidad exclusiva de la PMO",
+   "Sí: se elimina del registro del proyecto",
+   "No: lo sigue vigilando y adapta su plan mientras tanto",
+   "No: sigue respondiendo él con su propia reserva de contingencia"
+  ],
+  "c": 2,
+  "e": "Escalar no significa desentenderse: el riesgo se gestiona en el nivel superior, pero el director sigue vigilándolo y adapta su plan mientras tanto.",
+  "w": [
+   "El director sigue vigilando.",
+   "Sigue en el registro.",
+   "",
+   "El riesgo pasa a gestionarse en el nivel superior."
+  ],
+  "t": "Escalar ≠ olvidarse.",
+  "s": "Memoria P09 (S8), §1.3; Batería P09, pregunta 2"
+ },
+ {
+  "id": "S8-E48",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Para asegurar que una oportunidad se materialice, el equipo actúa para eliminar la incertidumbre. ¿Qué estrategia es?",
+  "o": [
+   "Mejorar",
+   "Compartir",
+   "Aceptar",
+   "Explotar"
+  ],
+  "c": 3,
+  "e": "Explotar: asegurar que la oportunidad se materialice.",
+  "w": [
+   "Mejorar solo aumenta la probabilidad o el impacto.",
+   "Compartir la asigna a un tercero.",
+   "Aceptar no la busca activamente.",
+   ""
+  ],
+  "t": "Explotar = asegurar (el espejo de evitar).",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E49",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Se asigna una oportunidad a un tercero mejor capacitado para aprovecharla. ¿Qué estrategia es?",
+  "o": [
+   "Transferir",
+   "Explotar",
+   "Escalar",
+   "Compartir"
+  ],
+  "c": 3,
+  "e": "Compartir: asignar la propiedad de la oportunidad a un tercero mejor capacitado para aprovecharla.",
+  "w": [
+   "Transferir es para amenazas.",
+   "Explotar la asegura uno mismo.",
+   "Escalar la sube al nivel con autoridad.",
+   ""
+  ],
+  "t": "Transferir (amenaza) ↔ compartir (oportunidad).",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E50",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué estrategia para oportunidades es el espejo de mitigar en amenazas?",
+  "o": [
+   "Explotar",
+   "Compartir",
+   "Mejorar",
+   "Escalar"
+  ],
+  "c": 2,
+  "e": "Mitigar reduce la probabilidad o el impacto de una amenaza; mejorar aumenta la probabilidad o el impacto de una oportunidad.",
+  "w": [
+   "Explotar es el espejo de evitar.",
+   "Compartir es el espejo de transferir.",
+   "",
+   "Escalar existe igual en ambos casos."
+  ],
+  "t": "Evitar↔explotar, mitigar↔mejorar, transferir↔compartir.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 6)"
+ },
+ {
+  "id": "S8-E51",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué idea resume el proceso Implementar la respuesta a los riesgos?",
+  "o": [
+   "Una respuesta que nadie ejecuta no es una respuesta",
+   "Toda respuesta debe aprobarla el patrocinador antes de ejecutarse",
+   "Las respuestas se ejecutan al cierre, cuando hay datos reales",
+   "Implementar es volver a analizar el riesgo cuando aparece"
+  ],
+  "c": 0,
+  "e": "Implementar la respuesta asegura que el propietario aplica lo acordado cuando salta el disparador. Una respuesta que existe en el documento pero que nadie ejecuta no es una respuesta.",
+  "w": [
+   "",
+   "Ya se aprobó al planificarla.",
+   "Se ejecutan cuando salta el disparador.",
+   "Implementar es ejecutar lo acordado."
+  ],
+  "t": "Plan sin ejecución = nada.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 7)"
+ },
+ {
+  "id": "S8-E52",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué tipo de herramienta destaca en Implementar la respuesta a los riesgos?",
+  "o": [
+   "Simulación de Monte Carlo",
+   "Habilidades interpersonales, como la influencia",
+   "Matriz de probabilidad e impacto con escalas 5×5",
+   "Tormenta de ideas guiada por la estructura RBS"
+  ],
+  "c": 1,
+  "e": "Herramientas de Implementar la respuesta: juicio de expertos, habilidades interpersonales (influencia) y el sistema de información de la dirección de proyectos.",
+  "w": [
+   "Es del análisis cuantitativo.",
+   "",
+   "Es del análisis cualitativo.",
+   "Es de Identificar los riesgos."
+  ],
+  "t": "Implementar = conseguir que otros actúen (influencia).",
+  "s": "Memoria P09 (S8), §1.3, tabla de procesos (pág. 5)"
+ },
+ {
+  "id": "S8-E53",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estas NO es una función de Monitorear los riesgos?",
+  "o": [
+   "Comprobar si las respuestas están funcionando",
+   "Analizar el consumo de las reservas",
+   "Identificar riesgos nuevos",
+   "Elaborar el plan de gestión de riesgos"
+  ],
+  "c": 3,
+  "e": "Monitorear los riesgos sigue los identificados y los residuales, identifica riesgos nuevos, comprueba si las respuestas funcionan y analiza el consumo de reservas. El plan se hace en Planificar la gestión de riesgos.",
+  "w": [
+   "Sí es función de monitorear.",
+   "Sí es función de monitorear.",
+   "Sí es función de monitorear.",
+   ""
+  ],
+  "t": "Monitorear cierra el ciclo; no lo empieza.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 7)"
+ },
+ {
+  "id": "S8-E54",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué técnicas son típicas de Monitorear los riesgos?",
+  "o": [
+   "Auditorías de riesgos y análisis de reservas",
+   "Tormenta de ideas, entrevistas y listas de verificación",
+   "EMV, árbol de decisión y simulación de Monte Carlo",
+   "Matriz P×I, urgencia y manejabilidad del riesgo"
+  ],
+  "c": 0,
+  "e": "Técnicas típicas de Monitorear los riesgos: auditorías de riesgos, análisis de reservas y análisis de desempeño técnico.",
+  "w": [
+   "",
+   "Son técnicas de identificación.",
+   "Son técnicas de análisis cuantitativo.",
+   "Son técnicas de análisis cualitativo."
+  ],
+  "t": "Monitorear = auditar y vigilar reservas.",
+  "s": "Memoria P09 (S8), §1.3 (pág. 5 y 7)"
+ },
+ {
+  "id": "S8-E55",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿En qué área de enfoque se recogen los riesgos de alto nivel y el apetito al riesgo del patrocinador en el acta de constitución?",
+  "o": [
+   "Inicio (Initiating)",
+   "Planificación (Planning)",
+   "Ejecución (Executing)",
+   "Cierre (Closing)"
+  ],
+  "c": 0,
+  "e": "Inicio: riesgos de alto nivel y apetito al riesgo del patrocinador en el acta de constitución.",
+  "w": [
+   "",
+   "En Planificación se identifican y analizan en detalle.",
+   "En Ejecución se implementan las respuestas.",
+   "En el Cierre se cierra el registro."
+  ],
+  "t": "Acta → Inicio.",
+  "s": "Memoria P09 (S8), §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E56",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué se hace con los riesgos en el área de enfoque de Cierre (Closing)?",
+  "o": [
+   "Cerrar el registro y liberar la reserva no consumida",
+   "Repetir la identificación de riesgos pensando en el siguiente proyecto",
+   "Transferir los riesgos abiertos al patrocinador",
+   "Consumir la reserva sobrante en mejoras"
+  ],
+  "c": 0,
+  "e": "Cierre: se cierra el registro, se libera la reserva no consumida y se capitalizan las lecciones aprendidas.",
+  "w": [
+   "",
+   "No se reidentifica al cerrar.",
+   "No es lo que se hace al cerrar.",
+   "La reserva no consumida se libera."
+  ],
+  "t": "Lo que sobra se libera, no se gasta.",
+  "s": "Memoria P09 (S8), §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E57",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué dominio fija el apetito al riesgo, los umbrales y las reglas de escalado?",
+  "o": [
+   "Finanzas",
+   "Gobernanza",
+   "Interesados",
+   "Recursos"
+  ],
+  "c": 1,
+  "e": "La gobernanza fija el apetito, los umbrales y las reglas de escalado.",
+  "w": [
+   "Finanzas gestiona las reservas, no las reglas de escalado.",
+   "",
+   "Los interesados son la fuente de información sobre riesgos.",
+   "Recursos aporta riesgos de disponibilidad de perfiles."
+  ],
+  "t": "Reglas del juego = gobernanza.",
+  "s": "Memoria P09 (S8), §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E58",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿En la planificación de qué dominio se integran las reservas para riesgos?",
+  "o": [
+   "Alcance",
+   "Finanzas",
+   "Recursos",
+   "Cronograma"
+  ],
+  "c": 1,
+  "e": "Las reservas (contingencia y gestión) forman parte de la planificación de Finanzas (S7).",
+  "w": [
+   "El alcance introduce riesgo, pero no gestiona reservas.",
+   "",
+   "No es donde se planifican las reservas.",
+   "Las respuestas alteran el cronograma, pero las reservas son dinero."
+  ],
+  "t": "Reservas = dinero = Finanzas.",
+  "s": "Memoria P09 (S8), §1.4 (pág. 7)"
+ },
+ {
+  "id": "S8-E59",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cómo se gestionan los riesgos en un enfoque adaptativo?",
+  "o": [
+   "Se incorporan a las líneas base mediante reservas al inicio",
+   "Se revisan en cada iteración (sprint)",
+   "No se gestionan: el ágil absorbe la incertidumbre por sí solo",
+   "Solo se revisan en la auditoría final"
+  ],
+  "c": 1,
+  "e": "En predictivo, los riesgos se incorporan a las líneas base mediante reservas. En adaptativo, se revisan en cada iteración (planificación del sprint y retrospectiva).",
+  "w": [
+   "Eso es lo propio del predictivo.",
+   "",
+   "Se siguen gestionando.",
+   "Se revisan continuamente."
+  ],
+  "t": "Ágil = revisar en cada sprint.",
+  "s": "Memoria P09 (S8), §1.5 (pág. 7)"
+ },
+ {
+  "id": "S8-E60",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué significa adaptar (tailoring) la gestión de riesgos?",
+  "o": [
+   "Saltarse los procesos que no aportan valor en proyectos pequeños",
+   "Aplicar siempre el análisis cuantitativo completo",
+   "Dimensionar el esfuerzo según el proyecto, sin saltarse pasos",
+   "Copiar el plan de riesgos de otro proyecto similar"
+  ],
+  "c": 2,
+  "e": "La gestión de riesgos se adapta al tamaño, la complejidad, el apetito, el enfoque y la importancia estratégica. Adaptar no es saltarse pasos: es dimensionar el esfuerzo.",
+  "w": [
+   "Adaptar no es saltarse pasos.",
+   "No siempre es necesario.",
+   "",
+   "Adaptar es ajustar al contexto propio."
+  ],
+  "t": "Tailoring = dimensionar, no recortar.",
+  "s": "Memoria P09 (S8), §1.5 (pág. 7)"
+ },
+ {
+  "id": "S8-E61",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿A quién se aplica el Esquema Nacional de Seguridad (RD 311/2022)?",
+  "o": [
+   "Solo a las empresas privadas del sector financiero",
+   "Solo a las infraestructuras críticas de energía y transporte",
+   "Al sector público y a sus proveedores",
+   "A cualquier empresa que quiera certificar un SGSI"
+  ],
+  "c": 2,
+  "e": "El ENS regula la seguridad en el uso de medios electrónicos en el sector público y se aplica también a los proveedores que le prestan servicios o soluciones.",
+  "w": [
+   "Se dirige al sector público.",
+   "No es su ámbito.",
+   "",
+   "Eso es ISO 27001."
+  ],
+  "t": "ENS = sector público (+ proveedores).",
+  "s": "Memoria P09 (S8), §1.6 (pág. 7)"
+ },
+ {
+  "id": "S8-E62",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuál de estos es un principio básico del ENS?",
+  "o": [
+   "Seguridad delegada por completo en el proveedor",
+   "Gestión de la seguridad basada en los riesgos",
+   "Revisión de la seguridad solo al cierre",
+   "Responsabilidad única concentrada en una persona"
+  ],
+  "c": 1,
+  "e": "Principios básicos del ENS: seguridad como proceso integral; gestión basada en los riesgos; prevención, detección, respuesta y conservación; líneas de defensa; vigilancia continua y reevaluación periódica; diferenciación de responsabilidades.",
+  "w": [
+   "El ENS exige responsabilidades diferenciadas, no delegar todo.",
+   "",
+   "El ENS pide vigilancia continua.",
+   "Va contra la diferenciación de responsabilidades."
+  ],
+  "t": "ENS = riesgos + vigilancia continua + responsabilidades separadas.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 7–8)"
+ },
+ {
+  "id": "S8-E63",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cuáles son las cinco dimensiones de seguridad del ENS?",
+  "o": [
+   "Confidencialidad, integridad, disponibilidad, privacidad y legalidad de datos",
+   "Integridad, disponibilidad, resiliencia, trazabilidad y auditoría",
+   "Confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad",
+   "Confidencialidad, autenticidad, no repudio, calidad y disponibilidad"
+  ],
+  "c": 2,
+  "e": "Dimensiones del ENS (Anexo I): Confidencialidad (C), Integridad (I), Trazabilidad (T), Autenticidad (A) y Disponibilidad (D).",
+  "w": [
+   "Privacidad y legalidad no son dimensiones del ENS.",
+   "Resiliencia y auditoría no son dimensiones.",
+   "",
+   "No repudio y calidad no son dimensiones."
+  ],
+  "t": "C-I-T-A-D.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E64",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Un sistema tiene nivel BAJO en cuatro dimensiones y MEDIO en Disponibilidad. ¿Qué categoría ENS tiene?",
+  "o": [
+   "BÁSICA",
+   "MEDIA",
+   "ALTA",
+   "Depende de MAGERIT"
+  ],
+  "c": 1,
+  "e": "La categoría del sistema (BÁSICA, MEDIA o ALTA) es la del nivel más alto alcanzado en cualquier dimensión: aquí MEDIO → categoría MEDIA.",
+  "w": [
+   "La mayoría no cuenta: manda el nivel más alto.",
+   "",
+   "Ninguna dimensión es ALTA.",
+   "MAGERIT analiza riesgos, no fija la categoría."
+  ],
+  "t": "Manda el máximo.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E65",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿De qué depende el nivel de cada dimensión de seguridad en el ENS?",
+  "o": [
+   "Del perjuicio que causaría un incidente",
+   "Del número de usuarios del sistema",
+   "Del presupuesto del proyecto",
+   "Del resultado de la auditoría anterior del sistema"
+  ],
+  "c": 0,
+  "e": "A cada dimensión se le asigna un nivel BAJO, MEDIO o ALTO según el perjuicio que causaría un incidente.",
+  "w": [
+   "",
+   "No es el criterio.",
+   "No es el criterio.",
+   "La auditoría verifica, no fija niveles."
+  ],
+  "t": "Nivel = daño potencial.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E66",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué niveles puede tener cada dimensión y qué categorías el sistema en el ENS?",
+  "o": [
+   "Niveles del 1 al 5; categorías BAJA, MEDIA, ALTA y CRÍTICA",
+   "Niveles BÁSICO/ALTO; categorías PÚBLICA/RESERVADA",
+   "Niveles BAJO/MEDIO/ALTO; categorías BÁSICA/MEDIA/ALTA",
+   "Niveles BAJO/MEDIO/ALTO; categorías I, II y III"
+  ],
+  "c": 2,
+  "e": "Cada dimensión: BAJO, MEDIO o ALTO. El sistema: categoría BÁSICA, MEDIA o ALTA.",
+  "w": [
+   "No son las escalas del ENS.",
+   "No son las escalas del ENS.",
+   "",
+   "Las categorías no se numeran así."
+  ],
+  "t": "Dimensión → bajo; sistema → básica (no «baja»).",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E67",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿En qué tres marcos organiza el Anexo II del ENS sus medidas de seguridad?",
+  "o": [
+   "Medidas físicas, lógicas y documentales",
+   "Organizativo, operacional y de protección",
+   "Medidas preventivas, detectivas y correctivas",
+   "Marco técnico, legal y económico del sistema"
+  ],
+  "c": 1,
+  "e": "El Anexo II (73 medidas) se organiza en marco organizativo (org), marco operacional (op) y medidas de protección (mp).",
+  "w": [
+   "No es la estructura del Anexo II.",
+   "",
+   "No es la estructura del Anexo II.",
+   "No es la estructura del Anexo II."
+  ],
+  "t": "org · op · mp.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E68",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué medidas del Anexo II del ENS son obligatorias para un sistema?",
+  "o": [
+   "Todas las medidas del anexo, sea cual sea la categoría del sistema",
+   "Solo las del marco organizativo",
+   "Las que elija libremente el responsable",
+   "Las que correspondan a su categoría y al nivel de cada dimensión"
+  ],
+  "c": 3,
+  "e": "Las medidas del Anexo II se aplican según la categoría del sistema y el nivel de cada dimensión.",
+  "w": [
+   "Se aplican según la categoría y los niveles.",
+   "También las operacionales y de protección.",
+   "No es una elección libre.",
+   ""
+  ],
+  "t": "Más categoría → más medidas.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E69",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué son MAGERIT y PILAR?",
+  "o": [
+   "La metodología de análisis de riesgos y su herramienta",
+   "Dos normas internacionales de gestión de la seguridad de la información",
+   "Las dos fases de la auditoría formal del ENS",
+   "Dos catálogos de controles del Anexo A de ISO 27001"
+  ],
+  "c": 0,
+  "e": "MAGERIT (v3) es la metodología de análisis de riesgos que usa habitualmente la Administración española (activos, amenazas, salvaguardas e impacto). PILAR, del CCN, es la herramienta que la implementa.",
+  "w": [
+   "",
+   "Eso sería la familia ISO 27000.",
+   "No son fases de auditoría.",
+   "No son catálogos de controles."
+  ],
+  "t": "MAGERIT = método; PILAR = herramienta.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E70",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué sistemas deben someterse a una auditoría formal periódica del ENS?",
+  "o": [
+   "Solo los de categoría ALTA",
+   "Todos, incluidos los de categoría BÁSICA",
+   "Solo los que hayan sufrido un incidente",
+   "Los de categoría MEDIA o ALTA"
+  ],
+  "c": 3,
+  "e": "Los sistemas de categoría MEDIA o ALTA deben someterse a una auditoría formal periódica (Anexo III) y acreditar su conformidad con una certificación emitida por una entidad acreditada.",
+  "w": [
+   "También los de categoría MEDIA.",
+   "La BÁSICA no exige auditoría formal.",
+   "Es periódica, no reactiva.",
+   ""
+  ],
+  "t": "MEDIA y ALTA → auditoría.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8)"
+ },
+ {
+  "id": "S8-E71",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué papel tiene MAGERIT respecto a la categoría ENS de un sistema?",
+  "o": [
+   "Fijar la categoría del sistema por mayoría de niveles",
+   "Certificar la conformidad en la auditoría",
+   "Analizar y tratar los riesgos una vez categorizado",
+   "Elegir las dimensiones que se valoran"
+  ],
+  "c": 2,
+  "e": "MAGERIT sirve para analizar y tratar los riesgos una vez categorizado el sistema, no para fijar la categoría.",
+  "w": [
+   "La categoría la fija el nivel máximo, no MAGERIT.",
+   "La certificación la emite una entidad acreditada.",
+   "",
+   "Las cinco dimensiones son fijas."
+  ],
+  "t": "Primero se categoriza y después se analiza.",
+  "s": "Memoria P09 (S8), §1.6 (pág. 8); Batería P09, pregunta 5"
+ },
+ {
+  "id": "S8-E72",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué especifica la norma ISO/IEC 27001:2022?",
+  "o": [
+   "Las medidas obligatorias para el sector público español",
+   "Los requisitos de un SGSI",
+   "La metodología de análisis de riesgos de la Administración",
+   "Los procesos del dominio de Riesgos del PMBOK"
+  ],
+  "c": 1,
+  "e": "ISO/IEC 27001:2022 especifica los requisitos de un Sistema de Gestión de Seguridad de la Información (SGSI).",
+  "w": [
+   "Eso es el ENS.",
+   "",
+   "Eso es MAGERIT.",
+   "El PMBOK es otro marco."
+  ],
+  "t": "ISO 27001 = SGSI.",
+  "s": "Memoria P09 (S8), §1.7 (pág. 8)"
+ },
+ {
+  "id": "S8-E73",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué diferencia las cláusulas 6.1.2 y 6.1.3 de ISO 27001?",
+  "o": [
+   "6.1.2: apreciación de riesgos; 6.1.3: tratamiento",
+   "6.1.2: tratamiento de riesgos; 6.1.3: apreciación",
+   "6.1.2: política; 6.1.3: auditoría interna",
+   "6.1.2: controles; 6.1.3: mejora continua"
+  ],
+  "c": 0,
+  "e": "La cláusula 6.1.2 exige un proceso de apreciación de riesgos y la 6.1.3 un proceso de tratamiento, que culmina en la Declaración de Aplicabilidad.",
+  "w": [
+   "",
+   "Está al revés.",
+   "No es su contenido.",
+   "La mejora es la cláusula 10."
+  ],
+  "t": "Primero se aprecia (6.1.2) y luego se trata (6.1.3).",
+  "s": "Memoria P09 (S8), §1.7 (pág. 8–9)"
+ },
+ {
+  "id": "S8-E74",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Qué documento culmina el tratamiento de riesgos en ISO 27001?",
+  "o": [
+   "El registro de riesgos del proyecto",
+   "El informe de auditoría del ENS",
+   "La Declaración de Aplicabilidad",
+   "El plan de continuidad de negocio"
+  ],
+  "c": 2,
+  "e": "El tratamiento (6.1.3) culmina en la Declaración de Aplicabilidad, con los controles seleccionados y su justificación.",
+  "w": [
+   "Es un documento del PMBOK.",
+   "Es del ENS.",
+   "",
+   "No culmina el tratamiento."
+  ],
+  "t": "Tratamiento → Declaración de Aplicabilidad.",
+  "s": "Memoria P09 (S8), §1.7 (pág. 9)"
+ },
+ {
+  "id": "S8-E75",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Cómo se organizan los 93 controles del Anexo A de ISO 27001:2022?",
+  "o": [
+   "En 4 temas: organizacionales, personas, físicos y tecnológicos",
+   "En tres marcos: organizativo, operacional y de protección",
+   "En catorce dominios, igual que en la versión anterior de la norma",
+   "En cinco dimensiones: C, I, T, A y D"
+  ],
+  "c": 0,
+  "e": "Anexo A: 93 controles en cuatro temas: 37 organizacionales (5.x), 8 de personas (6.x), 14 físicos (7.x) y 34 tecnológicos (8.x).",
+  "w": [
+   "",
+   "Eso es el Anexo II del ENS.",
+   "La versión 2022 los agrupa en cuatro temas.",
+   "Eso son las dimensiones del ENS."
+  ],
+  "t": "ISO = 4 temas; ENS = 3 marcos.",
+  "s": "Memoria P09 (S8), §1.7 (pág. 9)"
+ },
+ {
+  "id": "S8-E76",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "¿Con qué estrategia del PMBOK se corresponde «retener» el riesgo en ISO 27000?",
+  "o": [
+   "Aceptar",
+   "Mitigar",
+   "Evitar",
+   "Transferir"
+  ],
+  "c": 0,
+  "e": "ISO 27000 → PMBOK: modificar → mitigar, retener → aceptar, evitar → evitar, compartir → transferir.",
+  "w": [
+   "",
+   "Se corresponde con «modificar».",
+   "Se llama igual en ambas: «evitar».",
+   "Se corresponde con «compartir»."
+  ],
+  "t": "Retener = quedárselo = aceptar.",
+  "s": "Memoria P09 (S8), §1.7 (pág. 9)"
+ },
+ {
+  "id": "S8-E77",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "En ISO 27000, «compartir» un riesgo equivale en el PMBOK a…",
+  "o": [
+   "Transferir",
+   "Mitigar",
+   "Aceptar",
+   "Escalar al portafolio"
+  ],
+  "c": 0,
+  "e": "ISO 27000 → PMBOK: modificar → mitigar, retener → aceptar, evitar → evitar, compartir → transferir.",
+  "w": [
+   "",
+   "Mitigar equivale a «modificar».",
+   "Aceptar equivale a «retener».",
+   "Escalar no tiene equivalente en esa lista."
+  ],
+  "t": "Ojo: «compartir» ISO (amenaza) = transferir PMBOK; «compartir» PMBOK es para oportunidades.",
+  "s": "Memoria P09 (S8), §1.7 (pág. 9)"
+ },
+ {
+  "id": "S8-E78",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "En un proyecto de ciberseguridad, ¿qué riesgos gestiona el PMBOK y cuáles el ENS e ISO 27001?",
+  "o": [
+   "PMBOK: riesgos del sistema entregado; ENS/ISO: los del proyecto",
+   "PMBOK: riesgos del proyecto; ENS/ISO: del sistema entregado",
+   "Los tres gestionan solo los riesgos del proyecto",
+   "Los tres gestionan solo los riesgos de seguridad"
+  ],
+  "c": 1,
+  "e": "El PMBOK gestiona los riesgos del proyecto (plazo, coste, calidad). El ENS y la ISO 27001 gestionan los riesgos del sistema de información que el proyecto entrega.",
+  "w": [
+   "Está al revés.",
+   "",
+   "ENS e ISO miran el sistema de información.",
+   "El PMBOK mira plazo, coste y calidad del proyecto."
+  ],
+  "t": "Proyecto ↔ PMBOK; producto ↔ ENS/ISO.",
+  "s": "Memoria P09 (S8), §1.8 (pág. 9)"
+ },
+ {
+  "id": "S8-E79",
+  "tema": "S8",
+  "fuente": "practica",
+  "p": "Una vulnerabilidad sin resolver en un proyecto de ciberseguridad, ¿qué tipo de riesgo es?",
+  "o": [
+   "Solo un riesgo de seguridad del sistema",
+   "Solo un riesgo del proyecto, no de seguridad",
+   "Un riesgo de seguridad y, a la vez, del proyecto",
+   "Una incidencia, porque la vulnerabilidad ya existe"
+  ],
+  "c": 2,
+  "e": "En un proyecto de ciberseguridad los marcos se cruzan: una vulnerabilidad no resuelta es a la vez un riesgo de seguridad y un riesgo de no superar la auditoría, que bloquea la aceptación.",
+  "w": [
+   "También amenaza la auditoría y la aceptación.",
+   "También es un riesgo de seguridad.",
+   "",
+   "Su explotación o el fallo en la auditoría aún no han ocurrido."
+  ],
+  "t": "Seguridad y proyecto se cruzan.",
+  "s": "Memoria P09 (S8), §1.8 (pág. 9)"
+ }
+]

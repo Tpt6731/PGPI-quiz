@@ -1846,5 +1846,49 @@
   ],
   "t": "Seguridad y proyecto se cruzan.",
   "s": "Memoria P09 (S8), §1.8 (pág. 9)"
+ },
+ {
+  "id": "S8-T3G2-7",
+  "tema": "S8",
+  "fuente": "banco",
+  "p": "Es el director del proyecto GHK. Usted y el fabricante han acordado sustituir el tipo de plástico utilizado en el producto por uno ligeramente más grueso si se produce un error superior al 7 por ciento en la producción. El plástico más grueso costará más y ralentizará la producción, pero los errores disminuirán. ¿De qué es ejemplo esta situación?",
+  "o": [
+   "Umbral (Threshold)",
+   "Detección y seguimiento",
+   "Fabricación justo a tiempo (JIT)",
+   "Presupuestación"
+  ],
+  "c": 0,
+  "e": "El 7 % de error es un umbral: un límite medible acordado a partir del cual se actúa (aquí, cambiar de plástico). El umbral traduce el apetito al riesgo a límites concretos, como un ±5 % de coste.",
+  "w": [
+   "",
+   "Detectar y seguir los errores no es lo que define la situación: lo clave es el límite del 7 %.",
+   "JIT es una técnica de inventario, no tiene relación.",
+   "No se está elaborando ningún presupuesto."
+  ],
+  "t": "Si hay un número que, al superarse, obliga a actuar → umbral.",
+  "s": "Test 3 G2 03/11/2026 (versión A), P7 · Memoria P09 (S8), §1.2 (pág. 3)"
+ },
+ {
+  "id": "S8-T3G2-8",
+  "tema": "S8",
+  "fuente": "banco",
+  "p": "Jason es el director de proyectos de su organización y trabaja con el equipo para identificar y analizar los riesgos del proyecto. Jason comienza a crear un registro de riesgos como parte de este proceso, pero su equipo no comprende qué es un registro de riesgos ni cuál es su propósito. ¿Cuál de las siguientes opciones describe mejor el registro de riesgos?",
+  "o": [
+   "Es parte del sistema de información para la dirección de proyectos (PMIS) para el control integrado de cambios.",
+   "Documenta los resultados de los demás procesos de gestión de riesgos.",
+   "Es un documento que contiene las entradas iniciales de identificación de riesgos.",
+   "Es un sistema que rastrea únicamente los riesgos negativos dentro de un proyecto."
+  ],
+  "c": 1,
+  "e": "El registro de riesgos nace en Identificar los riesgos y se va completando con los resultados de los demás procesos: el análisis añade probabilidad, impacto y prioridad; la planificación de respuestas, estrategia, propietario y disparador; y el seguimiento, el estado y el riesgo residual.",
+  "w": [
+   "El registro no es parte del PMIS ni una herramienta del control integrado de cambios.",
+   "",
+   "No contiene las entradas de la identificación: es su salida, y luego se sigue actualizando.",
+   "También recoge oportunidades (riesgos positivos)."
+  ],
+  "t": "El registro es el documento vivo de todo el ciclo de riesgos, no solo de la identificación.",
+  "s": "Test 3 G2 03/11/2026 (versión A), P8 · Memoria P09 (S8), §1.3, tabla de procesos (pág. 4–5) y §2.9 (pág. 13)"
  }
 ]

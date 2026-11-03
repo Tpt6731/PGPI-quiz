@@ -2066,5 +2066,115 @@
   ],
   "t": "Con CPI < 1 la EAC sale MAYOR que el BAC: se divide, no se multiplica.",
   "s": "Memoria P02 (S7), §1.1.2.4 (pág. 8)"
+ },
+ {
+  "id": "S7-T3G2-2",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "En el contexto del Dominio de Desempeño de los Recursos, ¿cuál es el alcance principal del procedimiento Monitorizar y Controlar los Recursos?",
+  "o": [
+   "Evaluar el desempeño individual y la motivación de los miembros del equipo.",
+   "Supervisar el uso, capacidad y disponibilidad de recursos físicos y virtuales (hardware, licencias, instalaciones).",
+   "Negociar la incorporación de personal con los gestores funcionales.",
+   "Asignar las tareas diarias en las reuniones de pie (Stand-up meetings)."
+  ],
+  "c": 1,
+  "e": "Monitorizar y controlar los recursos se centra en los recursos físicos y virtuales (equipos, software, licencias, instalaciones, infraestructura): uso real frente a planificado, escasez o exceso y liberación a tiempo. Las personas se gestionan en «Liderar el equipo».",
+  "w": [
+   "El desempeño y la motivación de las personas pertenecen a Liderar el equipo.",
+   "",
+   "Negociar con gestores funcionales es Adquirir recursos.",
+   "Asignar tareas diarias no es el alcance de este proceso."
+  ],
+  "t": "Monitorear recursos = cosas (hardware, licencias); personas = Liderar el equipo.",
+  "s": "Test 3 G2 03/11/2026 (versión A), P2 · Presentación S7, diap. 18"
+ },
+ {
+  "id": "S7-T3G2-3",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Durante la evolución del equipo de proyecto, los miembros empiezan a resolver conflictos de manera constructiva, desarrollan confianza mutua y establecen normas claras de convivencia. Según el modelo de Tuckman, ¿en qué etapa se encuentra el equipo?",
+  "o": [
+   "Formación (Forming)",
+   "Turbulencia (Storming)",
+   "Normalización (Norming)",
+   "Desempeño (Performing)"
+  ],
+  "c": 2,
+  "e": "Fijar normas de convivencia y empezar a resolver conflictos de forma constructiva es la etapa de Normalización (Norming): el equipo sale de la turbulencia y se pone de acuerdo en cómo trabajar. En Desempeño (Performing) el equipo ya funciona con autonomía y alto rendimiento. S7 solo cita las cuatro etapas; su contenido es teoría general del modelo de Tuckman.",
+  "w": [
+   "En Formación el equipo apenas se conoce.",
+   "En Turbulencia aparecen los conflictos; aquí ya se están resolviendo.",
+   "",
+   "En Desempeño el equipo ya rinde con autonomía; aquí aún está fijando normas."
+  ],
+  "t": "«Establecen normas» = Norming. No saltes a Performing por ver que hay buen ambiente.",
+  "s": "Test 3 G2 03/11/2026 (versión A), P3 · Presentación S7, diap. 10"
+ },
+ {
+  "id": "S7-T3G2-5",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Durante la revisión mensual del estado financiero de un proyecto de TI mediante el análisis del Valor Ganado (EVM), el director constata un Costo Real (AC) de 180.000 € frente a un Valor Ganado (EV) de 150.000 € a la fecha de corte. ¿Qué conclusión debe reportar sobre el estado del proyecto?",
+  "o": [
+   "El proyecto registra un sobrecosto, ya que se ha gastado más dinero de lo presupuestado para el trabajo completado hasta el momento (CPI<1,0).",
+   "La línea base de costos debe aumentarse automáticamente sin requerir una solicitud de cambio formal.",
+   "El proyecto se encuentra adelantado en el cronograma respecto a la línea base aprobada (SPI>1,0).",
+   "Se ha generado un ahorro neto que permite reasignar la reserva de gestión a nuevas actividades."
+  ],
+  "c": 0,
+  "e": "CPI = EV / AC = 150.000 / 180.000 ≈ 0,83 < 1: por cada euro gastado se obtienen 0,83 € de valor, hay sobrecoste. CV = EV − AC = −30.000 €.",
+  "w": [
+   "",
+   "La línea base solo cambia mediante control formal de cambios.",
+   "Sin el PV no se puede calcular el SPI; con EV y AC solo se mide el coste.",
+   "Es lo contrario: gastar más de lo ganado es sobrecoste, no ahorro."
+  ],
+  "t": "Con EV y AC solo puedes hablar de coste (CPI, CV); el plazo (SPI) necesita el PV.",
+  "s": "Test 3 G2 03/11/2026 (versión A), P5 · Memoria P02 (S7), §1.1.2.4 (pág. 6–8)"
+ },
+ {
+  "id": "S7-T3G2-13",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Un director de proyectos observa que un desarrollador clave muestra un rendimiento mínimo indispensable, desinterés manifiesto y falta de compromiso con los objetivos del proyecto debido a un agotamiento no gestionado. ¿Qué fenómeno o riesgo relacionado con el bienestar humano se está manifestando?",
+  "o": [
+   "Conflicto de matriz débil",
+   "Renuncia silenciosa (Quiet quitting)",
+   "Modelo de Tuckman en etapa de Storming",
+   "Sesgo inconsciente de selección"
+  ],
+  "c": 1,
+  "e": "Quiet quitting: esfuerzo mínimo e indiferencia por falta de compromiso. Se previene con bienestar: salud mental, flexibilidad horaria y conciliación.",
+  "w": [
+   "No hay ningún conflicto de autoridad en una organización matricial.",
+   "",
+   "Storming es una etapa del equipo con conflictos, no desinterés de una persona.",
+   "No hay ningún proceso de selección implicado."
+  ],
+  "t": "Mínimo esfuerzo + desconexión = quiet quitting.",
+  "s": "Test 3 G2 03/11/2026 (versión B), P3 · Presentación S7, diap. 21"
+ },
+ {
+  "id": "S7-T3G2-15",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Es el director del proyecto de actualización de red para su empresa. La gerencia le ha pedido que cree una estimación de costos del proyecto para determinar el financiamiento del mismo. Reúne las entradas e inicia el proceso de estimación. De las siguientes entradas para la estimación de costos, ¿cuál es la menos confiable?",
+  "o": [
+   "Información histórica",
+   "Recuerdos de los miembros del equipo",
+   "Archivos del proyecto",
+   "Plantillas de estimación de costos"
+  ],
+  "c": 1,
+  "e": "Los recuerdos de las personas son la fuente menos fiable: son subjetivos e incompletos. La información histórica, los archivos de proyectos anteriores y las plantillas están documentados. No aparece de forma explícita en el material del curso; es teoría general del PMBOK.",
+  "w": [
+   "Está documentada: es de las entradas más fiables.",
+   "",
+   "Los archivos de proyectos son registros documentados.",
+   "Las plantillas están estandarizadas y documentadas."
+  ],
+  "t": "Documentado > recordado.",
+  "s": "Test 3 G2 03/11/2026 (versión B), P7 · Presentación S7, diap. 30"
  }
 ]

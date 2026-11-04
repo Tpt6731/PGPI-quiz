@@ -2176,5 +2176,93 @@
   ],
   "t": "Documentado > recordado.",
   "s": "Test 3 G2 03/11/2026 (versión B), P7 · Presentación S7, diap. 30"
+ },
+ {
+  "id": "S7-T3G2-21",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Necesita adquirir un producto químico altamente especializado para un proyecto de investigación. Solo un proveedor proporciona los materiales que necesita. ¿De qué condición de mercado es ejemplo este escenario?",
+  "o": [
+   "Fuente única exclusiva / Proveedor único (Sole source)",
+   "Restricción",
+   "Fuente única opcional (Single source)",
+   "Oligopolio"
+  ],
+  "c": 0,
+  "e": "Sole source: solo existe un proveedor en el mercado (exclusividad, patente…). Single source: hay varios, pero se elige trabajar con uno concreto. Oligopolio: pocos proveedores que dominan el mercado. No aparece en el material del curso; es teoría general de adquisiciones.",
+  "w": [
+   "",
+   "Una restricción no es una condición de mercado.",
+   "En single source hay más proveedores, pero se prefiere uno; aquí solo existe uno.",
+   "En un oligopolio hay pocos proveedores, no uno solo."
+  ],
+  "t": "Sole = solo existe uno; single = eliges uno entre varios.",
+  "s": "Test 3 G2 03/11/2026 (versión C), P7"
+ },
+ {
+  "id": "S7-T3G2-22",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Ha creado una estimación de costos para un nuevo proyecto que gestionará en su organización. Todos los siguientes elementos deben incluirse en su estimación de costos, EXCEPTO:",
+  "o": [
+   "Supuestos realizados",
+   "Los miembros específicos del equipo que utilizará el proyecto",
+   "Descripción del alcance del trabajo de la actividad del cronograma",
+   "Restricciones"
+  ],
+  "c": 1,
+  "e": "La estimación de costos y su base documentan el alcance del trabajo estimado, los supuestos, las restricciones y el nivel de confianza. Se estima por tipo de recurso y tarifa, no por las personas concretas que trabajarán. No aparece de forma explícita en el material del curso; es teoría general del PMBOK.",
+  "w": [
+   "Los supuestos forman parte de la base de las estimaciones.",
+   "",
+   "Hay que describir qué trabajo se está estimando.",
+   "Las restricciones forman parte de la base de las estimaciones."
+  ],
+  "t": "EXCEPTO: busca lo que no es base de la estimación (los nombres de las personas).",
+  "s": "Test 3 G2 03/11/2026 (versión C), P8 · Presentación S7, diap. 30"
+ },
+ {
+  "id": "S7-T3G2-23",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Según la clasificación del Dominio de Desempeño de los Recursos, ¿cuál de los siguientes elementos se categoriza formalmente como un recurso físico o virtual?",
+  "o": [
+   "El gestor funcional de la organización",
+   "La infraestructura en la nube y los entornos de prueba",
+   "El equipo de desarrollo de software",
+   "El director de proyecto"
+  ],
+  "c": 1,
+  "e": "Los recursos se clasifican en humanos (las personas) y físicos o virtuales: hardware, infraestructura, software, entornos de pruebas, licencias, instalaciones, suministros y servicios.",
+  "w": [
+   "Es una persona: recurso humano.",
+   "",
+   "Son personas: recurso humano.",
+   "Es una persona: recurso humano."
+  ],
+  "t": "Si es una persona, es recurso humano.",
+  "s": "Test 3 G2 03/11/2026 (versión C), P9 · Presentación S7, diap. 2"
+ },
+ {
+  "id": "S7-T3G2-27",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "¿En qué proceso se desarrolla la línea base de los costos?",
+  "o": [
+   "Estimar los costos",
+   "Desarrollar el cronograma",
+   "Desarrollar el presupuesto",
+   "Realizar el control integrado de cambios"
+  ],
+  "c": 2,
+  "e": "Desarrollar el presupuesto agrega las estimaciones de costes de actividades o paquetes de trabajo y establece la línea base de costes autorizada.",
+  "w": [
+   "Estima cada pieza, pero no fija la línea base.",
+   "Produce la línea base del cronograma, no la de costes.",
+   "",
+   "Aprueba cambios a la línea base; no la crea."
+  ],
+  "t": "Estimar → piezas; desarrollar el presupuesto → suma + línea base.",
+  "s": "Test 3 G2 03/11/2026 (versión D), P10 · Presentación S7, diap. 30"
  }
 ]

@@ -1890,5 +1890,71 @@
   ],
   "t": "El registro es el documento vivo de todo el ciclo de riesgos, no solo de la identificación.",
   "s": "Test 3 G2 03/11/2026 (versión A), P8 · Memoria P09 (S8), §1.3, tabla de procesos (pág. 4–5) y §2.9 (pág. 13)"
+ },
+ {
+  "id": "S8-T3G2-17",
+  "tema": "S8",
+  "fuente": "banco",
+  "p": "Es el director de un proyecto híbrido que creará un sitio web nuevo y mejorado para su empresa. Actualmente, su empresa cuenta con más de 8 millones de usuarios en todo el mundo. Desea encuestar a los expertos de su organización mediante un formulario sencillo e anónimo sobre cualquier riesgo previsible en el diseño, estructura e intención del sitio web. Con la información recopilada, se envían encuestas anónimas subsiguientes al grupo de expertos. Este es un ejemplo de _________________________________.",
+  "o": [
+   "Un disparador anónimo",
+   "Identificación de riesgos",
+   "Un disparador (Trigger)",
+   "La técnica Delphi"
+  ],
+  "c": 3,
+  "e": "Encuestas anónimas a expertos en varias rondas, en las que cada ronda se apoya en las respuestas de la anterior hasta llegar a un consenso: eso es la técnica Delphi. El anonimato evita que una opinión dominante arrastre a las demás. No aparece en el material del curso; es teoría general del PMBOK.",
+  "w": [
+   "No existe ese concepto.",
+   "Es el proceso en el que se usa, pero la pregunta es por la técnica concreta.",
+   "Un disparador es una señal de que un riesgo va a materializarse.",
+   ""
+  ],
+  "t": "Anónimo + expertos + varias rondas = Delphi. «Identificación de riesgos» es demasiado genérico.",
+  "s": "Test 3 G2 03/11/2026 (versión C), P2 · Memoria P09 (S8), §1.3 (pág. 5)"
+ },
+ {
+  "id": "S8-T3G2-18",
+  "tema": "S8",
+  "fuente": "banco",
+  "p": "Bradley es el Scrum Master de su organización y trabaja con el equipo del proyecto para identificar riesgos. Algunos miembros del equipo están confundidos sobre cuándo debe realizarse la identificación de riesgos en el proyecto. ¿Cuándo debe llevarse a cabo la identificación de riesgos?",
+  "o": [
+   "Lo antes posible durante el proceso de inicio",
+   "A lo largo del ciclo de vida de gestión del producto",
+   "Lo antes posible durante el proceso de planificación",
+   "A lo largo de todo el ciclo de vida del proyecto"
+  ],
+  "c": 3,
+  "e": "Identificar los riesgos es iterativo: la primera lista siempre está incompleta, y al monitorear los riesgos se siguen identificando riesgos nuevos hasta el cierre del proyecto.",
+  "w": [
+   "Empieza pronto, pero no se queda en el inicio.",
+   "Se habla del ciclo de vida del proyecto, no del producto.",
+   "Se hace sobre todo al planificar, pero continúa durante toda la ejecución.",
+   ""
+  ],
+  "t": "«Lo antes posible» suena bien, pero la clave es que no se para nunca.",
+  "s": "Test 3 G2 03/11/2026 (versión C), P3 · Memoria P09 (S8), §1.3 (pág. 6–7)"
+ },
+ {
+  "id": "S8-T3G2-25",
+  "tema": "S8",
+  "fuente": "banco",
+  "p": "En el marco de un sistema de información de una entidad pública categorizado según el Esquema Nacional de Seguridad (Real Decreto 311/2022), se detecta un conflicto entre las necesidades operativas de tratamiento de datos y las medidas técno-operativas planteadas. ¿Quién tiene la responsabilidad directa de determinar los requisitos de seguridad de la información tratada y valorar las dimensiones de seguridad correspondientes?",
+  "o": [
+   "El Responsable de Seguridad",
+   "El Responsable del Sistema",
+   "El Responsable de la Información",
+   "El Responsable del Servicio"
+  ],
+  "c": 2,
+  "e": "En el ENS, el Responsable de la Información determina los requisitos de seguridad de la información tratada (y valora sus dimensiones). El Responsable del Servicio hace lo mismo con los servicios prestados. El Responsable de Seguridad decide cómo satisfacer esos requisitos y el Responsable del Sistema se encarga de la operación del sistema. La memoria de P09 solo cita la «diferenciación de responsabilidades»; el reparto de roles es teoría general del ENS.",
+  "w": [
+   "Decide cómo satisfacer los requisitos, pero no los fija.",
+   "Opera el sistema; no fija los requisitos de la información.",
+   "",
+   "Fija los requisitos de los servicios, no los de la información."
+  ],
+  "t": "La pregunta dice «información tratada» → Responsable de la Información.",
+  "s": "Test 3 G2 03/11/2026 (versión D), P4 · Memoria P09 (S8), §1.6 (pág. 7–8)"
  }
 ]

@@ -1,0 +1,1014 @@
+[
+ {
+  "id": "P03-1",
+  "tema": "S9",
+  "fuente": "oficial",
+  "p": "Para el software de e-Vista, que maneja información judicial crítica, el equipo del P3 dispone de cuatro perfiles internos con las habilidades y el tiempo necesarios. ¿Qué decisión es más razonable?",
+  "o": [
+   "Comprar el software, porque externalizar siempre es más barato.",
+   "Desarrollarlo internamente: pesan más el control de un componente crítico y la capacidad interna.",
+   "Contratarlo fuera, para que el proveedor asuma todos los riesgos.",
+   "Decidir solo comparando los costes inmediatos."
+  ],
+  "c": 1,
+  "e": "El hacer o comprar es multicriterio: recursos internos, costes directos e indirectos, necesidad de control y riesgos. Por eso el software se hace dentro y los equipos audiovisuales se compran fuera.",
+  "w": [
+   "Externalizar no es «siempre» más barato: hay que comparar costes directos e indirectos.",
+   "",
+   "El proveedor no asume «todos» los riesgos, y aquí pesa el control de un componente crítico.",
+   "El coste inmediato es solo uno de los factores."
+  ],
+  "t": "Desconfía de los «siempre» y de decidir por un solo criterio.",
+  "s": "Presentación P03 (S9), preguntas PMP, 1 de 5"
+ },
+ {
+  "id": "P03-2",
+  "tema": "S9",
+  "fuente": "oficial",
+  "p": "El P3 contrata cámaras, codificadores y microfonía con el alcance claramente definido, y quiere limitar el riesgo de sobrecostes. ¿Qué contrato es el más adecuado?",
+  "o": [
+   "Tiempo y materiales, pagando horas y materiales utilizados.",
+   "Costes reembolsables, con el comprador asumiendo los costes reales.",
+   "Precio fijo, con alcance y condiciones de aceptación definidos.",
+   "Equipo dedicado, para que el alcance pueda cambiar."
+  ],
+  "c": 2,
+  "e": "Con el alcance bien definido, el precio fijo traslada al proveedor el riesgo de sobrecoste. Las demás opciones son para alcance incierto o cambiante. Y transferir el riesgo no lo elimina: puede aparecer dependencia del proveedor.",
+  "w": [
+   "Es para cuando el volumen de trabajo no puede cerrarse al inicio.",
+   "Deja el riesgo de sobrecoste en el comprador.",
+   "",
+   "Sirve para alcance cambiante, no para uno ya definido."
+  ],
+  "t": "Alcance definido + limitar sobrecoste → precio fijo.",
+  "s": "Presentación P03 (S9), preguntas PMP, 2 de 5"
+ },
+ {
+  "id": "P03-3",
+  "tema": "S9",
+  "fuente": "oficial",
+  "p": "En la licitación de los equipos, una empresa presenta el precio más bajo pero no acredita la solvencia exigida en los pliegos. ¿Qué ocurre?",
+  "o": [
+   "No se le adjudica si no cumple, tras dar plazo de subsanación cuando proceda.",
+   "Se le adjudica, porque el precio compensa la falta de solvencia.",
+   "Se admite su oferta y se le restan puntos en la adjudicación.",
+   "Se le adjudica y se le exige la solvencia al empezar la ejecución."
+  ],
+  "c": 0,
+  "e": "La solvencia es un requisito mínimo de admisión: se cumple o no, y no se compensa con puntos. Los criterios de adjudicación solo comparan las ofertas que ya han pasado ese filtro.",
+  "w": [
+   "",
+   "El precio no compensa la solvencia: son filtros distintos.",
+   "La solvencia no puntúa: es un filtro de cumple o no cumple.",
+   "La solvencia se acredita antes de adjudicar, no después."
+  ],
+  "t": "Solvencia = filtro (sí/no); adjudicación = puntos.",
+  "s": "Presentación P03 (S9), preguntas PMP, 3 de 5"
+ },
+ {
+  "id": "P03-4",
+  "tema": "S9",
+  "fuente": "oficial",
+  "p": "El equipo identifica un riesgo de alto impacto: que los equipos no alcancen de forma estable la latencia exigida (inferior a 50 ms), lo que comprometería un hito. El contrato incluye penalizaciones. ¿Qué respuesta al riesgo es la más adecuada?",
+  "o": [
+   "Aceptarlo y comprobar la latencia al terminar la instalación.",
+   "Transferirlo con las penalizaciones y dejar de gestionarlo.",
+   "Eliminar del contrato el requisito de latencia.",
+   "Mitigarlo: pruebas de latencia en laboratorio antes de aceptar los equipos."
+  ],
+  "c": 3,
+  "e": "La penalización reparte las consecuencias económicas, pero no elimina el impacto sobre el calendario ni sobre las vistas. Exigir pruebas antes de aceptar reduce la probabilidad de fallo antes de que ocurra. Quitar el requisito incumpliría los objetivos del proyecto.",
+  "w": [
+   "Comprobarlo al final llega tarde para un riesgo de alto impacto.",
+   "La penalización compensa el dinero, pero no el retraso del hito; y transferir no es dejar de gestionar.",
+   "Quitar el requisito incumple los objetivos del proyecto.",
+   ""
+  ],
+  "t": "Una penalización no evita el problema: solo lo compensa.",
+  "s": "Presentación P03 (S9), preguntas PMP, 4 de 5"
+ },
+ {
+  "id": "P03-5",
+  "tema": "S9",
+  "fuente": "oficial",
+  "p": "El proveedor ha entregado los equipos y las pruebas iniciales son satisfactorias, pero faltan la auditoría ENS de nivel alto y la firma del acta de aceptación por los LAJ. Pide el pago final. ¿Qué debe hacer el director del proyecto?",
+  "o": [
+   "Pagarlo: la entrega física demuestra que ha cumplido.",
+   "Mantener pendientes la aceptación y el pago hasta completar los pasos del contrato.",
+   "Cerrar el contrato y hacer las pruebas de seguridad después.",
+   "Rechazar todo el equipamiento sin dejar que complete las pruebas."
+  ],
+  "c": 1,
+  "e": "El cierre exige comprobar que se cumplen las condiciones, obtener la aceptación formal y completar lo administrativo y financiero. En el P3 el pago final depende del protocolo de cinco pasos: laboratorio, auditoría ENS, UAT jurídica, traspaso a P10 y P11 y aceptación definitiva por la PMO.",
+  "w": [
+   "Entregar no es cumplir: falta la aceptación formal.",
+   "",
+   "No se cierra un contrato con verificaciones pendientes.",
+   "Es desproporcionado: las pruebas aún no han fallado."
+  ],
+  "t": "Sin aceptación formal no hay pago final ni cierre.",
+  "s": "Presentación P03 (S9), preguntas PMP, 5 de 5"
+ },
+ {
+  "id": "S9-E1",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Dónde se tratan principalmente las adquisiciones en el PMBOK 8?",
+  "o": [
+   "Solo en un dominio de desempeño propio de Adquisiciones",
+   "Solo en el dominio de Finanzas, junto al presupuesto",
+   "Solo en el Apéndice X4, fuera de los dominios",
+   "En Gobernanza, Recursos y el Apéndice X4"
+  ],
+  "c": 3,
+  "e": "En el PMBOK 8 las adquisiciones son transversales: en Gobernanza (proceso Estrategia de aprovisionamiento), en Recursos (proceso Adquirir recursos) y con un desarrollo específico en el Apéndice X4 (Adquisiciones).",
+  "w": [
+   "No tiene un dominio propio: se reparten de forma transversal.",
+   "Finanzas no es donde se sitúan los procesos de adquisición.",
+   "El apéndice las desarrolla, pero también aparecen en Gobernanza y Recursos.",
+   ""
+  ],
+  "t": "No busques un «dominio de Adquisiciones»: no existe como tal.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 3)"
+ },
+ {
+  "id": "S9-E2",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿En qué proceso del dominio de Gobernanza se integran las adquisiciones?",
+  "o": [
+   "Adquirir recursos",
+   "Controlar las adquisiciones del proyecto",
+   "Evaluar e implementar cambios",
+   "Estrategia de aprovisionamiento"
+  ],
+  "c": 3,
+  "e": "Gobernanza → Estrategia de aprovisionamiento. Recursos → Adquirir recursos.",
+  "w": [
+   "Ese proceso está en el dominio de Recursos.",
+   "Es una etapa del ciclo contractual, no el proceso de Gobernanza.",
+   "Es el control de cambios, no las adquisiciones.",
+   ""
+  ],
+  "t": "Gobernanza = estrategia; Recursos = adquirir.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 3)"
+ },
+ {
+  "id": "S9-E3",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuál de estos NO es un acuerdo formal con fuentes externas según el PMBOK 8?",
+  "o": [
+   "Un acuerdo de nivel de servicio (SLA/ANS)",
+   "Un memorando de acuerdo (MOA)",
+   "El acta de constitución del proyecto",
+   "Una orden de compra"
+  ],
+  "c": 2,
+  "e": "Las adquisiciones desarrollan y administran acuerdos formales para obtener bienes, servicios o resultados de fuentes externas: contratos, órdenes de compra, memorandos de acuerdo (MOA) y acuerdos de nivel de servicio (SLA/ANS). El acta autoriza el proyecto internamente.",
+  "w": [
+   "Sí es un acuerdo formal con un proveedor.",
+   "Sí es un acuerdo formal.",
+   "",
+   "Sí es un acuerdo formal."
+  ],
+  "t": "Acuerdo formal = con un tercero externo.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 3)"
+ },
+ {
+  "id": "S9-E4",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Según el PMBOK 8, ¿en qué debe centrarse una gestión eficaz de las adquisiciones?",
+  "o": [
+   "Precio mínimo, plazos cortos y penalizaciones altas",
+   "Vigilancia contractual estricta, sin colaborar con nadie",
+   "Alineación, relación con proveedores e incertidumbre",
+   "Externalizar el máximo de trabajo posible"
+  ],
+  "c": 2,
+  "e": "Tres focos: alinear las compras con los objetivos (implicando a los interesados desde el inicio), gestionar la relación con los proveedores (colaboración, transparencia, igualdad de oportunidades) y gestionar la incertidumbre y el riesgo (transferirlo o compartirlo con el contrato adecuado).",
+  "w": [
+   "Reduce las adquisiciones a vigilar y castigar.",
+   "Va más allá de la mera vigilancia contractual.",
+   "",
+   "Eso es una decisión de hacer o comprar, no un foco de gestión."
+  ],
+  "t": "Relación con proveedores ≠ vigilarlos: es colaborar.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 3)"
+ },
+ {
+  "id": "S9-E5",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿En qué etapa del ciclo contractual se decide si cubrir una necesidad interna o externamente?",
+  "o": [
+   "Planificar la gestión de las adquisiciones",
+   "Conducir las adquisiciones con los licitadores",
+   "Controlar las adquisiciones",
+   "Cerrar las adquisiciones"
+  ],
+  "c": 0,
+  "e": "Planificar: analizar necesidades, decidir hacer o comprar, definir la estrategia de aprovisionamiento, identificar proveedores y preparar los documentos de licitación.",
+  "w": [
+   "",
+   "En esta etapa ya se licita y adjudica.",
+   "Aquí se gestiona un contrato ya firmado.",
+   "El cierre es el final del ciclo."
+  ],
+  "t": "Hacer o comprar se decide al planificar.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 3–4)"
+ },
+ {
+  "id": "S9-E6",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Se celebra una conferencia de postores para aclarar dudas de los licitadores. ¿En qué etapa estamos?",
+  "o": [
+   "Planificar la gestión de las adquisiciones",
+   "Conducir las adquisiciones",
+   "Controlar las adquisiciones",
+   "Estrategia de aprovisionamiento"
+  ],
+  "c": 1,
+  "e": "Conducir: obtener respuestas del mercado (RFI, conferencia de postores), evaluar las ofertas con criterios predefinidos, seleccionar, negociar y adjudicar.",
+  "w": [
+   "Aquí se preparan los documentos, aún no hay licitadores.",
+   "",
+   "Aquí ya hay contrato firmado.",
+   "Es la parte de planificación, previa a la licitación."
+  ],
+  "t": "Hay licitadores pero no contrato → conducir.",
+  "s": "Memoria P03 (S9), §2.1 (pág. 4)"
+ },
+ {
+  "id": "S9-E7",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuál de estas es una salida de planificar la estrategia de aprovisionamiento?",
+  "o": [
+   "Los contratos vinculantes adjudicados",
+   "Los pagos de facturas autorizados",
+   "Los documentos de licitación y el SOW",
+   "La evaluación final del proveedor"
+  ],
+  "c": 2,
+  "e": "Salidas de la planificación: plan y estrategia de aprovisionamiento, decisiones de fabricar o comprar, documentos de licitación (RFI, RFQ, RFP, IFB) y enunciado del trabajo (SOW), y criterios de selección ponderados.",
+  "w": [
+   "Son salida de Conducir las adquisiciones.",
+   "Son salida de Controlar las adquisiciones.",
+   "",
+   "Es salida de Controlar las adquisiciones."
+  ],
+  "t": "Planificar → documentos; conducir → contrato; controlar → pagos y cierre.",
+  "s": "Memoria P03 (S9), §2.1, Cuadro 2.1 (pág. 5)"
+ },
+ {
+  "id": "S9-E8",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué herramienta pertenece a Controlar las adquisiciones?",
+  "o": [
+   "La conferencia de postores con los licitadores",
+   "La investigación de mercado",
+   "El valor ganado (EVM) y el índice TCPI",
+   "El análisis de hacer o comprar"
+  ],
+  "c": 2,
+  "e": "Controlar: gestión de cambios y órdenes de variación, inspecciones y auditorías, EVM y TCPI, software de gestión de adquisiciones e IA, y administración de reclamaciones y métodos ADR.",
+  "w": [
+   "Es de Conducir las adquisiciones.",
+   "Es de la planificación.",
+   "",
+   "Es de la planificación."
+  ],
+  "t": "Controlar = seguir el desempeño del contrato (EVM, auditorías, reclamaciones).",
+  "s": "Memoria P03 (S9), §2.1, Cuadro 2.3 (pág. 5)"
+ },
+ {
+  "id": "S9-E9",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué técnica de Conducir las adquisiciones permite comparar ofertas de forma objetiva?",
+  "o": [
+   "El análisis de hacer o comprar",
+   "Las inspecciones y auditorías de calidad",
+   "Las órdenes de variación",
+   "La evaluación ponderada de propuestas"
+  ],
+  "c": 3,
+  "e": "Al conducir se analizan y evalúan las propuestas con sistemas de ponderación (numérica o por colores) y criterios predefinidos, y se hace el análisis de selección de fuentes.",
+  "w": [
+   "Se hace antes, al planificar.",
+   "Son del control del contrato.",
+   "Gestionan cambios de un contrato ya firmado.",
+   ""
+  ],
+  "t": "Comparar ofertas = conducir.",
+  "s": "Memoria P03 (S9), §2.1, Cuadro 2.2 (pág. 5)"
+ },
+ {
+  "id": "S9-E10",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué caracteriza al análisis de hacer o comprar (make-or-buy)?",
+  "o": [
+   "Se decide solo por el coste directo de cada opción",
+   "Es multicriterio: capacidad, control, coste y riesgo",
+   "Siempre conviene comprar, porque transfiere el riesgo",
+   "Se hace al cerrar el contrato con el proveedor"
+  ],
+  "c": 1,
+  "e": "Factores: disponibilidad y capacidades de los recursos internos; obligaciones laborales y control (propiedad intelectual); costes directos e indirectos; y riesgo (quién absorbe mejor los riesgos técnicos y de capacidad).",
+  "w": [
+   "El coste es un factor, pero no el único.",
+   "",
+   "No hay respuesta universal.",
+   "Se hace al planificar, antes de licitar."
+  ],
+  "t": "Hacer o comprar nunca se decide por un solo criterio.",
+  "s": "Memoria P03 (S9), §2.2.1 (pág. 4)"
+ },
+ {
+  "id": "S9-E11",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Una organización necesita un perfil muy especializado solo durante cuatro meses. ¿Qué factor de hacer o comprar pesa a favor de comprar?",
+  "o": [
+   "Proteger la propiedad intelectual crítica",
+   "Evitar obligaciones laborales permanentes",
+   "Mantener el control directo del trabajo",
+   "Aprovechar la plantilla ya disponible"
+  ],
+  "c": 1,
+  "e": "Entre los factores está evitar ampliar obligaciones laborales permanentes (contratar indefinidamente perfiles que solo se necesitan de forma temporal).",
+  "w": [
+   "Eso pesa a favor de hacer dentro.",
+   "",
+   "Eso pesa a favor de hacer dentro.",
+   "Si la hubiera, pesaría a favor de hacer."
+  ],
+  "t": "Necesidad temporal → no crear plantilla fija.",
+  "s": "Memoria P03 (S9), §2.2.1 (pág. 4)"
+ },
+ {
+  "id": "S9-E12",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué indicadores financieros recoge el estándar para comparar las alternativas de hacer o comprar?",
+  "o": [
+   "Payback, ROI, TIR, VAN y coste-beneficio",
+   "Índices de valor ganado CPI, SPI y TCPI del proyecto",
+   "Matriz P×I y EMV",
+   "Solvencia económica y técnica"
+  ],
+  "c": 0,
+  "e": "Indicadores formales: período de recuperación (Payback), ROI, TIR, flujo de caja descontado, VAN y análisis coste-beneficio.",
+  "w": [
+   "",
+   "Son índices de valor ganado para el seguimiento.",
+   "Son técnicas de análisis de riesgos.",
+   "Son requisitos de los licitadores."
+  ],
+  "t": "Hacer o comprar usa indicadores de inversión, no de seguimiento.",
+  "s": "Memoria P03 (S9), §2.2.1 (pág. 4)"
+ },
+ {
+  "id": "S9-E13",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuándo está justificado recurrir a un proveedor único (sole source)?",
+  "o": [
+   "Siempre que reduzca el precio del contrato",
+   "Con patentes o capacidades técnicas exclusivas",
+   "Cuando se quiere evitar depender de un proveedor",
+   "En cualquier compra rutinaria de bajo importe"
+  ],
+  "c": 1,
+  "e": "Varios proveedores fomentan la competencia y evitan la dependencia. El proveedor único (sole source) solo se aplica cuando hay patentes o capacidades técnicas exclusivas.",
+  "w": [
+   "El precio no justifica eliminar la competencia.",
+   "",
+   "Un proveedor único crea dependencia.",
+   "No es el criterio."
+  ],
+  "t": "Sole source = excepción, no comodidad.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 4–6)"
+ },
+ {
+  "id": "S9-E14",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué ventaja tiene trabajar con varios proveedores?",
+  "o": [
+   "Fomenta la competencia y evita la dependencia",
+   "Reduce la carga de coordinación del proyecto",
+   "Unifica las garantías en un solo responsable",
+   "Elimina la necesidad de criterios de selección"
+  ],
+  "c": 0,
+  "e": "Múltiples proveedores fomentan la competencia y evitan la dependencia de uno solo.",
+  "w": [
+   "",
+   "Más proveedores suelen exigir más coordinación.",
+   "Eso es lo propio de un único contrato.",
+   "Siempre hace falta seleccionar."
+  ],
+  "t": "Varios → competencia; uno → dependencia.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 4)"
+ },
+ {
+  "id": "S9-E15",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Se contrata a un integrador que entrega el sistema completo, instalado y listo para usar. ¿Qué método de entrega es?",
+  "o": [
+   "Alianza (joint venture)",
+   "Llave en mano (turnkey)",
+   "Subcontratación autorizada",
+   "Proveedor único (sole source)"
+  ],
+  "c": 1,
+  "e": "Métodos de entrega: sin subcontratación, con subcontratación autorizada, alianza (joint venture) o llave en mano (turnkey), habitual en suministro e integración de sistemas.",
+  "w": [
+   "Una alianza une a dos organizaciones; no es entregar algo terminado.",
+   "",
+   "Describe que el proveedor puede subcontratar, no la entrega completa.",
+   "Es una condición de número de proveedores, no un método de entrega."
+  ],
+  "t": "Llave en mano = te lo dan funcionando.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 4–6)"
+ },
+ {
+  "id": "S9-E16",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Cuando una adquisición se divide en fases, ¿qué debe fijar además la estrategia?",
+  "o": [
+   "Un proveedor distinto y obligatorio para cada una de las fases",
+   "Hitos, KPI, paso de fase y transferencia de conocimiento",
+   "Un único pago al final de todas las fases",
+   "La renuncia a la transferencia de conocimiento"
+  ],
+  "c": 1,
+  "e": "Por fases: objetivos de cada una, hitos e indicadores de desempeño (KPI), criterios para pasar de fase y transferencia de conocimiento al equipo interno para garantizar la continuidad.",
+  "w": [
+   "No es obligatorio cambiar de proveedor.",
+   "",
+   "Los pagos no se definen así.",
+   "Al contrario: hay que planificarla."
+  ],
+  "t": "Por fases → que el conocimiento se quede dentro.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E17",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Antes de licitar, se quiere sondear qué pueden ofrecer los proveedores del mercado. ¿Qué documento se usa?",
+  "o": [
+   "RFI (solicitud de información)",
+   "RFQ (solicitud de cotización)",
+   "RFP (solicitud de propuesta)",
+   "SOW (enunciado del trabajo a contratar)"
+  ],
+  "c": 0,
+  "e": "RFI: sondear capacidades del mercado antes de licitar. RFQ: solución estándar, el precio es el factor decisivo. RFP: alcance complejo en el que el proveedor propone una solución técnica al SOW.",
+  "w": [
+   "",
+   "Se usa cuando la solución es estándar y se decide por precio.",
+   "Pide una propuesta técnica para un alcance complejo.",
+   "Describe el trabajo que se contrata."
+  ],
+  "t": "I = información; Q = precio (quote); P = propuesta.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E18",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Se necesitan 200 monitores estándar y lo que decide es el precio. ¿Qué documento de licitación encaja?",
+  "o": [
+   "RFI (solicitud de información)",
+   "RFP (solicitud de propuesta)",
+   "Acuerdo de nivel de servicio (SLA)",
+   "RFQ (solicitud de cotización)"
+  ],
+  "c": 3,
+  "e": "RFQ: solución estándar en la que el precio es el factor decisivo.",
+  "w": [
+   "Sirve para sondear el mercado, no para pedir precio.",
+   "Es para alcances complejos con propuesta técnica.",
+   "Es un acuerdo, no un documento de licitación.",
+   ""
+  ],
+  "t": "Producto estándar + precio = RFQ.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E19",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Un sistema a medida exige que cada proveedor proponga su solución técnica. ¿Qué documento de licitación procede?",
+  "o": [
+   "RFP (solicitud de propuesta)",
+   "RFQ (solicitud de cotización)",
+   "RFI (solicitud de información)",
+   "Orden de compra directa"
+  ],
+  "c": 0,
+  "e": "RFP: alcance complejo, el proveedor propone una solución técnica al enunciado del trabajo (SOW).",
+  "w": [
+   "",
+   "Es para soluciones estándar decididas por precio.",
+   "Solo sondea el mercado.",
+   "No hay licitación ni propuesta técnica."
+  ],
+  "t": "Solución técnica propuesta = RFP.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E20",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "En una compra con alto riesgo técnico, ¿qué enfoque de selección es el más adecuado?",
+  "o": [
+   "Menor coste",
+   "Solo calificaciones",
+   "Calidad y coste, dando más peso a la calidad",
+   "Presupuesto fijo, sin valorar la parte técnica"
+  ],
+  "c": 2,
+  "e": "Enfoques: calidad y coste (más peso a la calidad cuanto mayor es el riesgo técnico), puntuación técnica más alta, presupuesto fijo (mejor oferta técnica dentro de un techo cerrado), menor coste (solo compras rutinarias) y solo calificaciones (importes menores).",
+  "w": [
+   "Solo para compras rutinarias, nunca complejas.",
+   "Se reserva para importes menores.",
+   "",
+   "El presupuesto fijo sí valora la mejor oferta técnica dentro del techo."
+  ],
+  "t": "Más riesgo técnico → más peso a la calidad.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E21",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuándo es aceptable seleccionar por menor coste?",
+  "o": [
+   "Solo en compras rutinarias",
+   "En cualquier compra pública",
+   "En proyectos complejos de alto riesgo",
+   "Cuando hay un techo de presupuesto"
+  ],
+  "c": 0,
+  "e": "El menor coste solo se usa en compras rutinarias, nunca en las complejas.",
+  "w": [
+   "",
+   "No: depende del tipo de compra.",
+   "Nunca en compras complejas.",
+   "Eso es el enfoque de presupuesto fijo."
+  ],
+  "t": "Menor coste ≠ mejor opción en lo complejo.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E22",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Se fija un techo de gasto cerrado y gana la mejor oferta técnica que no lo supere. ¿Qué enfoque es?",
+  "o": [
+   "Presupuesto fijo",
+   "Menor coste",
+   "Calidad y coste",
+   "Solo calificaciones"
+  ],
+  "c": 0,
+  "e": "Presupuesto fijo: la mejor oferta técnica dentro de un techo presupuestario cerrado.",
+  "w": [
+   "",
+   "Ganaría la más barata, no la mejor técnica.",
+   "Pondera ambos, no fija un techo.",
+   "Se reserva para importes menores."
+  ],
+  "t": "Techo cerrado + mejor técnica = presupuesto fijo.",
+  "s": "Memoria P03 (S9), §2.2.2 (pág. 6)"
+ },
+ {
+  "id": "S9-E23",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué tipo de contrato conviene cuando el alcance es muy incierto, de alto riesgo o de I+D?",
+  "o": [
+   "Precio fijo",
+   "Costes reembolsables",
+   "Llave en mano",
+   "Tiempo y materiales con tarifa cerrada"
+  ],
+  "c": 1,
+  "e": "Costes reembolsables: se pagan los costes reales más un honorario o comisión. Para alcance muy incierto, alto riesgo o I+D; da flexibilidad al comprador, pero este asume la escalada de costes.",
+  "w": [
+   "Exige un alcance bien definido.",
+   "",
+   "Es un método de entrega, no un tipo de contrato.",
+   "Tiempo y materiales es para volumen incierto, pero el típico de I+D es costes reembolsables."
+  ],
+  "t": "I+D o alcance muy incierto → costes reembolsables.",
+  "s": "Memoria P03 (S9), §2.2.3, Cuadro 2.4 (pág. 7)"
+ },
+ {
+  "id": "S9-E24",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "En un contrato de precio fijo, ¿quién asume principalmente el riesgo de sobrecoste?",
+  "o": [
+   "El comprador",
+   "Se reparte a partes iguales",
+   "El vendedor",
+   "Ninguno: el precio fijo elimina el riesgo"
+  ],
+  "c": 2,
+  "e": "Precio fijo: tarifa cerrada y alcance definido. El comprador obtiene previsibilidad; el vendedor tiene alto potencial de beneficio si es eficiente, pero asume el riesgo de sobrecostes.",
+  "w": [
+   "Eso pasa en costes reembolsables.",
+   "No hay reparto fijo a medias.",
+   "",
+   "El riesgo existe; lo asume el vendedor."
+  ],
+  "t": "Precio fijo → riesgo al vendedor.",
+  "s": "Memoria P03 (S9), §2.2.3, Cuadro 2.4 (pág. 7)"
+ },
+ {
+  "id": "S9-E25",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué desventaja tiene para el comprador un contrato de precio fijo?",
+  "o": [
+   "Asume la posible escalada de costes del vendedor",
+   "Precios iniciales más altos por las primas de riesgo",
+   "Pierde la previsibilidad del presupuesto",
+   "Debe vigilar de cerca las horas que dedica el vendedor"
+  ],
+  "c": 1,
+  "e": "El precio fijo da certeza presupuestaria al comprador, pero puede salir más caro de inicio: el vendedor incluye primas por el riesgo que asume.",
+  "w": [
+   "Eso ocurre en costes reembolsables.",
+   "",
+   "Al contrario: gana previsibilidad.",
+   "Eso es propio de tiempo y materiales."
+  ],
+  "t": "Certeza tiene precio: la prima de riesgo.",
+  "s": "Memoria P03 (S9), §2.2.3, Cuadro 2.4 (pág. 7)"
+ },
+ {
+  "id": "S9-E26",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Se contratan perfiles de consultoría TIC por tarifa diaria porque no se sabe cuántas jornadas harán falta. ¿Qué tipo de contrato es y qué exige al comprador?",
+  "o": [
+   "Precio fijo; ningún seguimiento",
+   "Costes reembolsables; asumir honorarios fijos",
+   "Llave en mano; aceptar solo al final",
+   "Tiempo y materiales; seguimiento muy cercano"
+  ],
+  "c": 3,
+  "e": "Tiempo y materiales: combina tarifas fijas por perfil con pago del tiempo y materiales consumidos. Da agilidad cuando el volumen no puede cerrarse al inicio, pero exige un seguimiento muy cercano de los costes.",
+  "w": [
+   "El volumen no está cerrado, así que no puede ser precio fijo.",
+   "Las tarifas por perfil son propias de tiempo y materiales.",
+   "Llave en mano es un método de entrega.",
+   ""
+  ],
+  "t": "Tarifa por hora o día de perfil → tiempo y materiales.",
+  "s": "Memoria P03 (S9), §2.2.3, Cuadro 2.4 (pág. 7)"
+ },
+ {
+  "id": "S9-E27",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué principios establece la Ley 9/2017 de Contratos del Sector Público (LCSP)?",
+  "o": [
+   "Menor precio, rapidez y adjudicación directa",
+   "Confidencialidad, exclusividad y preferencia por lo local",
+   "Rentabilidad, retorno de la inversión y riesgo cero",
+   "Transparencia, igualdad de trato y libre competencia"
+  ],
+  "c": 3,
+  "e": "La LCSP transpone las Directivas 2014/23/UE y 2014/24/UE y establece principios como la transparencia, la igualdad de trato y la libre competencia.",
+  "w": [
+   "No son los principios de la ley.",
+   "Van contra la igualdad y la competencia.",
+   "Son criterios financieros, no principios legales.",
+   ""
+  ],
+  "t": "Contratación pública = transparente, igualitaria y competitiva.",
+  "s": "Memoria P03 (S9), §2.3 (pág. 6)"
+ },
+ {
+  "id": "S9-E28",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el Pliego de Prescripciones Técnicas (PPT) del Pliego de Cláusulas Administrativas Particulares (PCAP)?",
+  "o": [
+   "El PPT fija la solvencia; el PCAP, los requisitos de hardware",
+   "Son el mismo documento con dos nombres",
+   "El PPT dice qué cumplir; el PCAP, bajo qué condiciones",
+   "El PCAP es técnico y el PPT, económico"
+  ],
+  "c": 2,
+  "e": "PPT: requisitos técnicos de la prestación (hardware, software, interoperabilidad, pruebas, aceptación técnica). PCAP: condiciones administrativas y económicas (solvencia, criterios de adjudicación, plazos, pagos, penalidades y modificaciones).",
+  "w": [
+   "Está al revés: la solvencia va en el PCAP.",
+   "Son complementarios pero distintos.",
+   "",
+   "Está al revés."
+  ],
+  "t": "PPT = técnico (qué); PCAP = administrativo (cómo y en qué condiciones).",
+  "s": "Memoria P03 (S9), §2.3.1 (pág. 6–8) y Cuadro 2.5 (pág. 11)"
+ },
+ {
+  "id": "S9-E29",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿En qué pliego se recogen los criterios de adjudicación y las penalidades?",
+  "o": [
+   "En el PPT",
+   "En el SOW del proveedor",
+   "En el acta de constitución",
+   "En el PCAP"
+  ],
+  "c": 3,
+  "e": "El PCAP establece las condiciones administrativas y económicas: solvencia, criterios de adjudicación, plazos, pagos, condiciones de ejecución, penalidades y modificaciones previstas.",
+  "w": [
+   "El PPT recoge los requisitos técnicos.",
+   "El SOW describe el trabajo, no las condiciones administrativas.",
+   "El acta autoriza el proyecto.",
+   ""
+  ],
+  "t": "Dinero, plazos, puntos y penalidades → PCAP.",
+  "s": "Memoria P03 (S9), §2.3.1 (pág. 8)"
+ },
+ {
+  "id": "S9-E30",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Por qué las prescripciones técnicas deben evitar referencias injustificadas a marcas concretas?",
+  "o": [
+   "Porque las marcas encarecen siempre el suministro",
+   "Porque la marca se fija después, en el contrato",
+   "Para garantizar la igualdad de acceso de los licitadores",
+   "Porque el PPT no puede contener ningún requisito técnico concreto"
+  ],
+  "c": 2,
+  "e": "Las prescripciones técnicas deben garantizar la igualdad de acceso de los licitadores y evitar obstáculos injustificados a la competencia; por eso se basan en estándares reconocidos y no en marcas.",
+  "w": [
+   "No es el motivo legal.",
+   "No es así.",
+   "",
+   "Al contrario: es su contenido."
+  ],
+  "t": "Pedir una marca concreta = cerrar la competencia.",
+  "s": "Memoria P03 (S9), §2.3.1 (pág. 6) y §3.3.2 (pág. 14)"
+ },
+ {
+  "id": "S9-E31",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "En contratación pública, ¿qué hay que hacer si se decide licitar todo en un único contrato sin dividirlo en lotes?",
+  "o": [
+   "Nada: no dividir es la regla general",
+   "Pedir permiso a cada licitador",
+   "Cambiar a un procedimiento sin publicidad",
+   "Motivar en el expediente la no división"
+  ],
+  "c": 3,
+  "e": "La LCSP exige motivar la no división del objeto del contrato en lotes, con razones como la compatibilidad técnica, la coordinación o la unificación de garantías.",
+  "w": [
+   "La regla es dividir; no hacerlo debe justificarse.",
+   "No es así.",
+   "No guarda relación.",
+   ""
+  ],
+  "t": "No dividir en lotes hay que justificarlo.",
+  "s": "Memoria P03 (S9), §3.3.2 (pág. 13)"
+ },
+ {
+  "id": "S9-E32",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cómo deben ser los requisitos mínimos de solvencia?",
+  "o": [
+   "Lo más altos posible, para asegurar la máxima calidad",
+   "Iguales para cualquier contrato público",
+   "Secretos hasta el momento de adjudicar",
+   "Vinculados al objeto del contrato y proporcionales"
+  ],
+  "c": 3,
+  "e": "Los requisitos de solvencia deben estar vinculados al objeto del contrato, ser proporcionales y figurar en el anuncio de licitación y en los pliegos.",
+  "w": [
+   "Deben ser proporcionales, no máximos.",
+   "Dependen del objeto y del valor.",
+   "Deben indicarse en el anuncio y en los pliegos.",
+   ""
+  ],
+  "t": "Solvencia proporcional, no máxima.",
+  "s": "Memoria P03 (S9), §2.3.2 (pág. 8)"
+ },
+ {
+  "id": "S9-E33",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué acredita la solvencia económica de un licitador?",
+  "o": [
+   "Su volumen de negocio, seguros e indicadores",
+   "Su experiencia en trabajos similares de los últimos años",
+   "La cualificación de su equipo técnico",
+   "El precio de su oferta"
+  ],
+  "c": 0,
+  "e": "Económica y financiera: volumen anual de negocios, seguro de responsabilidad civil e indicadores financieros. Técnica: trabajos similares de los últimos años, equipo y cualificación.",
+  "w": [
+   "",
+   "Eso es solvencia técnica.",
+   "Eso es solvencia técnica.",
+   "El precio se valora en la adjudicación, no en la solvencia."
+  ],
+  "t": "Económica = dinero de la empresa; técnica = experiencia y equipo.",
+  "s": "Memoria P03 (S9), §2.3.2 (pág. 8)"
+ },
+ {
+  "id": "S9-E34",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Un licitador se compromete a dedicar a la ejecución un equipo de instalación concreto. ¿Qué concepto es?",
+  "o": [
+   "Solvencia técnica",
+   "Integración de la solvencia con medios externos",
+   "Adscripción de medios",
+   "Criterio de adjudicación"
+  ],
+  "c": 2,
+  "e": "La solvencia comprueba la capacidad del licitador; la adscripción de medios exige el compromiso de dedicar recursos personales o materiales concretos a la ejecución. Integrar medios externos es recurrir a otras entidades demostrando que se dispondrá de ellos.",
+  "w": [
+   "La solvencia comprueba capacidad; esto es un compromiso de dedicar recursos.",
+   "Es apoyarse en otras entidades para acreditar la solvencia.",
+   "",
+   "No puntúa ofertas: es un compromiso exigible."
+  ],
+  "t": "Solvencia = puedes; adscripción = te comprometes a ponerlo.",
+  "s": "Memoria P03 (S9), §2.3.2 (pág. 8)"
+ },
+ {
+  "id": "S9-E35",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué diferencia la solvencia de los criterios de adjudicación?",
+  "o": [
+   "La solvencia admite o excluye; la adjudicación compara",
+   "Son lo mismo: ambas suman puntos",
+   "La solvencia se valora después de adjudicar",
+   "Los criterios de adjudicación sirven para excluir ofertas"
+  ],
+  "c": 0,
+  "e": "La solvencia comprueba si una empresa reúne la capacidad exigida (cumple o no). Los criterios de adjudicación evalúan las ofertas admitidas y seleccionan la mejor.",
+  "w": [
+   "",
+   "La solvencia no puntúa.",
+   "Se comprueba antes.",
+   "Comparan las ya admitidas."
+  ],
+  "t": "Primero el filtro (solvencia), después la comparación (adjudicación).",
+  "s": "Memoria P03 (S9), §2.3.2 (pág. 8)"
+ },
+ {
+  "id": "S9-E36",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué relación hay entre la LCSP y el PMBOK en la contratación pública?",
+  "o": [
+   "El PMBOK sustituye a la LCSP en proyectos TI",
+   "La LCSP hace innecesario planificar las adquisiciones",
+   "Se complementan: marco jurídico y guía de gestión",
+   "Son incompatibles y hay que elegir uno"
+  ],
+  "c": 2,
+  "e": "La LCSP fija las condiciones legales que deben respetarse; el PMBOK (Apéndice X4) orienta cómo planificar y gestionar las adquisiciones dentro del proyecto, adaptándose a la normativa.",
+  "w": [
+   "El PMBOK no tiene fuerza legal.",
+   "La planificación sigue siendo necesaria.",
+   "",
+   "Son complementarios."
+  ],
+  "t": "Ley (qué es obligatorio) + guía (cómo gestionarlo).",
+  "s": "Memoria P03 (S9), §2.3.3 (pág. 8–9)"
+ },
+ {
+  "id": "S9-E37",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuál de estas NO es una actividad del cierre de adquisiciones?",
+  "o": [
+   "Publicar los pliegos de la licitación",
+   "Verificación y aceptación formal",
+   "Cierre administrativo y financiero",
+   "Resolución de las reclamaciones pendientes"
+  ],
+  "c": 0,
+  "e": "Cierre: verificación y aceptación formal; cierre administrativo y financiero; resolución de reclamaciones; y actualización de activos organizacionales (lecciones aprendidas, evaluación del proveedor). Publicar pliegos es de la licitación.",
+  "w": [
+   "",
+   "Sí es una actividad de cierre.",
+   "Sí es una actividad de cierre.",
+   "Sí es una actividad de cierre."
+  ],
+  "t": "Cierre = aceptar, liquidar, resolver y aprender.",
+  "s": "Memoria P03 (S9), §2.4 (pág. 9)"
+ },
+ {
+  "id": "S9-E38",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "Al cerrar un contrato, ¿qué se actualiza en los activos de la organización?",
+  "o": [
+   "La línea base del alcance del proyecto",
+   "El acta de constitución del proyecto",
+   "Los criterios de solvencia exigidos en el contrato",
+   "Lecciones aprendidas y evaluación del proveedor"
+  ],
+  "c": 3,
+  "e": "La actualización de activos organizacionales recoge las lecciones aprendidas y la evaluación final del proveedor, salidas del control de las adquisiciones.",
+  "w": [
+   "No es un activo de la organización.",
+   "No se actualiza al cerrar un contrato.",
+   "Pertenecen a la licitación.",
+   ""
+  ],
+  "t": "Lo que se aprende del proveedor queda para el siguiente contrato.",
+  "s": "Memoria P03 (S9), §2.1, Cuadro 2.3 (pág. 5) y §2.4"
+ },
+ {
+  "id": "S9-E39",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Qué es una reclamación (claim) en las adquisiciones?",
+  "o": [
+   "Un desacuerdo sobre si se cumple el contrato",
+   "Una solicitud de cambio ya aprobada por el comité",
+   "Una incidencia técnica en producción",
+   "Una queja del equipo interno"
+  ],
+  "c": 0,
+  "e": "Si hay desacuerdo sobre si el trabajo realizado cumple los términos del contrato, es una reclamación. Se resuelve con escalada estructurada.",
+  "w": [
+   "",
+   "Un cambio aprobado no es un desacuerdo.",
+   "No tiene por qué ser contractual.",
+   "No es un desacuerdo contractual."
+  ],
+  "t": "Claim = disputa contractual.",
+  "s": "Memoria P03 (S9), §2.4 (pág. 9)"
+ },
+ {
+  "id": "S9-E40",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿Cuál es el orden de escalada recomendado para resolver una reclamación?",
+  "o": [
+   "Litigio → arbitraje → mediación → negociación",
+   "Negociación → mediación → arbitraje → litigio",
+   "Arbitraje → negociación → litigio → mediación",
+   "Mediación → litigio → negociación → arbitraje"
+  ],
+  "c": 1,
+  "e": "Escalada estructurada: negociación directa; mediación o resolución alternativa de disputas (ADR) con un tercero neutral; arbitraje (decisión vinculante); y litigio, siempre el último recurso por su coste, tiempo y daño a la relación.",
+  "w": [
+   "Está al revés: el litigio es el último recurso.",
+   "",
+   "El orden no es ese.",
+   "El orden no es ese."
+  ],
+  "t": "Del acuerdo mutuo al juez, de menos a más.",
+  "s": "Memoria P03 (S9), §2.4 (pág. 9)"
+ },
+ {
+  "id": "S9-E41",
+  "tema": "S9",
+  "fuente": "practica",
+  "p": "¿En qué se diferencia el arbitraje de la mediación?",
+  "o": [
+   "En la mediación el tercero impone la solución",
+   "En el arbitraje un tercero decide de forma vinculante",
+   "El arbitraje es la vía judicial",
+   "No hay diferencia: los dos son formas de negociación directa"
+  ],
+  "c": 1,
+  "e": "Mediación/ADR: interviene un tercero neutral que facilita el acuerdo. Arbitraje: un árbitro toma una decisión vinculante. Litigio: vía judicial.",
+  "w": [
+   "El mediador facilita el acuerdo, no decide.",
+   "",
+   "La vía judicial es el litigio.",
+   "Ambos involucran a un tercero."
+  ],
+  "t": "Mediador ayuda; árbitro decide; juez sentencia.",
+  "s": "Memoria P03 (S9), §2.4 (pág. 9)"
+ }
+]

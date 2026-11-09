@@ -39,6 +39,11 @@
       "id": "S8",
       "nombre": "Riesgos y Ciberseguridad",
       "archivo": "S8.json"
+    },
+    {
+      "id": "S9",
+      "nombre": "Adquisiciones",
+      "archivo": "S9.json"
     }
   ]
 }

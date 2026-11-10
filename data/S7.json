@@ -2264,5 +2264,27 @@
   ],
   "t": "Estimar → piezas; desarrollar el presupuesto → suma + línea base.",
   "s": "Test 3 G2 03/11/2026 (versión D), P10 · Presentación S7, diap. 30"
+ },
+ {
+  "id": "S7-T4G2-4",
+  "tema": "S7",
+  "fuente": "banco",
+  "p": "Durante la ejecución del subproyecto P02, se requiere reemplazar temporalmente a un especialista en ciberseguridad. De acuerdo con el proceso de Adquirir Recursos del PMBOK, ¿qué acción debe realizar el Director de Proyecto antes de formalizar la asignación del sustituto?",
+  "o": [
+   "Asignar a un técnico de cableado para mantener constante el número total de FTEs.",
+   "Evaluar el coste, la capacidad técnica, la experiencia, el riesgo y la disponibilidad del candidato.",
+   "Solicitar de inmediato una ampliación del presupuesto total a la PMO sin analizar alternativas",
+   "Cancelar los entregables de seguridad del alcance para evitar demoras en el cronograma."
+  ],
+  "c": 1,
+  "e": "Al gestionar alternativas en Adquirir recursos, el recurso sustituto se evalúa (competencias, coste, riesgo, disponibilidad, cumplimiento legal) antes de asignarlo formalmente.",
+  "w": [
+   "Mantener el número de FTE no sirve si el perfil no tiene la competencia necesaria.",
+   "",
+   "Pedir presupuesto sin analizar alternativas se salta la evaluación.",
+   "Recortar alcance es desproporcionado y exigiría control de cambios."
+  ],
+  "t": "Sustituir ≠ rellenar el hueco: hay que evaluar al candidato.",
+  "s": "Test 4 G2 10/11/2026, P4 · Presentación S7, diap. 15 · Memoria P02 (S7), §1.2.2.3 (pág. 14)"
  }
 ]

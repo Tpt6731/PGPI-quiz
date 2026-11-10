@@ -1010,5 +1010,49 @@
   ],
   "t": "Mediador ayuda; árbitro decide; juez sentencia.",
   "s": "Memoria P03 (S9), §2.4 (pág. 9)"
+ },
+ {
+  "id": "S9-T4G2-1",
+  "tema": "S9",
+  "fuente": "banco",
+  "p": "Es el director del proyecto de red de la ciudad SRQ. Gestionará la selección de varios proveedores para participar en este proceso y su equipo desea saber cuándo se lleva a cabo la selección formal de los vendedores. ¿En qué grupo de procesos ocurre el evento de selección de vendedores?",
+  "o": [
+   "Planificación",
+   "Inicio",
+   "Cierre",
+   "Ejecución"
+  ],
+  "c": 3,
+  "e": "La selección formal de vendedores ocurre al Conducir las adquisiciones: obtener respuestas del mercado, evaluar las ofertas con criterios predefinidos, seleccionar, negociar y adjudicar. Ese proceso pertenece al grupo de Ejecución.",
+  "w": [
+   "Al planificar se preparan los documentos de licitación y los criterios de selección, pero no se selecciona a nadie.",
+   "En el Inicio todavía no hay licitación.",
+   "En el Cierre se cierran contratos ya adjudicados.",
+   ""
+  ],
+  "t": "Preparar los criterios es planificar; aplicarlos y adjudicar es ejecutar.",
+  "s": "Test 4 G2 10/11/2026, P1 · Memoria P03 (S9), §2.1 (pág. 3–4)"
+ },
+ {
+  "id": "S9-T4G2-2",
+  "tema": "S9",
+  "fuente": "banco",
+  "p": "Yolanda ha subcontratado una parte de un proyecto a un proveedor. El proveedor ha descubierto algunos problemas que influirán en el costo y el cronograma de su parte del proyecto. ¿Cómo debe actualizarse el acuerdo?",
+  "o": [
+   "Los contratos de dirección de proyectos tienen cláusulas que permiten a los proveedores ajustar su trabajo ante imprevistos.",
+   "Mediante un nuevo contrato firmado por Yolanda y el proveedor.",
+   "Según lo indicado por el sistema de control de cambios del contrato.",
+   "Mediante un memorando y un SOW firmados por Yolanda y el proveedor."
+  ],
+  "c": 2,
+  "e": "Los cambios en un contrato vigente se tramitan por su propio sistema de control de cambios (gestión de cambios y órdenes de variación), una técnica de Controlar las adquisiciones. El contrato marca cómo se modifica.",
+  "w": [
+   "El proveedor no puede ajustar su trabajo por su cuenta: el cambio debe pasar por el control de cambios.",
+   "No hace falta un contrato nuevo: se modifica el vigente.",
+   "",
+   "Un memorando y un SOW no sustituyen el procedimiento de cambio del contrato."
+  ],
+  "t": "Contrato vigente + cambio → su control de cambios, no un contrato nuevo.",
+  "s": "Test 4 G2 10/11/2026, P2 · Memoria P03 (S9), §2.1, Cuadro 2.3 (pág. 5)"
  }
 ]

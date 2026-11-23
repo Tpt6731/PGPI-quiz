@@ -44,6 +44,16 @@
       "id": "S9",
       "nombre": "Adquisiciones",
       "archivo": "S9.json"
+    },
+    {
+      "id": "S10",
+      "nombre": "Marcos ágiles",
+      "archivo": "S10.json"
+    },
+    {
+      "id": "S11",
+      "nombre": "Otros marcos (PRINCE2 e IPMA)",
+      "archivo": "S11.json"
     }
   ]
 }

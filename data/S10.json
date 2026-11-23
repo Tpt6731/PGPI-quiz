@@ -1,0 +1,838 @@
+[
+ {
+  "id": "P05-1",
+  "tema": "S10",
+  "fuente": "oficial",
+  "p": "Durante el desarrollo del subproyecto P05, el Scrum Master observa que la columna Testing/QA del tablero Kanban acumula 6 Historias de Usuario, mientras que el límite de WIP establecido para esa columna es de 2. Los desarrolladores continúan arrastrando nuevas historias desde la columna Ready. ¿Qué acción inmediata debe tomar el Scrum Master?",
+  "o": [
+   "Aumentar de forma permanente el límite de WIP de la columna Testing/QA a 6 para reflejar la realidad del trabajo.",
+   "Instruir a los desarrolladores para que detengan la ingesta de nuevas tareas y colaboren con QA para despejar el cuello de botella.",
+   "Solicitar a la PMO la contratación de 2 técnicos de pruebas adicionales mediante una reserva de contingencia.",
+   "Notificar al Product Owner que el Sprint se cancela debido al incumplimiento de los compromisos."
+  ],
+  "c": 1,
+  "e": "En Kanban, el límite de WIP es una restricción rígida diseñada para visibilizar cuellos de botella. Cuando se alcanza el límite, el equipo debe aplicar el principio de «dejar de empezar y empezar a terminar» (Stop starting, start finishing), ayudando a resolver el bloqueo antes de asumir nuevo trabajo.",
+  "w": [
+   "Subir el límite esconde el cuello de botella en vez de resolverlo.",
+   "",
+   "Ampliar recursos no es la respuesta inmediata: primero se para la entrada y se despeja el atasco.",
+   "Un atasco en una columna no justifica cancelar el Sprint."
+  ],
+  "t": "Límite de WIP superado → dejar de empezar y empezar a terminar.",
+  "s": "Batería P05 (S10), pregunta 1 · Presentación P05 (S10), diap. 28–29"
+ },
+ {
+  "id": "P05-2",
+  "tema": "S10",
+  "fuente": "oficial",
+  "p": "En la mitad del Sprint 4, un interesado clave de la Administración de Justicia contacta directamente con los desarrolladores del subproyecto P05 para exigir la inclusión urgente de un nuevo módulo de filtrado de expedientes. ¿Cómo debe proceder el equipo de desarrollo?",
+  "o": [
+   "Aceptar la solicitud e incluirla en el Sprint Backlog actual ajustando las horas de trabajo.",
+   "Rechazar rotundamente la petición indicando que en metodologías ágiles nunca se aceptan cambios.",
+   "Dirigir al interesado al Product Owner para que evalúe y priorice la necesidad en el Product Backlog.",
+   "Escalar la situación a la PMO para que aplique una penalización por injerencia en el Sprint."
+  ],
+  "c": 2,
+  "e": "Según la Guía Oficial de Scrum, el Product Owner es la única persona autorizada para gestionar el Product Backlog y decidir la entrada de nuevos requerimientos. Los desarrolladores no deben aceptar cambios de alcance directos durante el Sprint sin la mediación del PO.",
+  "w": [
+   "Los desarrolladores no meten cambios de alcance en el Sprint por su cuenta.",
+   "Ágil sí acepta cambios, pero a través del Product Backlog y del PO.",
+   "",
+   "No hay ninguna penalización: basta con canalizar la petición al PO."
+  ],
+  "t": "Petición nueva → Product Owner → Product Backlog. Ni se mete en el Sprint ni se rechaza.",
+  "s": "Batería P05 (S10), pregunta 2 · Presentación P05 (S10), diap. 30–31"
+ },
+ {
+  "id": "P05-3",
+  "tema": "S10",
+  "fuente": "oficial",
+  "p": "Durante la Sprint Review del Sprint 5, el Product Owner detecta que una Historia de Usuario crítica para la redacción de sentencias funciona perfectamente en la demostración, pero el análisis de vulnerabilidades SAST no se ha ejecutado. El equipo propone marcarla como «Done» y pasar la prueba en el siguiente Sprint. ¿Qué decisión debe tomar el Product Owner?",
+  "o": [
+   "Aceptar la Historia de Usuario como completada ya que la funcionalidad técnica ha sido demostrada.",
+   "Rechazar la Historia de Usuario, no incluirla en el Incremento y devolverla al Product Backlog.",
+   "Aprobar la historia condicionalmente firmando una exención de responsabilidad técnica.",
+   "Modificar la Definition of Done para eliminar el requisito de SAST en el proyecto."
+  ],
+  "c": 1,
+  "e": "Si un elemento del backlog no cumple la Definition of Done (DoD), no puede ser publicado ni presentado como parte del Incremento. Debe volver al Product Backlog para su completación en iteraciones futuras.",
+  "w": [
+   "Funcionar en la demo no basta: la DoD exige también la prueba de seguridad.",
+   "",
+   "No existe una aprobación «condicional» de la DoD.",
+   "Rebajar la DoD para que pase un elemento rompe el compromiso de calidad."
+  ],
+  "t": "Sin DoD cumplida no hay «Done», aunque la demo funcione.",
+  "s": "Batería P05 (S10), pregunta 3 · Presentación P05 (S10), diap. 32–33"
+ },
+ {
+  "id": "P05-4",
+  "tema": "S10",
+  "fuente": "oficial",
+  "p": "Un Director de Proyecto que supervisa la integración del Asistente IA (P05) observa que el Cycle Time de las historias de usuario es muy bajo (2 días), pero el Lead Time total percibido por el cliente supera los 45 días. ¿Qué indica este escenario?",
+  "o": [
+   "Que el equipo de desarrollo es ineficiente y requiere capacitación en programación rápida.",
+   "Que existe un tiempo de espera masivo en el Product Backlog antes de que las tareas sean atendidas.",
+   "Que la métrica de Throughput se ha calculado incorrectamente por el software.",
+   "Que el límite de WIP en la columna de desarrollo es demasiado estricto."
+  ],
+  "c": 1,
+  "e": "Un Cycle Time corto con un Lead Time elevado evidencia que el trabajo se ejecuta rápidamente una vez iniciado, pero sufre largos periodos de latencia o abandono en el Backlog antes de ser seleccionado para desarrollo.",
+  "w": [
+   "Un Cycle Time de 2 días indica que el equipo es rápido.",
+   "",
+   "El Throughput no interviene en la diferencia entre Lead y Cycle Time.",
+   "Un WIP estricto acorta el Cycle Time; no explica la espera previa."
+  ],
+  "t": "Lead Time = espera + Cycle Time. Si el Cycle Time es corto, la espera está antes de empezar.",
+  "s": "Batería P05 (S10), pregunta 4 · Presentación P05 (S10), diap. 34–35"
+ },
+ {
+  "id": "P05-5",
+  "tema": "S10",
+  "fuente": "oficial",
+  "p": "Durante las pruebas del pipeline CI/CD del motor de anonimización de P05 se mide un F1 de 0,93, inferior al mínimo aprobado de 0,96 (MTR RNF-001). El pipeline bloquea la promoción a staging hasta corregir el defecto. ¿Qué principio DevOps se está aplicando?",
+  "o": [
+   "Control de Cambios Integrado (CCB)",
+   "Detección temprana de fallos y barrera de calidad automatizada (Quality Gate).",
+   "Compresión del cronograma mediante Fast-Tracking.",
+   "Nivelación de recursos de infraestructura."
+  ],
+  "c": 1,
+  "e": "Las prácticas CI/CD y AIOps modernas integran Quality Gates automatizados en el pipeline que impiden el avance de artefactos o modelos que no superen los umbrales de calidad y seguridad prefijados en la DoD.",
+  "w": [
+   "El control integrado de cambios gestiona solicitudes de cambio, no bloquea despliegues automáticamente.",
+   "",
+   "El fast-tracking solapa actividades para recuperar plazo.",
+   "Nivelar recursos reparte la carga; no tiene que ver con la calidad."
+  ],
+  "t": "El pipeline se para solo si no se alcanza el umbral = quality gate.",
+  "s": "Batería P05 (S10), pregunta 5 · Presentación P05 (S10), diap. 36–37"
+ },
+ {
+  "id": "S10-E1",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el ciclo de vida de un proyecto de su enfoque de desarrollo?",
+  "o": [
+   "Son sinónimos: ambos describen el método de trabajo del equipo",
+   "El ciclo de vida son las fases; el enfoque, cómo se crea el producto",
+   "El ciclo de vida solo existe en proyectos predictivos",
+   "El enfoque de desarrollo define las fases y el ciclo de vida el método"
+  ],
+  "c": 1,
+  "e": "Ciclo de vida: conjunto de fases y actividades desde el inicio hasta el cierre; es el marco de referencia para dirigir el proyecto. Enfoque de desarrollo: el método concreto con el que se crea y hace evolucionar el producto (cómo se planifica y ejecuta el trabajo).",
+  "w": [
+   "Son conceptos distintos: el enfoque vive dentro del ciclo de vida.",
+   "",
+   "Todo proyecto tiene ciclo de vida, sea cual sea el enfoque.",
+   "Está al revés."
+  ],
+  "t": "Ciclo de vida = el recorrido; enfoque = la forma de construir.",
+  "s": "Presentación P05 (S10), diap. 3–4 · Memoria P05 (S10), pág. 5"
+ },
+ {
+  "id": "S10-E2",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Cuándo es más adecuado un enfoque predictivo?",
+  "o": [
+   "Cuando los requisitos cambian constantemente durante el proyecto",
+   "Cuando el equipo trabaja con iteraciones de una semana",
+   "Cuando el alcance se puede estabilizar desde el principio",
+   "Cuando hay alta incertidumbre técnica sobre la solución"
+  ],
+  "c": 2,
+  "e": "Predictivo (tradicional o en cascada): óptimo cuando el alcance se estabiliza pronto. Costes, cronograma y riesgos se planifican por adelantado, con un control de cambios estricto.",
+  "w": [
+   "Ese es el caso del enfoque adaptativo.",
+   "Las iteraciones cortas son propias del adaptativo.",
+   "",
+   "La alta incertidumbre pide un enfoque adaptativo."
+  ],
+  "t": "Alcance estable → predictivo; incertidumbre → adaptativo.",
+  "s": "Presentación P05 (S10), diap. 4 · Memoria P05 (S10), pág. 5"
+ },
+ {
+  "id": "S10-E3",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué caracteriza a un enfoque híbrido?",
+  "o": [
+   "Usa un único método para todo el proyecto",
+   "Es un enfoque predictivo con iteraciones obligatorias",
+   "Combina elementos predictivos y adaptativos",
+   "Solo se usa cuando no hay ninguna restricción de negocio"
+  ],
+  "c": 2,
+  "e": "El híbrido combina lo predictivo y lo adaptativo: flexibilidad en las áreas inciertas y control en las consolidadas. Puede aplicarse con una fase adaptativa y luego otra predictiva, o con los dos enfoques a la vez en componentes distintos.",
+  "w": [
+   "Precisamente mezcla métodos distintos.",
+   "No tiene que ser así: puede ser adaptativo con restricciones fijas.",
+   "",
+   "Suele usarse justo cuando hay restricciones fijas."
+  ],
+  "t": "Híbrido = flexibilidad donde hay incertidumbre, control donde no.",
+  "s": "Presentación P05 (S10), diap. 6 · Memoria P05 (S10), pág. 5–6"
+ },
+ {
+  "id": "S10-E4",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el carácter iterativo del incremental en un enfoque adaptativo?",
+  "o": [
+   "Iterativo entrega partes útiles; incremental refina en ciclos",
+   "Son lo mismo con dos nombres distintos",
+   "Iterativo refina en ciclos; incremental entrega partes útiles",
+   "Iterativo es propio del predictivo y el incremental del ágil"
+  ],
+  "c": 2,
+  "e": "Iterativo: perfecciona el trabajo mediante ciclos repetidos. Incremental: entrega el resultado en partes utilizables que aportan valor de forma constante.",
+  "w": [
+   "Está al revés.",
+   "Son dos ideas distintas que se combinan.",
+   "",
+   "Los dos son características del enfoque adaptativo."
+  ],
+  "t": "Iterar = mejorar; incrementar = añadir piezas que ya sirven.",
+  "s": "Presentación P05 (S10), diap. 5 · Memoria P05 (S10), pág. 5"
+ },
+ {
+  "id": "S10-E5",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿En qué se fundamenta Scrum?",
+  "o": [
+   "En la planificación detallada por adelantado",
+   "En la gestión por excepción y las tolerancias",
+   "En el empirismo y el pensamiento Lean",
+   "En la estandarización de procesos y áreas"
+  ],
+  "c": 2,
+  "e": "Scrum es un marco ligero para generar valor con soluciones adaptables a problemas complejos. Se basa en el empirismo (el conocimiento viene de la experiencia) y en el pensamiento Lean (reducir desperdicios).",
+  "w": [
+   "Eso es lo propio del enfoque predictivo.",
+   "Eso es PRINCE2.",
+   "",
+   "Eso describe al PMI y su cuerpo de conocimiento."
+  ],
+  "t": "Scrum = empirismo + Lean.",
+  "s": "Presentación P05 (S10), diap. 7 · Memoria P05 (S10), pág. 6"
+ },
+ {
+  "id": "S10-E6",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Cuáles son los tres pilares de Scrum?",
+  "o": [
+   "Transparencia, inspección y adaptación",
+   "Compromiso, enfoque y apertura",
+   "Planificación, ejecución y control",
+   "Visualizar, limitar el WIP y gestionar el flujo"
+  ],
+  "c": 0,
+  "e": "Pilares: transparencia, inspección y adaptación. Valores: compromiso, enfoque, apertura, respeto y coraje.",
+  "w": [
+   "",
+   "Son algunos de sus valores, no sus pilares.",
+   "Son fases de gestión, no los pilares de Scrum.",
+   "Son prácticas de Kanban."
+  ],
+  "t": "Pilares (3) ≠ valores (5).",
+  "s": "Presentación P05 (S10), diap. 7 · Memoria P05 (S10), pág. 6"
+ },
+ {
+  "id": "S10-E7",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Quién decide qué entra en el Product Backlog y en qué orden?",
+  "o": [
+   "El Scrum Master",
+   "Los Desarrolladores",
+   "Los interesados que lo pidan",
+   "El Product Owner"
+  ],
+  "c": 3,
+  "e": "El Product Owner desarrolla y comunica el Objetivo del Producto y crea, ordena y hace transparentes los elementos del Product Backlog. Es una figura individual con autoridad respetada.",
+  "w": [
+   "Facilita y elimina impedimentos, no gestiona el backlog.",
+   "Gestionan el Sprint Backlog, no el Product Backlog.",
+   "Sus peticiones pasan por el Product Owner.",
+   ""
+  ],
+  "t": "Product Backlog = PO. Sprint Backlog = Desarrolladores.",
+  "s": "Presentación P05 (S10), diap. 8 · Memoria P05 (S10), pág. 7"
+ },
+ {
+  "id": "S10-E8",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Quién crea el plan del Sprint (Sprint Backlog)?",
+  "o": [
+   "Los Desarrolladores",
+   "El Product Owner",
+   "El Scrum Master",
+   "El director del proyecto"
+  ],
+  "c": 0,
+  "e": "Los Desarrolladores crean el plan del Sprint, se adhieren a la Definition of Done, adaptan el trabajo cada día hacia el Objetivo del Sprint y se responsabilizan mutuamente.",
+  "w": [
+   "",
+   "El PO ordena el Product Backlog, pero el plan del Sprint es de los Desarrolladores.",
+   "Facilita, pero no planifica el trabajo del equipo.",
+   "En Scrum no existe ese rol dentro del equipo."
+  ],
+  "t": "El que hace el trabajo planifica el Sprint.",
+  "s": "Presentación P05 (S10), diap. 8 · Memoria P05 (S10), pág. 7"
+ },
+ {
+  "id": "S10-E9",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Cuál de estas es una responsabilidad del Scrum Master?",
+  "o": [
+   "Ordenar el Product Backlog según el valor",
+   "Eliminar los impedimentos que frenan al equipo",
+   "Asignar las tareas diarias a cada desarrollador",
+   "Aceptar o rechazar el Incremento del Sprint"
+  ],
+  "c": 1,
+  "e": "El Scrum Master tutoriza en autogestión y multifuncionalidad, elimina impedimentos y asegura que los eventos se celebren de forma positiva y dentro de su tiempo máximo.",
+  "w": [
+   "Es responsabilidad del Product Owner.",
+   "",
+   "El equipo es autogestionado: decide quién hace qué.",
+   "Eso lo hace el Product Owner frente a la DoD."
+  ],
+  "t": "SM = facilitador, no jefe.",
+  "s": "Presentación P05 (S10), diap. 8 · Memoria P05 (S10), pág. 7"
+ },
+ {
+  "id": "S10-E10",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué compromiso está asociado al Incremento en Scrum?",
+  "o": [
+   "El Objetivo del Producto",
+   "La Definition of Done",
+   "El Objetivo del Sprint",
+   "La Definition of Ready"
+  ],
+  "c": 1,
+  "e": "Cada artefacto tiene su compromiso: Product Backlog → Objetivo del Producto; Sprint Backlog → Objetivo del Sprint; Incremento → Definition of Done.",
+  "w": [
+   "Está asociado al Product Backlog.",
+   "",
+   "Está asociado al Sprint Backlog.",
+   "No es uno de los tres compromisos de Scrum."
+  ],
+  "t": "Backlog-Objetivo del Producto, Sprint-Objetivo del Sprint, Incremento-DoD.",
+  "s": "Presentación P05 (S10), diap. 9 · Memoria P05 (S10), pág. 7"
+ },
+ {
+  "id": "S10-E11",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué es el Objetivo del Sprint (Sprint Goal)?",
+  "o": [
+   "La meta a largo plazo del producto",
+   "La lista completa de tareas técnicas que componen el Sprint actual",
+   "Los criterios de calidad para dar algo por terminado",
+   "El propósito único del Sprint, que da foco y flexibilidad"
+  ],
+  "c": 3,
+  "e": "El Objetivo del Sprint es el propósito único del Sprint: aporta coherencia y enfoque, y da flexibilidad a los Desarrolladores sobre qué historias concretas implementar.",
+  "w": [
+   "Eso es el Objetivo del Producto.",
+   "Eso es el Sprint Backlog.",
+   "Eso es la Definition of Done.",
+   ""
+  ],
+  "t": "Sprint Goal = el «para qué» del Sprint, no la lista de tareas.",
+  "s": "Presentación P05 (S10), diap. 9 · Memoria P05 (S10), pág. 7 y 11"
+ },
+ {
+  "id": "S10-E12",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Cuál es la duración máxima de la Daily Scrum?",
+  "o": [
+   "1 hora",
+   "Hasta 3 horas",
+   "15 minutos",
+   "Hasta 8 horas"
+  ],
+  "c": 2,
+  "e": "Duraciones máximas (Sprint de un mes): Sprint Planning hasta 8 h, Daily Scrum 15 min, Sprint Review hasta 4 h y Retrospectiva hasta 3 h.",
+  "w": [
+   "Es mucho más corta.",
+   "Ese es el máximo de la Retrospectiva.",
+   "",
+   "Ese es el máximo del Sprint Planning."
+  ],
+  "t": "8 · 15 min · 4 · 3.",
+  "s": "Presentación P05 (S10), diap. 10 · Memoria P05 (S10), pág. 8"
+ },
+ {
+  "id": "S10-E13",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué evento de Scrum inspecciona el resultado del Sprint con los interesados y adapta el Product Backlog?",
+  "o": [
+   "La Sprint Review",
+   "La Sprint Retrospective",
+   "La Daily Scrum",
+   "El Sprint Planning"
+  ],
+  "c": 0,
+  "e": "Sprint Review: inspeccionar el resultado con los interesados y adaptar la Pila del Producto. Retrospectiva: evaluar personas, interacciones, procesos y herramientas para mejorar.",
+  "w": [
+   "",
+   "Revisa personas, interacciones y procesos, no el producto.",
+   "Revisa el avance diario hacia el Objetivo del Sprint.",
+   "Planifica el Sprint; no revisa resultados."
+  ],
+  "t": "Review = producto; Retro = forma de trabajar.",
+  "s": "Presentación P05 (S10), diap. 10 · Memoria P05 (S10), pág. 8"
+ },
+ {
+  "id": "S10-E14",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué persigue Kanban?",
+  "o": [
+   "Fijar iteraciones de duración cerrada para entregar el producto",
+   "Optimizar el flujo limitando el trabajo en curso (WIP)",
+   "Asignar roles de PO y Scrum Master al equipo",
+   "Planificar todo el alcance al inicio del proyecto"
+  ],
+  "c": 1,
+  "e": "Kanban es una estrategia para optimizar el flujo de valor visualizando el proceso y limitando el trabajo en curso (WIP). Como Scrum, se basa en el empirismo y el pensamiento Lean.",
+  "w": [
+   "Kanban trabaja con flujo continuo, no con iteraciones fijas.",
+   "",
+   "Esos roles son de Scrum.",
+   "Eso es lo propio del predictivo."
+  ],
+  "t": "Kanban = flujo + WIP.",
+  "s": "Presentación P05 (S10), diap. 11 · Memoria P05 (S10), pág. 8"
+ },
+ {
+  "id": "S10-E15",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué crea el límite de WIP en un tablero Kanban?",
+  "o": [
+   "Un sistema de empuje (push)",
+   "Un calendario de iteraciones fijas",
+   "Una jerarquía de aprobación de tareas",
+   "Un sistema de arrastre (pull)"
+  ],
+  "c": 3,
+  "e": "Limitar el WIP crea un sistema de arrastre (pull): solo se empieza trabajo nuevo si se libera capacidad.",
+  "w": [
+   "Con límite de WIP solo se toma trabajo si hay capacidad: es arrastre.",
+   "El WIP no fija iteraciones.",
+   "No introduce jerarquía.",
+   ""
+  ],
+  "t": "WIP limitado → pull: tiras del trabajo cuando puedes.",
+  "s": "Presentación P05 (S10), diap. 11 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E16",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué es la Definición de Workflow en Kanban?",
+  "o": [
+   "El acuerdo explícito de cómo avanza el trabajo",
+   "El número máximo de ítems por columna",
+   "La previsión de cuánto tarda un ítem",
+   "La lista ordenada de todo lo que hay que hacer"
+  ],
+  "c": 0,
+  "e": "La Definición de Workflow es el entendimiento compartido y explícito de las políticas operativas sobre cómo avanza el trabajo: habilita la autogestión y la transparencia.",
+  "w": [
+   "",
+   "Eso es el límite de WIP, una parte de la definición.",
+   "Eso es la Expectativa de Nivel de Servicio.",
+   "Eso es el backlog."
+  ],
+  "t": "Workflow = reglas del tablero, no solo los límites.",
+  "s": "Presentación P05 (S10), diap. 12 · Memoria P05 (S10), pág. 8"
+ },
+ {
+  "id": "S10-E17",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué mide el Cycle Time?",
+  "o": [
+   "Desde que el cliente lo solicita hasta que se le entrega el resultado",
+   "Los ítems terminados por unidad de tiempo",
+   "Desde que un ítem entra en una etapa activa hasta que acaba",
+   "El tiempo que lleva abierto un ítem aún en curso"
+  ],
+  "c": 2,
+  "e": "Cycle Time: desde que el ítem entra en una etapa activa hasta su fin. Lead Time: desde la solicitud del cliente hasta la entrega. Throughput: elementos completados por unidad de tiempo.",
+  "w": [
+   "Eso es el Lead Time.",
+   "Eso es el Throughput.",
+   "",
+   "Eso es el Work Item Age."
+  ],
+  "t": "Lead Time incluye la espera; Cycle Time solo el trabajo activo.",
+  "s": "Presentación P05 (S10), diap. 11 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E18",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "Un equipo termina una media de 8 historias cada dos semanas. ¿Qué métrica es esa?",
+  "o": [
+   "Throughput",
+   "Cycle Time",
+   "Lead Time",
+   "Work Item Age"
+  ],
+  "c": 0,
+  "e": "Throughput: cantidad de elementos completados por unidad de tiempo.",
+  "w": [
+   "",
+   "Mide tiempo por ítem, no cantidad por periodo.",
+   "Mide tiempo de solicitud a entrega.",
+   "Mide la antigüedad de los ítems en curso."
+  ],
+  "t": "Cuántos por periodo = Throughput.",
+  "s": "Presentación P05 (S10), diap. 11 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E19",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿A qué elementos se aplica el Work Item Age?",
+  "o": [
+   "A todos los ítems ya terminados",
+   "A los ítems que esperan en el backlog",
+   "Al conjunto del Sprint, no a cada ítem",
+   "Solo a los ítems que siguen en curso"
+  ],
+  "c": 3,
+  "e": "Work Item Age: tiempo transcurrido desde que se inició un ítem hasta hoy. Solo se aplica a los elementos activos que siguen en progreso; sirve para detectar trabajo que se está estancando.",
+  "w": [
+   "A esos se les mide el Cycle Time.",
+   "Aún no se han iniciado.",
+   "Se mide por ítem.",
+   ""
+  ],
+  "t": "Age = cuánto lleva abierto algo que aún no ha acabado.",
+  "s": "Presentación P05 (S10), diap. 12 · Memoria P05 (S10), pág. 12"
+ },
+ {
+  "id": "S10-E20",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "En Kanban, ¿qué es la Expectativa de Nivel de Servicio (ENS)?",
+  "o": [
+   "El Esquema Nacional de Seguridad aplicado al tablero",
+   "Una previsión probabilística del tiempo de ciclo",
+   "Un acuerdo contractual de disponibilidad (SLA)",
+   "El número máximo de ítems por columna"
+  ],
+  "c": 1,
+  "e": "La Expectativa de Nivel de Servicio es un pronóstico cuantitativo y probabilístico basado en el Tiempo de Ciclo histórico, p. ej. «el 85 % de los elementos se terminan en 8 días o menos». Permite detectar desviaciones pronto.",
+  "w": [
+   "Comparte siglas, pero no tiene nada que ver con la seguridad.",
+   "",
+   "No es un contrato: es un pronóstico basado en datos propios.",
+   "Eso es el límite de WIP."
+  ],
+  "t": "Ojo con las siglas: ENS en Kanban ≠ Esquema Nacional de Seguridad (S8).",
+  "s": "Presentación P05 (S10), diap. 12 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E21",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "Según la Ley de Little, con un WIP medio de 6 ítems y un Throughput de 2 ítems/día, ¿cuál es el Cycle Time medio?",
+  "o": [
+   "3 días",
+   "12 días",
+   "0,33 días",
+   "8 días"
+  ],
+  "c": 0,
+  "e": "Ley de Little: Cycle Time medio = WIP medio ÷ Throughput = 6 ÷ 2 = 3 días. Reducir el WIP acorta el tiempo de ciclo.",
+  "w": [
+   "",
+   "Has multiplicado WIP × Throughput en vez de dividir.",
+   "Has dividido Throughput entre WIP: está al revés.",
+   "No sale de la fórmula."
+  ],
+  "t": "Cycle Time = WIP / Throughput.",
+  "s": "Presentación P05 (S10), diap. 20"
+ },
+ {
+  "id": "S10-E22",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué relación hay entre Kanban y Scrum?",
+  "o": [
+   "Kanban potencia Scrum con métricas de flujo",
+   "Kanban sustituye a Scrum en cuanto se adopta",
+   "Son incompatibles y hay que elegir uno",
+   "Scrum elimina la necesidad de limitar el WIP"
+  ],
+  "c": 0,
+  "e": "Las prácticas de Kanban no alteran ni reemplazan Scrum: potencian su enfoque empírico añadiendo analíticas de flujo a sus eventos.",
+  "w": [
+   "",
+   "No lo reemplaza ni altera la Guía Scrum.",
+   "Se combinan habitualmente.",
+   "El límite de WIP se puede usar dentro de Scrum."
+  ],
+  "t": "Kanban no reemplaza Scrum: lo complementa.",
+  "s": "Presentación P05 (S10), diap. 13 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E23",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "Al combinar Scrum y Kanban, ¿qué aporta el Throughput real en el Sprint Planning?",
+  "o": [
+   "Sustituir el Objetivo del Sprint por una lista de métricas",
+   "Fijar la duración de la Daily Scrum",
+   "Eliminar la Definition of Done",
+   "Estimar la capacidad con datos en vez de a ojo"
+  ],
+  "c": 3,
+  "e": "En el Sprint Planning los Desarrolladores determinan la capacidad neta con métricas analíticas (Throughput y Tiempo de Ciclo), sustituyendo las estimaciones subjetivas.",
+  "w": [
+   "El Sprint Goal sigue siendo necesario.",
+   "No está relacionado.",
+   "La DoD sigue siendo obligatoria.",
+   ""
+  ],
+  "t": "Kanban en Scrum = decidir con datos del flujo.",
+  "s": "Presentación P05 (S10), diap. 13–14 · Memoria P05 (S10), pág. 9"
+ },
+ {
+  "id": "S10-E24",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué diferencia LLMOps de MLOps?",
+  "o": [
+   "LLMOps sustituye por completo a MLOps y no se apoya en él",
+   "MLOps es solo para modelos de lenguaje masivos",
+   "LLMOps añade prompts, RAG y guardrails sobre MLOps",
+   "No hay diferencia: son dos nombres comerciales"
+  ],
+  "c": 2,
+  "e": "MLOps gestiona el ciclo de vida de los modelos (pipelines de datos, entrenamiento, validación, monitoreo de degradación). LLMOps añade la ingeniería y versionado de prompts, el fine-tuning, RAG, la evaluación de alucinaciones y los guardrails.",
+  "w": [
+   "LLMOps se apoya en la base de MLOps.",
+   "MLOps es para modelos de aprendizaje automático en general.",
+   "",
+   "Tienen alcances distintos."
+  ],
+  "t": "MLOps es la base; LLMOps la extiende para modelos de lenguaje.",
+  "s": "Presentación P05 (S10), diap. 13 · Memoria P05 (S10), pág. 10"
+ },
+ {
+  "id": "S10-E25",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué favorece combinar Kanban con una cadena CI/CD?",
+  "o": [
+   "Entregar un único incremento al final del proyecto",
+   "Aumentar el WIP para aprovechar al máximo el pipeline CI/CD",
+   "Eliminar las pruebas automáticas del pipeline",
+   "Entregar varios incrementos pequeños dentro del Sprint"
+  ],
+  "c": 3,
+  "e": "Scrum exige al menos un Incremento por Sprint; con Kanban y CI/CD, el WIP bajo y los ciclos cortos permiten que varios incrementos fluyan por los entornos automatizados con entregas frecuentes y seguras.",
+  "w": [
+   "Va en contra de la entrega continua.",
+   "Se busca un WIP bajo y ciclos cortos.",
+   "Al contrario: las pruebas automáticas son la base.",
+   ""
+  ],
+  "t": "WIP bajo + CI/CD = entregas pequeñas y frecuentes.",
+  "s": "Presentación P05 (S10), diap. 13 · Memoria P05 (S10), pág. 10"
+ },
+ {
+  "id": "S10-E26",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué tres preguntas responde el Sprint Planning?",
+  "o": [
+   "Por qué es valioso, qué se puede hacer y cómo se hará",
+   "Quién lo hace, cuánto cuesta y quién debe aprobarlo al final",
+   "Qué se hizo ayer, qué se hará hoy y qué bloquea",
+   "Qué salió bien, qué salió mal y qué mejorar"
+  ],
+  "c": 0,
+  "e": "Sprint Planning: ¿por qué es valioso este Sprint? (Sprint Goal), ¿qué se puede hacer? (capacidad y selección) y ¿cómo se hará? (tareas técnicas de un día o menos).",
+  "w": [
+   "",
+   "No son las preguntas del Sprint Planning.",
+   "Recuerda a la Daily Scrum.",
+   "Es el enfoque de la Retrospectiva."
+  ],
+  "t": "Planning = por qué, qué y cómo.",
+  "s": "Presentación P05 (S10), diap. 14 · Memoria P05 (S10), pág. 11"
+ },
+ {
+  "id": "S10-E27",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué diferencia la Definition of Ready (DoR) de la Definition of Done (DoD)?",
+  "o": [
+   "La DoR es para entrar al Sprint; la DoD, para darlo por hecho",
+   "La DoD es para entrar al Sprint; la DoR, para terminarlo",
+   "Son lo mismo con dos nombres distintos",
+   "La DoR la decide el cliente y la DoD la decide el Scrum Master"
+  ],
+  "c": 0,
+  "e": "DoR: criterios de entrada al Sprint (objetivo claro, dependencias resueltas, criterios de aceptación y tamaño adecuado). DoD: criterios de salida (pruebas, revisión por pares, seguridad y documentación). Ningún ítem se da por terminado sin cumplir la DoD.",
+  "w": [
+   "",
+   "Está al revés.",
+   "Son dos puertas de calidad distintas.",
+   "No es así."
+  ],
+  "t": "Ready = puede entrar; Done = puede salir.",
+  "s": "Presentación P05 (S10), diap. 15 · Memoria P05 (S10), pág. 11–12"
+ },
+ {
+  "id": "S10-E28",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "Una historia tiene dependencias sin resolver y no tiene criterios de aceptación. ¿Qué incumple?",
+  "o": [
+   "La Definition of Done",
+   "El Objetivo del Producto",
+   "El límite de WIP del tablero",
+   "La Definition of Ready"
+  ],
+  "c": 3,
+  "e": "Sin dependencias resueltas ni criterios de aceptación, la historia no está lista para entrar al Sprint: no cumple la DoR.",
+  "w": [
+   "La DoD se mira al terminar, no al entrar.",
+   "No tiene que ver con una historia concreta.",
+   "No es un problema de capacidad.",
+   ""
+  ],
+  "t": "Aún no puede empezar → DoR.",
+  "s": "Presentación P05 (S10), diap. 15 · Memoria P05 (S10), pág. 11"
+ },
+ {
+  "id": "S10-E29",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el Release Plan del Iteration Plan?",
+  "o": [
+   "El release planifica un solo Sprint en detalle",
+   "El release agrupa incrementos en versiones a medio plazo",
+   "El Iteration Plan es estratégico y el Release Plan es táctico",
+   "No hay diferencia: los dos cubren un Sprint"
+  ],
+  "c": 1,
+  "e": "El Iteration Plan gobierna el microciclo (un Sprint de 1 a 4 semanas). El Release Plan es estratégico a medio y largo plazo: agrega incrementos en versiones estables y hace de puente entre el Product Backlog y cada iteración.",
+  "w": [
+   "Eso es el Iteration Plan.",
+   "",
+   "Está al revés.",
+   "Tienen horizontes distintos."
+  ],
+  "t": "Iteration = el Sprint; Release = varias iteraciones empaquetadas.",
+  "s": "Presentación P05 (S10), diap. 16–17 · Memoria P05 (S10), pág. 12"
+ },
+ {
+  "id": "S10-E30",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Qué se comprueba en la Release Readiness?",
+  "o": [
+   "Que cada historia tiene criterios de aceptación antes de empezar",
+   "Que el equipo tiene capacidad para el siguiente Sprint",
+   "Que el conjunto cumple la DoD global y está listo para desplegar",
+   "Que el Product Backlog está ordenado por el PO"
+  ],
+  "c": 2,
+  "e": "Release Readiness: validación conjunta antes del despliegue (DoD global, pruebas de integración del sistema, auditorías de seguridad y métricas de rendimiento).",
+  "w": [
+   "Eso es la DoR.",
+   "Eso se ve en el Sprint Planning.",
+   "",
+   "No es un criterio de despliegue."
+  ],
+  "t": "Readiness = listo para producción, no listo para empezar.",
+  "s": "Presentación P05 (S10), diap. 17 · Memoria P05 (S10), pág. 13"
+ },
+ {
+  "id": "S10-E31",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "En un Release Plan, ¿qué se hace si el Throughput real baja respecto a lo previsto?",
+  "o": [
+   "Rebajar la DoD para llegar a la fecha",
+   "Ajustar el alcance o la fecha sin romper la DoD",
+   "Mantener todo el alcance y aumentar el WIP del equipo",
+   "Cancelar el release y empezar de nuevo"
+  ],
+  "c": 1,
+  "e": "Gestión adaptativa de las liberaciones: si la velocidad o el Throughput varían, se ajusta el alcance de la versión o se reprograma la fecha, manteniendo la integridad del producto y la DoD.",
+  "w": [
+   "La DoD no se rebaja.",
+   "",
+   "Aumentar el WIP empeora el flujo.",
+   "Es desproporcionado."
+  ],
+  "t": "Se negocia alcance o fecha; la calidad no.",
+  "s": "Presentación P05 (S10), diap. 16 · Memoria P05 (S10), pág. 12"
+ },
+ {
+  "id": "S10-E32",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "¿Cómo se calcula el CD3 para priorizar historias?",
+  "o": [
+   "Story points multiplicados por la prioridad MoSCoW",
+   "Coste del retraso dividido entre su tamaño",
+   "Coste del retraso multiplicado por la duración",
+   "Valor de negocio menos el coste de desarrollo"
+  ],
+  "c": 1,
+  "e": "CD3 = coste del retraso (CoD) ÷ duración o tamaño (story points). Se atiende antes lo que más valor pierde por esperar en relación con lo que cuesta hacerlo. MoSCoW y RICE pueden usarse como apoyo.",
+  "w": [
+   "No es la fórmula del CD3.",
+   "",
+   "Se divide, no se multiplica.",
+   "No es la fórmula del CD3."
+  ],
+  "t": "CD3 = CoD / tamaño: mucho valor y poco esfuerzo, primero.",
+  "s": "Presentación P05 (S10), diap. 19 y 25"
+ },
+ {
+  "id": "S10-E33",
+  "tema": "S10",
+  "fuente": "practica",
+  "p": "En las clases de servicio de un tablero Kanban, ¿qué tipo de ítem se atiende con prioridad máxima y un WIP muy limitado?",
+  "o": [
+   "Fecha fija",
+   "Estándar",
+   "Intangible",
+   "Urgente"
+  ],
+  "c": 3,
+  "e": "Clases de servicio: Urgente (incidencias críticas, máximo 1 ítem), Fecha fija (hitos con fecha), Estándar (trabajo funcional habitual) e Intangible (deuda técnica y mejoras).",
+  "w": [
+   "Tiene una fecha comprometida, pero no se salta la cola como lo urgente.",
+   "Es el trabajo normal del flujo.",
+   "Deuda técnica u otras mejoras sin urgencia inmediata.",
+   ""
+  ],
+  "t": "Urgente = se cuela, pero de uno en uno.",
+  "s": "Presentación P05 (S10), diap. 20"
+ }
+]

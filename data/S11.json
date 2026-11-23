@@ -1,0 +1,1036 @@
+[
+ {
+  "id": "S11-1",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "Una empresa tecnológica ha certificado a todos sus directores de proyecto bajo el marco de referencia de IPMA con el objetivo de estandarizar la gestión de sus iniciativas. Sin embargo, tras seis meses, la dirección observa graves cuellos de botella: no existe un criterio uniforme para aprobar el paso de una fase a otra, los contratos con proveedores se gestionan de forma dispar y los equipos carecen de una estructura operativa diaria clara. Según el enfoque de IPMA, ¿cuál es la causa raíz más probable de esta situación?",
+  "o": [
+   "Los directores de proyecto no han desarrollado adecuadamente el dominio de Practice, encargado de estandarizar las herramientas técnicas de gestión y los flujos operativos diarios de la organización.",
+   "La organización está utilizando IPMA para resolver un problema de gobernanza corporativa y flujo de procesos, cuando dicho marco se centra en las competencias individuales y no define cómo operar o aprobar fases.",
+   "Se ha priorizado el desarrollo de habilidades blandas (soft skills) frente al dominio de Perspective, omitiendo la alineación estratégica necesaria para gobernar la ejecución de los contratos.",
+   "El modelo del Ojo de la Competencia exige que la alta dirección asuma primero la aprobación de fases y la gestión contractual antes de evaluar la madurez individual de los líderes de proyecto."
+  ],
+  "c": 1,
+  "e": "Limitación de IPMA: no proporciona un flujo de procesos ni una estructura de gobernanza para la organización. Le dice al profesional qué habilidades debe tener, pero no define cómo se aprueban las fases de un proyecto, cómo se gestiona un contrato o cómo opera el equipo en el día a día.",
+  "w": [
+   "Practice son competencias técnicas del individuo; no estandariza los flujos de la organización.",
+   "",
+   "Perspective es una competencia individual; no aporta gobernanza de procesos.",
+   "El Ojo de la Competencia evalúa individuos; no exige nada a la alta dirección."
+  ],
+  "t": "IPMA certifica personas, no organiza procesos ni gobernanza.",
+  "s": "Presentación S11 de la profesora, diap. 29–30 (y diap. 5)"
+ },
+ {
+  "id": "S11-2",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "¿Cuál de los siguientes NO es uno de los 5 elementos integrados de PRINCE2?",
+  "o": [
+   "Principios",
+   "Prácticas.",
+   "Presupuestos.",
+   "Procesos"
+  ],
+  "c": 2,
+  "e": "PRINCE2 v7 basa su estructura en la integración de cinco elementos esenciales: Principios, Personas (novedad de v7), Prácticas (antes Temáticas), Procesos y Contexto.",
+  "w": [
+   "Sí es uno de los cinco elementos.",
+   "Sí es uno de los cinco elementos (antes «temáticas»).",
+   "",
+   "Sí es uno de los cinco elementos."
+  ],
+  "t": "Los 5 elementos: Principios, Personas, Prácticas, Procesos y Contexto. El presupuesto no está.",
+  "s": "Presentación S11 de la profesora, diap. 31–32 (y diap. 6)"
+ },
+ {
+  "id": "S11-3",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "Una compañía ha invertido ya el 80% del presupuesto total en el desarrollo de una plataforma logística a medida. Al alcanzar el límite de la penúltima fase, un competidor lanza al mercado una solución SaaS que cubre exactamente la misma necesidad operativa a una décima parte del coste, haciendo que el retorno de la inversión del proyecto interno pase a ser negativo. El Usuario Principal insiste en ejecutar la última fase para no desperdiciar la inversión realizada, argumentando que el producto técnico está casi terminado. Aplicando los principios y fundamentos de gobernanza de PRINCE2, ¿cuál es la actuación correcta?",
+  "o": [
+   "Completar la última etapa para entregar el producto técnico (Output), dado que el principio de Enfoque en los Productos prevalece sobre las variaciones del mercado en fases avanzadas.",
+   "Continuar el desarrollo recortando las actividades de verificación de calidad para compensar la pérdida de rentabilidad sin escalar el problema a la Junta de Proyecto.",
+   "Recomendar el cierre prematuro del proyecto en la revisión de límite de fase, ya que la Justificación Comercial Continua es obligatoria y cancelar proyectos inviables libera recursos valiosos.",
+   "Transferir la propiedad del Business Case del Ejecutivo al Proveedor Principal para que redefina el alcance técnico hasta restablecer un VAN positivo antes de autorizar la última etapa."
+  ],
+  "c": 2,
+  "e": "En PRINCE2, la Justificación Comercial Continua es un principio obligatorio que exige mantener una razón de negocio válida y actualizada durante todo el ciclo de vida del proyecto, no solo en su arranque. Cuando un cambio en el entorno convierte el retorno de la inversión en negativo, el proyecto deja de ser deseable (balance favorable entre beneficios, costes, riesgos y perjuicios) y debe replantearse o cancelarse.",
+  "w": [
+   "Ningún principio prevalece sobre la justificación comercial; lo invertido no justifica seguir.",
+   "Recortar la calidad sin escalar viola la gestión por excepción.",
+   "",
+   "El dueño del Business Case es siempre el Ejecutivo; no se transfiere al proveedor."
+  ],
+  "t": "Lo ya gastado no cuenta (coste hundido): si deja de merecer la pena, se para.",
+  "s": "Presentación S11 de la profesora, diap. 33–34 (y diap. 17)"
+ },
+ {
+  "id": "S11-4",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "Una empresa tecnológica de tamaño medio está aplicando el principio de adaptación (Tailoring) de PRINCE2 7 en un proyecto interno de desarrollo de software para evitar burocracia innecesaria. Para optimizar recursos, la dirección propone una estructura de gobernanza donde: (1) el Ejecutivo asume también el rol de Usuario Principal al tratarse de una herramienta interna para su propio departamento, y (2) el Project Manager asume también el rol de Garantía de Proyecto (Project Assurance) para verificar la calidad y el progreso sin incorporar más personal. ¿Cómo debe evaluarse esta propuesta según las reglas de gobernanza de PRINCE2?",
+  "o": [
+   "Ambas combinaciones son inválidas, porque PRINCE2 prohíbe estrictamente que una misma persona desempeñe más de un rol de gobernanza bajo cualquier circunstancia.",
+   "Ambas combinaciones son válidas bajo el principio de Tailoring, siempre que la Junta de Proyecto apruebe la estructura agrupada en el cierre de la fase de inicio.",
+   "Agrupar Ejecutivo y Usuario Principal es válido si no existe conflicto de intereses, pero acumular Project Manager y Project Assurance está prohibido porque la Garantía debe ser independiente del PM para informar objetivamente a la Junta.",
+   "Agrupar Project Manager y Project Assurance es válido para mantener una única fuente de verdad, mientras que unir Ejecutivo y Usuario Principal rompe el equilibrio obligatorio de tres personas distintas en la Junta."
+  ],
+  "c": 2,
+  "e": "En proyectos pequeños o internos donde el área beneficiaria coincide con quien financia, es válido que una persona sea Ejecutivo y Usuario Principal, si no hay conflicto entre la rentabilidad del Business Case y los requisitos de uso. En cambio, la Garantía de Proyecto ofrece a la Junta una verificación independiente del desempeño, por lo que el PM no puede asumirla: nadie puede garantizar de forma imparcial su propia gestión. Errata en la diapositiva: la opción A termina con un texto pegado de otra pregunta («Solicitar la liberación de la Reserva de Gestión…»); aquí se ha eliminado.",
+  "w": [
+   "El tailoring permite combinar roles; lo que no se permite es perder la independencia de la Garantía.",
+   "No todas las combinaciones son válidas: la Garantía no puede recaer en el PM.",
+   "",
+   "Está al revés: lo prohibido es PM + Garantía."
+  ],
+  "t": "Combinar roles sí; que el PM se audite a sí mismo, no.",
+  "s": "Presentación S11 de la profesora, diap. 35–36 (y diap. 16 y 27)"
+ },
+ {
+  "id": "S11-5",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "En un proyecto de infraestructura tecnológica gobernado bajo PRINCE2 7, la Junta de Proyecto asignó al Project Manager una tolerancia de coste de fase del +5% y una tolerancia de sostenibilidad del +2% en huella de carbono. A mitad de fase, el Team Manager notifica al Project Manager que una incidencia en el proveedor cloud obliga a migrar cargas a un centro de respaldo, lo que incrementará el coste de la fase en un 3% (dentro del margen permitido), pero elevará la huella de carbono de la fase un 4% sobre la línea base, superando la tolerancia de sostenibilidad de fase aunque sin rebasar la tolerancia global del proyecto fijada por el nivel Corporativo. ¿Cuál es la actuación obligatoria del Project Manager?",
+  "o": [
+   "Autorizar directamente la migración dentro del proceso Controlling a Stage (CS), dado que el impacto financiero se mantiene dentro de la tolerancia de coste del +5% y la sostenibilidad es solo un indicador informativo",
+   "Instruir al Team Manager para que absorba la desviación ambiental en su Team Plan y la reporte de forma ordinaria en el siguiente Checkpoint Report periódico.",
+   "Elevar de inmediato un Informe de Excepción (Exception Report) a la Junta de Proyecto, ya que prever el rebase de cualquiera de las siete metas de desempeño (incluida sostenibilidad) excede su autoridad delegada.",
+   "Escalar la desviación directamente al nivel Corporativo para que reajuste las tolerancias globales del proyecto, evitando demoras en la Junta de Proyecto."
+  ],
+  "c": 2,
+  "e": "Gestión por excepción: mientras las previsiones estén dentro de las tolerancias de fase, el PM actúa con autonomía. En cuanto prevé rebasar cualquiera de ellas (también la de sostenibilidad, nueva en la v7), carece de autoridad y debe escalarlo de inmediato a la Junta mediante un Informe de Excepción.",
+  "w": [
+   "La sostenibilidad es una tolerancia más en PRINCE2 7, no un indicador informativo.",
+   "Una desviación fuera de tolerancia no se absorbe ni espera al siguiente informe ordinario.",
+   "",
+   "Se escala al nivel inmediatamente superior (la Junta), no se salta al Corporativo."
+  ],
+  "t": "Basta con rebasar una tolerancia, sea cual sea, para elevar una excepción a la Junta.",
+  "s": "Presentación S11 de la profesora, diap. 37–38 (y diap. 22–23)"
+ },
+ {
+  "id": "P06-1",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "¿Cuál es el propósito principal del Caso de Negocio (Business Case) en PRINCE2?",
+  "o": [
+   "Seleccionar al proveedor de software del proyecto",
+   "Demostrar si merece la pena invertir en el proyecto comparando costes, riesgos y beneficios",
+   "Planificar en detalle el calendario de tareas del equipo",
+   "Evaluar el rendimiento individual de los jefes de proyecto"
+  ],
+  "c": 1,
+  "e": "El Business Case es la práctica que justifica el proyecto: demuestra que es viable, deseable y alcanzable, comparando opciones, costes, beneficios y riesgos. Se esboza en la puesta en marcha, se detalla en el inicio, se actualiza en cada límite de fase y se verifica al cierre. Su dueño es el Ejecutivo.",
+  "w": [
+   "La elección de proveedor pertenece a la estrategia de aprovisionamiento.",
+   "",
+   "El calendario se recoge en los planes (Project Plan y Stage Plan).",
+   "El Business Case evalúa el proyecto, no a las personas."
+  ],
+  "t": "Business Case = ¿merece la pena?",
+  "s": "Batería P06 (S11), pregunta 1"
+ },
+ {
+  "id": "P06-2",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "¿Cuántos principios, prácticas de gestión y procesos definen el método PRINCE2?",
+  "o": [
+   "5 principios, 7 prácticas y 7 procesos",
+   "7 principios, 5 prácticas y 7 procesos",
+   "7 principios, 7 prácticas y 7 procesos",
+   "7 principios, 7 prácticas y 5 procesos"
+  ],
+  "c": 2,
+  "e": "PRINCE2 se apoya en tres bloques de siete: siete principios (reglas para todo el proyecto), siete prácticas (los antiguos «temas», que se gestionan de forma continua) y siete procesos (SU, DP, IP, CS, MP, SB y CP).",
+  "w": [
+   "Hay 7 principios, no 5.",
+   "Hay 7 prácticas, no 5.",
+   "",
+   "Hay 7 procesos, no 5."
+  ],
+  "t": "El 5 confunde con las 5 áreas de enfoque del PMBOK 8 (o con los 5 elementos de PRINCE2): principios, prácticas y procesos son 7-7-7.",
+  "s": "Batería P06 (S11), pregunta 2"
+ },
+ {
+  "id": "P06-3",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "Un proyecto tiene un presupuesto de 100.000 € con una tolerancia de coste del 10 %. ¿A partir de qué previsión de gasto debe escalarse el problema al comité de dirección?",
+  "o": [
+   "Más de 100.000 €",
+   "Más de 105.000 €",
+   "Más de 110.000 €",
+   "Más de 120.000 €"
+  ],
+  "c": 2,
+  "e": "Una tolerancia del 10 % sobre 100.000 € son 10.000 €: el director decide libremente mientras la previsión no pase de 110.000 €. El umbral se aplica a la previsión, no al gasto ya realizado; en cuanto prevé superarlo, eleva un Exception Report al Project Board.",
+  "w": [
+   "100.000 € es el presupuesto, no el límite: hasta 110.000 € sigue dentro de tolerancia.",
+   "Correspondería a una tolerancia del 5 %.",
+   "",
+   "Correspondería a una tolerancia del 20 %."
+  ],
+  "t": "Se escala por la previsión de superar la tolerancia, no por superar el presupuesto.",
+  "s": "Batería P06 (S11), pregunta 3"
+ },
+ {
+  "id": "P06-4",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "Si durante el proyecto ocurre lo siguiente: «El proveedor ha comunicado tres semanas de retraso», ¿ante qué estamos?",
+  "o": [
+   "Un riesgo",
+   "Una incidencia",
+   "Una oportunidad",
+   "Una tolerancia"
+  ],
+  "c": 1,
+  "e": "Un riesgo es incierto y todavía no ha ocurrido; una incidencia (issue) ya ha ocurrido y requiere una decisión ahora. El proveedor ya ha comunicado el retraso: es un hecho. Se registra como incidencia, se analiza frente a las tolerancias y, si las supera, se eleva con un informe de excepción.",
+  "w": [
+   "Sería un riesgo si dijera «podría retrasarse».",
+   "",
+   "Una oportunidad es un riesgo con efecto positivo.",
+   "La tolerancia es el margen permitido, no un acontecimiento."
+  ],
+  "t": "«Ha comunicado» = ya pasó = incidencia.",
+  "s": "Batería P06 (S11), pregunta 4"
+ },
+ {
+  "id": "P06-5",
+  "tema": "S11",
+  "fuente": "oficial",
+  "p": "¿Qué principio establece que NO debemos continuar un proyecto simplemente porque ya hemos invertido mucho dinero en él?",
+  "o": [
+   "Justificación comercial continua",
+   "Gestionar por fases",
+   "Centrarse en los productos",
+   "Gestionar por excepción"
+  ],
+  "c": 0,
+  "e": "La justificación comercial continua exige que el proyecto siga siendo viable, deseable y alcanzable durante todo su ciclo de vida. Lo gastado es un coste irrecuperable: lo que cuenta es si el beneficio esperado supera el coste restante.",
+  "w": [
+   "",
+   "Crea los puntos de decisión, pero no es el principio que impide seguir por lo invertido.",
+   "Trata de definir resultados y calidad antes del trabajo.",
+   "Trata de delegar dentro de tolerancias."
+  ],
+  "t": "Coste hundido → justificación comercial continua.",
+  "s": "Batería P06 (S11), pregunta 5"
+ },
+ {
+  "id": "S11-E1",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿En qué se centra el marco de IPMA?",
+  "o": [
+   "En procesos y áreas de conocimiento estandarizados",
+   "En la gobernanza por fases y el caso de negocio",
+   "En la ejecución ágil del trabajo del equipo",
+   "En las competencias del director de proyecto"
+  ],
+  "c": 3,
+  "e": "IPMA se centra en la profesión: profesionalización y evaluación del individuo mediante su estándar (ICB, Ojo de la Competencia). El PMI se centra en procesos y conocimiento; PRINCE2, en gobernanza y justificación comercial.",
+  "w": [
+   "Ese es el enfoque del PMI.",
+   "Ese es el enfoque de PRINCE2.",
+   "Eso son las metodologías como Scrum o Kanban.",
+   ""
+  ],
+  "t": "IPMA = la persona; PMI = el conocimiento; PRINCE2 = la gobernanza.",
+  "s": "Presentación S11 de la profesora, diap. 2 y 5"
+ },
+ {
+  "id": "S11-E2",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Cuáles son los tres dominios del «Ojo de la Competencia» de IPMA?",
+  "o": [
+   "People, Practice y Perspective",
+   "Principios, Prácticas y Procesos",
+   "Inicio, Ejecución y Cierre",
+   "Alcance, Coste y Tiempo"
+  ],
+  "c": 0,
+  "e": "Ojo de la Competencia: People (liderazgo, comunicación, negociación, conflicto), Practice (herramientas técnicas de gestión) y Perspective (alineación estratégica, legalidad y entorno organizativo).",
+  "w": [
+   "",
+   "Son bloques de PRINCE2.",
+   "Son fases o grupos de procesos.",
+   "Es la triple restricción clásica."
+  ],
+  "t": "IPMA = las 3 P de la persona: People, Practice, Perspective.",
+  "s": "Presentación S11 de la profesora, diap. 5"
+ },
+ {
+  "id": "S11-E3",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "Un director de proyecto quiere mejorar su capacidad de alinear el proyecto con la estrategia y el marco legal de la organización. ¿Qué dominio de IPMA trabaja?",
+  "o": [
+   "People",
+   "Practice",
+   "Perspective",
+   "Procesos de gestión"
+  ],
+  "c": 2,
+  "e": "Perspective agrupa la alineación estratégica, la legalidad y el entorno organizativo.",
+  "w": [
+   "Trata de liderazgo, comunicación y conflictos.",
+   "Trata de herramientas técnicas de gestión.",
+   "",
+   "No es un dominio del Ojo de la Competencia."
+  ],
+  "t": "Estrategia y entorno = Perspective.",
+  "s": "Presentación S11 de la profesora, diap. 5"
+ },
+ {
+  "id": "S11-E4",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué limitación tiene el PMBOK frente a PRINCE2?",
+  "o": [
+   "No es reconocido a nivel internacional",
+   "No contempla el caso de negocio ni la gestión de beneficios",
+   "Solo sirve para proyectos predictivos",
+   "No impone una estructura prescriptiva de decisiones"
+  ],
+  "c": 3,
+  "e": "El PMBOK es el catálogo de buenas prácticas más amplio, pero no impone una estructura prescriptiva de toma de decisiones organizativas. PRINCE2 sí: dice quién autoriza, cuándo y cómo se controla.",
+  "w": [
+   "Es el catálogo de buenas prácticas más reconocido.",
+   "Sí los contempla (entrega de valor, gestión de beneficios).",
+   "Contempla enfoques adaptativos e híbridos.",
+   ""
+  ],
+  "t": "PMBOK = qué saber; PRINCE2 = cómo gobernar.",
+  "s": "Presentación S11 de la profesora, diap. 3–4"
+ },
+ {
+  "id": "S11-E5",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué riesgo se atribuye tradicionalmente a PRINCE2 si no se adapta?",
+  "o": [
+   "Que resulte burocrático",
+   "Que no defina roles claros",
+   "Que no controle la relación cliente-proveedor",
+   "Que no tenga en cuenta el caso de negocio"
+  ],
+  "c": 0,
+  "e": "PRINCE2 destaca por el control de la relación cliente-proveedor y la gestión por excepción, pero se percibe como burocrático si no se aplica una adaptación (tailoring) adecuada.",
+  "w": [
+   "",
+   "Precisamente define roles muy claros.",
+   "Es una de sus fortalezas.",
+   "Es su principio central."
+  ],
+  "t": "Sin tailoring, PRINCE2 = papeleo.",
+  "s": "Presentación S11 de la profesora, diap. 4"
+ },
+ {
+  "id": "S11-E6",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué diferencia esencial hay entre PRINCE2 y el PMBOK?",
+  "o": [
+   "PRINCE2 es un estándar de competencias individuales del director",
+   "PRINCE2 es un método; el PMBOK, un cuerpo de conocimiento",
+   "El PMBOK es más prescriptivo que PRINCE2",
+   "Son incompatibles en un mismo proyecto"
+  ],
+  "c": 1,
+  "e": "El PMBOK es un cuerpo de conocimiento y un estándar; PRINCE2 es un método que indica cómo dirigir y controlar el proyecto paso a paso. No son excluyentes.",
+  "w": [
+   "Eso describe a IPMA.",
+   "",
+   "Es al revés.",
+   "Se pueden usar técnicas del PMBOK dentro de PRINCE2."
+  ],
+  "t": "Método (cómo) frente a conocimiento (qué).",
+  "s": "Memoria P06 (S11), §1.2 y §1.4 (pág. 2–3)"
+ },
+ {
+  "id": "S11-E7",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué elemento de PRINCE2 recoge las reglas obligatorias que determinan si un proyecto es PRINCE2?",
+  "o": [
+   "Las prácticas",
+   "Los procesos",
+   "El contexto del proyecto",
+   "Los principios"
+  ],
+  "c": 3,
+  "e": "Los 7 principios son obligatorios: si falta alguno, no se está aplicando PRINCE2. Las prácticas son los aspectos de gestión, los procesos el flujo paso a paso, las personas el centro del método y el contexto la adaptación al entorno.",
+  "w": [
+   "Son aspectos que se gestionan de forma continua.",
+   "Son el flujo paso a paso del ciclo de vida.",
+   "Adapta el método al entorno.",
+   ""
+  ],
+  "t": "Sin los 7 principios no hay PRINCE2.",
+  "s": "Presentación S11 de la profesora, diap. 6 · Memoria P06 (S11), §1.6 (pág. 3)"
+ },
+ {
+  "id": "S11-E8",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué novedad clave incorpora PRINCE2 7 respecto a versiones anteriores?",
+  "o": [
+   "Las Personas y la tolerancia de sostenibilidad",
+   "La eliminación del caso de negocio",
+   "La sustitución de las fases de gestión por sprints ágiles",
+   "La desaparición de la gestión por excepción"
+  ],
+  "c": 0,
+  "e": "PRINCE2 7 integra explícitamente las personas (liderazgo, cambio cultural, co-creación), añade la sostenibilidad como séptima tolerancia, refuerza la gestión digital y de datos, y renombra los «temas» como «prácticas».",
+  "w": [
+   "",
+   "Sigue siendo central.",
+   "Las fases de gestión siguen existiendo.",
+   "Sigue siendo un principio."
+  ],
+  "t": "v7 = personas, sostenibilidad, datos y «prácticas».",
+  "s": "Presentación S11 de la profesora, diap. 11 y 22 · Memoria P06 (S11), §1.3 (pág. 2)"
+ },
+ {
+  "id": "S11-E9",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "Antes de planificar actividades y plazos, el equipo define qué entregables se van a producir y con qué calidad. ¿Qué principio aplica?",
+  "o": [
+   "Gestión por fases",
+   "Gestión por excepción",
+   "Enfoque en los productos",
+   "Aprender de la experiencia"
+  ],
+  "c": 2,
+  "e": "Enfoque en los productos: definir y acordar los productos (y su calidad) antes de planificar las actividades, los plazos o los recursos.",
+  "w": [
+   "Divide el proyecto en etapas con puntos de decisión.",
+   "Delega autoridad dentro de tolerancias.",
+   "",
+   "Registra y aplica lecciones aprendidas."
+  ],
+  "t": "Primero el qué (productos), después el cómo (tareas).",
+  "s": "Presentación S11 de la profesora, diap. 7 y 10 · Memoria P06 (S11), §1.6 (pág. 4)"
+ },
+ {
+  "id": "S11-E10",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué exige el principio de gestión por fases?",
+  "o": [
+   "Que todas las fases duren lo mismo",
+   "Que el equipo técnico apruebe cada fase",
+   "Evaluar cada fase antes de autorizar la siguiente",
+   "Planificar en detalle todas las fases desde el inicio del proyecto"
+  ],
+  "c": 2,
+  "e": "Gestionar por fases: dividir el proyecto en etapas manejables y evaluar el éxito de una fase antes de autorizar la siguiente.",
+  "w": [
+   "No exige una duración fija.",
+   "La aprueba la Junta de Proyecto.",
+   "",
+   "Se planifica en detalle solo la fase siguiente."
+  ],
+  "t": "Fase a fase, con una puerta al final de cada una.",
+  "s": "Presentación S11 de la profesora, diap. 9 · Memoria P06 (S11), §1.6 (pág. 4)"
+ },
+ {
+  "id": "S11-E11",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué principio de PRINCE2 obliga a ajustar el método al tamaño, la complejidad y el riesgo del proyecto?",
+  "o": [
+   "Roles y responsabilidades definidos",
+   "Justificación comercial continua",
+   "Gestión por excepción",
+   "Adaptación al entorno (tailoring)"
+  ],
+  "c": 3,
+  "e": "Adaptar el método al tamaño, importancia, complejidad, nivel de riesgo, capacidad del equipo y entorno organizativo, sin burocracia innecesaria: la metodología se adapta al proyecto, no al revés.",
+  "w": [
+   "Define quién hace qué, no cómo se ajusta el método.",
+   "Trata de si el proyecto sigue mereciendo la pena.",
+   "Trata de delegar dentro de tolerancias.",
+   ""
+  ],
+  "t": "Tailoring = el método se adapta al proyecto.",
+  "s": "Presentación S11 de la profesora, diap. 10 · Memoria P06 (S11), §1.6 (pág. 4)"
+ },
+ {
+  "id": "S11-E12",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "Según PRINCE2, ¿qué tres condiciones debe cumplir un proyecto para iniciarse y continuar?",
+  "o": [
+   "Ser deseable, viable y alcanzable",
+   "Ser barato, rápido y de alta calidad",
+   "Tener patrocinador, equipo y presupuesto",
+   "Ser innovador, sostenible y rentable"
+  ],
+  "c": 0,
+  "e": "Deseable: balance favorable de beneficios frente a costes, riesgos y perjuicios. Viable: capacidad técnica, financiera y operativa para producir los entregables. Alcanzable: probabilidad real de que los resultados generen los beneficios.",
+  "w": [
+   "",
+   "No son las condiciones del Business Case.",
+   "Son requisitos prácticos, no las tres condiciones.",
+   "No son las tres condiciones de PRINCE2."
+  ],
+  "t": "Deseable (compensa), viable (se puede), alcanzable (dará beneficios).",
+  "s": "Presentación S11 de la profesora, diap. 17 · Memoria P06 (S11), §1.6 (pág. 4)"
+ },
+ {
+  "id": "S11-E13",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "En las opciones de negocio de PRINCE2, ¿para qué sirve la opción «no hacer nada» (do nothing)?",
+  "o": [
+   "Para cerrar el proyecto antes de empezar",
+   "Como línea base para comparar el coste de no actuar",
+   "Para justificar la opción de mínima inversión del proyecto",
+   "Para que el Ejecutivo delegue la decisión"
+  ],
+  "c": 1,
+  "e": "Do nothing es la línea base obligatoria: cuantifica el coste de oportunidad, la ineficiencia y el riesgo de mantener la situación actual. Do the minimum cubre solo lo crítico o legal; do something son las alternativas propuestas.",
+  "w": [
+   "No es una decisión de cierre.",
+   "",
+   "Esa es la opción «hacer lo mínimo».",
+   "No tiene relación con delegar."
+  ],
+  "t": "No hacer nada también cuesta: por eso es la referencia.",
+  "s": "Presentación S11 de la profesora, diap. 17 · Memoria P06 (S11), §2.3 (pág. 9)"
+ },
+ {
+  "id": "S11-E14",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "En la cadena de valor de PRINCE2, ¿qué es un outcome?",
+  "o": [
+   "El entregable técnico creado por el equipo",
+   "La mejora medible que obtiene la organización",
+   "Una consecuencia negativa asumida",
+   "El cambio que resulta de usar el producto"
+  ],
+  "c": 3,
+  "e": "Output: entregable especializado creado por el equipo. Outcome: nuevo comportamiento o cambio operativo derivado de su uso. Benefit: mejora cuantificable. Dis-benefit: consecuencia negativa asumida.",
+  "w": [
+   "Eso es el output.",
+   "Eso es el beneficio (benefit).",
+   "Eso es un perjuicio (dis-benefit).",
+   ""
+  ],
+  "t": "Output (se hace) → outcome (se usa) → benefit (se gana).",
+  "s": "Presentación S11 de la profesora, diap. 18"
+ },
+ {
+  "id": "S11-E15",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿En qué se diferencia un perjuicio (dis-benefit) de un riesgo?",
+  "o": [
+   "El perjuicio es incierto; el riesgo, en cambio, es seguro",
+   "El perjuicio ocurrirá con certeza; el riesgo es incierto",
+   "El perjuicio es positivo y el riesgo negativo",
+   "No hay diferencia: son lo mismo"
+  ],
+  "c": 1,
+  "e": "Los perjuicios esperados son consecuencias negativas que ocurrirán con certeza (no son riesgos) y se recogen en el Business Case.",
+  "w": [
+   "Está al revés.",
+   "",
+   "El perjuicio es negativo.",
+   "Son conceptos distintos."
+  ],
+  "t": "Seguro y negativo = perjuicio; incierto = riesgo.",
+  "s": "Presentación S11 de la profesora, diap. 18 · Memoria P06 (S11), §2.3 (pág. 9)"
+ },
+ {
+  "id": "S11-E16",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Quién es el dueño del Business Case en PRINCE2?",
+  "o": [
+   "El Project Manager",
+   "El Ejecutivo",
+   "El Proveedor Principal",
+   "El Usuario Principal"
+  ],
+  "c": 1,
+  "e": "En PRINCE2 el Ejecutivo es el propietario único del Business Case y el PM solo controla el presupuesto de entrega. En el PMBOK, el PM colabora activamente con el patrocinador en la definición y entrega de valor.",
+  "w": [
+   "En PRINCE2 el PM solo controla el presupuesto de entrega.",
+   "",
+   "Representa a quien construye, no el negocio.",
+   "Representa a quien usará el producto."
+  ],
+  "t": "Business Case = Ejecutivo; en PMBOK el PM colabora más.",
+  "s": "Presentación S11 de la profesora, diap. 16 y 19"
+ },
+ {
+  "id": "S11-E17",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué pregunta responde la práctica de Progreso en PRINCE2?",
+  "o": [
+   "¿Dónde estamos?",
+   "¿Por qué?",
+   "¿Qué pasa si…?",
+   "¿Qué ocurre ahora?"
+  ],
+  "c": 0,
+  "e": "Prácticas y su pregunta: Caso de negocio (¿por qué?), Organización (¿quién?), Planes (¿cómo, cuánto y cuándo?), Calidad (¿qué producto entregar?), Riesgo (¿qué pasa si…?), Cuestiones (¿qué ocurre ahora?) y Progreso (¿dónde estamos?).",
+  "w": [
+   "",
+   "Es la del Caso de Negocio.",
+   "Es la del Riesgo.",
+   "Es la de Cuestiones (Issues)."
+  ],
+  "t": "Progreso = dónde estamos frente a tolerancias.",
+  "s": "Presentación S11 de la profesora, diap. 12 · Memoria P06 (S11), §1.8 (pág. 5)"
+ },
+ {
+  "id": "S11-E18",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué práctica de PRINCE2 gestiona las solicitudes de cambio y los problemas que ya han ocurrido?",
+  "o": [
+   "Riesgo",
+   "Progreso",
+   "Organización (Organizing)",
+   "Cuestiones (Issues)"
+  ],
+  "c": 3,
+  "e": "Cuestiones o incidencias (issues): problemas, solicitudes de cambio, desviaciones y decisiones pendientes que ya han ocurrido y requieren una decisión ahora.",
+  "w": [
+   "Gestiona lo incierto, lo que aún no ha pasado.",
+   "Monitoriza el avance frente a tolerancias.",
+   "Define roles y responsabilidades, no incidencias.",
+   ""
+  ],
+  "t": "Ya ha pasado → issue; puede pasar → riesgo.",
+  "s": "Presentación S11 de la profesora, diap. 12 · Memoria P06 (S11), §1.8 (pág. 5)"
+ },
+ {
+  "id": "S11-E19",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué tres intereses equilibra la Junta de Proyecto (Project Board)?",
+  "o": [
+   "Cliente, patrocinador y PMO",
+   "Coste, plazo y calidad",
+   "Negocio, usuario y proveedor",
+   "Dirección, gestión y entrega"
+  ],
+  "c": 2,
+  "e": "Ejecutivo (negocio: rentabilidad del Business Case), Usuario Principal (utilidad real) y Proveedor Principal (viabilidad técnica).",
+  "w": [
+   "No son los tres intereses de PRINCE2.",
+   "Son restricciones, no intereses.",
+   "",
+   "Son niveles de la estructura, no los intereses de la Junta."
+  ],
+  "t": "Junta = quien paga, quien usa y quien construye.",
+  "s": "Presentación S11 de la profesora, diap. 9 y 15 · Memoria P06 (S11), §1.7 (pág. 4)"
+ },
+ {
+  "id": "S11-E20",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Es la Junta de Proyecto un órgano democrático en el que se vota?",
+  "o": [
+   "No: el Ejecutivo tiene la responsabilidad última",
+   "Sí: cada uno de los tres intereses tiene un voto igual",
+   "Sí: decide por mayoría con el PM",
+   "No: decide siempre el Proveedor Principal"
+  ],
+  "c": 0,
+  "e": "La Junta no es democrática: equilibra los tres intereses, pero el Ejecutivo posee la responsabilidad última del éxito del proyecto.",
+  "w": [
+   "",
+   "El Ejecutivo tiene la última palabra.",
+   "El PM no forma parte de la Junta.",
+   "Decide el Ejecutivo."
+  ],
+  "t": "Tres voces, un responsable: el Ejecutivo.",
+  "s": "Presentación S11 de la profesora, diap. 15"
+ },
+ {
+  "id": "S11-E21",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Para qué existe la Garantía de Proyecto (Project Assurance)?",
+  "o": [
+   "Para ayudar al PM en las tareas administrativas y de control",
+   "Para dirigir al equipo técnico",
+   "Para verificar de forma independiente al PM",
+   "Para sustituir a la Junta en sus decisiones"
+  ],
+  "c": 2,
+  "e": "Project Assurance ofrece a la Junta una garantía independiente de que el proyecto se gestiona bien, separada del Project Manager. Por eso el PM no puede asumirla.",
+  "w": [
+   "Eso es el Soporte del Proyecto.",
+   "Eso es el Team Manager.",
+   "",
+   "La Junta sigue decidiendo."
+  ],
+  "t": "Assurance = ojos de la Junta, independientes del PM.",
+  "s": "Presentación S11 de la profesora, diap. 16 · Memoria P06 (S11), §1.7 (pág. 4)"
+ },
+ {
+  "id": "S11-E22",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "En los cuatro niveles de PRINCE2, ¿qué nivel aprueba las fases del proyecto?",
+  "o": [
+   "La dirección corporativa o de programa",
+   "La gestión del día a día (PM)",
+   "La entrega técnica (Team Manager)",
+   "La dirección del proyecto (Junta)"
+  ],
+  "c": 3,
+  "e": "Corporativo/programa: autoriza el inicio. Junta: aprueba las fases. Project Manager: dirige la ejecución diaria. Team Manager: entrega los paquetes de trabajo.",
+  "w": [
+   "Autoriza el inicio y fija tolerancias globales.",
+   "Dirige la ejecución diaria dentro de tolerancias.",
+   "Entrega los paquetes de trabajo.",
+   ""
+  ],
+  "t": "Cada nivel decide en su escala.",
+  "s": "Presentación S11 de la profesora, diap. 13–14 y 16"
+ },
+ {
+  "id": "S11-E23",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué proceso de PRINCE2 está activo durante todo el ciclo de vida?",
+  "o": [
+   "Iniciar un proyecto (IP)",
+   "Dirigir un proyecto (DP)",
+   "Gestionar un límite de fase (SB)",
+   "Cerrar un proyecto (CP)"
+  ],
+  "c": 1,
+  "e": "Los 7 procesos: SU (puesta en marcha), DP (dirección, transversal durante todo el ciclo), IP (inicio, PID), CS (control de fase), MP (entrega de productos), SB (límite de fase) y CP (cierre).",
+  "w": [
+   "Se realiza al principio y produce el PID.",
+   "",
+   "Se realiza al final de cada fase.",
+   "Se realiza al final."
+  ],
+  "t": "DP = la Junta, de principio a fin.",
+  "s": "Presentación S11 de la profesora, diap. 20 · Memoria P06 (S11), §1.9 (pág. 5–6)"
+ },
+ {
+  "id": "S11-E24",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿En qué proceso se elabora la documentación de inicio del proyecto (PID)?",
+  "o": [
+   "Poner en marcha un proyecto (SU)",
+   "Iniciar un proyecto (IP)",
+   "Controlar una fase (CS)",
+   "Gestionar la entrega de productos (MP)"
+  ],
+  "c": 1,
+  "e": "IP: caso de negocio detallado, planes, organización y enfoques de gestión, recogidos en la PID, que sirve de referencia para dirigir y controlar.",
+  "w": [
+   "SU prepara el Project Brief, previo al PID.",
+   "",
+   "Es el control diario del PM.",
+   "Es la ejecución del trabajo técnico."
+  ],
+  "t": "SU = Brief; IP = PID.",
+  "s": "Presentación S11 de la profesora, diap. 20 · Memoria P06 (S11), §1.9 (pág. 6)"
+ },
+ {
+  "id": "S11-E25",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿En qué proceso se revisa la fase que termina, se actualiza el Business Case y se prepara el plan de la siguiente?",
+  "o": [
+   "Controlar el día a día de una fase (CS)",
+   "Dirigir un proyecto (DP)",
+   "Gestionar un límite de fase (SB)",
+   "Cerrar un proyecto (CP)"
+  ],
+  "c": 2,
+  "e": "SB: revisar la fase, analizar costes y plazos, actualizar el caso de negocio y preparar la siguiente. El resultado es la decisión de la Junta: seguir, cambiar o detener.",
+  "w": [
+   "Es el control diario durante la fase.",
+   "La Junta decide, pero la preparación es de SB.",
+   "",
+   "Se ocupa del cierre, no de fases intermedias."
+  ],
+  "t": "Final de fase = SB.",
+  "s": "Memoria P06 (S11), §1.9 (pág. 6) · Presentación S11 de la profesora, diap. 20"
+ },
+ {
+  "id": "S11-E26",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué debe hacer el Project Manager cuando prevé que se superará una tolerancia de fase?",
+  "o": [
+   "Decidir él mismo y avisar al final de la fase",
+   "Pedir al equipo que absorba la desviación",
+   "Escalar directamente al nivel corporativo",
+   "Elevar un Informe de Excepción a la Junta"
+  ],
+  "c": 3,
+  "e": "Gestión por excepción: el PM decide dentro de las tolerancias; si prevé superarlas, eleva un Exception Report a la Junta, que puede pedir un plan de excepción.",
+  "w": [
+   "Fuera de tolerancia no tiene autoridad.",
+   "No se absorbe una desviación fuera de tolerancia.",
+   "Se escala al nivel inmediato: la Junta.",
+   ""
+  ],
+  "t": "Previsión de rebase → excepción a la Junta.",
+  "s": "Presentación S11 de la profesora, diap. 22–23 · Memoria P06 (S11), §1.11 (pág. 7)"
+ },
+ {
+  "id": "S11-E27",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué tolerancia añade PRINCE2 7 a las seis clásicas?",
+  "o": [
+   "Beneficios esperados",
+   "Riesgo",
+   "Sostenibilidad",
+   "Calidad"
+  ],
+  "c": 2,
+  "e": "Siete tolerancias en PRINCE2 7: tiempo, coste, calidad, alcance, beneficios, riesgo y sostenibilidad (la nueva, sobre el impacto ambiental y social).",
+  "w": [
+   "Ya era una de las tolerancias clásicas.",
+   "Ya era una de las tolerancias clásicas.",
+   "",
+   "Ya era una de las tolerancias clásicas."
+  ],
+  "t": "La séptima meta de la v7 es la sostenibilidad.",
+  "s": "Presentación S11 de la profesora, diap. 22 · Memoria P06 (S11), §1.11 (pág. 7)"
+ },
+ {
+  "id": "S11-E28",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "En el flujo descendente de tolerancias, ¿quién asigna las tolerancias de fase al Project Manager?",
+  "o": [
+   "La dirección corporativa",
+   "La Junta de Proyecto",
+   "El Team Manager",
+   "El propio Project Manager"
+  ],
+  "c": 1,
+  "e": "Descendente: el nivel corporativo fija las tolerancias del proyecto; la Junta asigna las de fase al PM; el PM define las de cada paquete de trabajo. Ascendente: cada nivel avisa al superior antes de rebasar su límite.",
+  "w": [
+   "Fija las tolerancias globales del proyecto.",
+   "",
+   "Recibe tolerancias de paquete del PM.",
+   "El PM fija las de los paquetes, no las suyas."
+  ],
+  "t": "Cada nivel recibe sus tolerancias del de arriba.",
+  "s": "Presentación S11 de la profesora, diap. 23 · Memoria P06 (S11), §1.11 (pág. 7)"
+ },
+ {
+  "id": "S11-E29",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué diferencia el PBS de una EDT/WBS orientada a actividades?",
+  "o": [
+   "El PBS solo contiene entregables, no tareas",
+   "El PBS ordena en el tiempo las actividades del proyecto",
+   "El PBS asigna recursos y costes a cada tarea",
+   "No hay diferencia: el PBS es la EDT de PRINCE2"
+  ],
+  "c": 0,
+  "e": "PBS (Product Breakdown Structure): árbol que descompone el producto en sus componentes y subproductos, sin tareas ni secuencia temporal. Frente a una EDT orientada a actividades, solo contiene entregables tangibles.",
+  "w": [
+   "",
+   "Eso lo hace el PFD.",
+   "No contiene tareas.",
+   "El PBS contiene solo entregables tangibles."
+  ],
+  "t": "PBS = sustantivos (productos), no verbos (tareas).",
+  "s": "Presentación S11 de la profesora, diap. 24"
+ },
+ {
+  "id": "S11-E30",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué representa el Diagrama de Flujo de Productos (PFD) en PRINCE2?",
+  "o": [
+   "El orden en que se crean e integran los productos",
+   "El árbol jerárquico de productos, sin ninguna secuencia",
+   "Los criterios de calidad de cada producto",
+   "Los roles que revisan y aprueban"
+  ],
+  "c": 0,
+  "e": "PFD: diagrama de flujo con las dependencias lógicas y el orden secuencial en que deben crearse los productos del PBS, incluidos los insumos externos. Es el puente hacia la red de actividades del cronograma.",
+  "w": [
+   "",
+   "Eso es el PBS.",
+   "Eso es la Product Description.",
+   "Eso va en la Product Description."
+  ],
+  "t": "PBS = qué entregar; PFD = en qué orden.",
+  "s": "Presentación S11 de la profesora, diap. 24"
+ },
+ {
+  "id": "S11-E31",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "En una Product Description, ¿quién acepta formalmente el producto?",
+  "o": [
+   "El Productor",
+   "El Revisor",
+   "El Aprobador",
+   "El Team Manager"
+  ],
+  "c": 2,
+  "e": "La Product Description define el método de calidad y separa los roles de Productor (construye), Revisor (verifica) y Aprobador (acepta formalmente). Fija una línea base de qué constituye un entregable completo y previene el scope creep.",
+  "w": [
+   "Es quien lo construye.",
+   "Es quien lo verifica.",
+   "",
+   "No es uno de los tres roles de calidad."
+  ],
+  "t": "Produce → revisa → aprueba: tres manos distintas.",
+  "s": "Presentación S11 de la profesora, diap. 25"
+ },
+ {
+  "id": "S11-E32",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué es un Work Package en PRINCE2?",
+  "o": [
+   "La forma en que el PM delega trabajo al Team Manager",
+   "El nivel más bajo de una rama de la EDT para estimar coste",
+   "El informe periódico de avance del equipo",
+   "El plan detallado de la siguiente fase"
+  ],
+  "c": 0,
+  "e": "En PRINCE2 el Work Package es el conjunto formal de información con el que el PM (proceso CS) delega al Team Manager (proceso MP) la creación de productos, con tolerancias y criterios de calidad. En el PMBOK es el nivel más bajo de la EDT.",
+  "w": [
+   "",
+   "Ese es el significado en el PMBOK.",
+   "Eso es el Checkpoint Report.",
+   "Eso es el Stage Plan."
+  ],
+  "t": "Mismo nombre, distinto significado: en PRINCE2 es una autorización.",
+  "s": "Presentación S11 de la profesora, diap. 26"
+ },
+ {
+  "id": "S11-E33",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Cómo informa el equipo de su avance al Project Manager en PRINCE2?",
+  "o": [
+   "Mediante Exception Reports en cada reunión",
+   "Mediante el informe de fin de fase",
+   "Mediante la PID actualizada",
+   "Mediante Checkpoint Reports periódicos"
+  ],
+  "c": 3,
+  "e": "El Team Manager reporta el avance con Checkpoint Reports pactados, escala si prevé rebasar tolerancias y notifica la entrega del paquete. El PMBOK usa radiadores de información y métricas de desempeño.",
+  "w": [
+   "Solo se usan si se prevé superar tolerancias.",
+   "Lo elabora el PM para la Junta.",
+   "La PID no es un informe de avance.",
+   ""
+  ],
+  "t": "Checkpoint = avance normal; Exception = fuera de tolerancia.",
+  "s": "Presentación S11 de la profesora, diap. 26"
+ },
+ {
+  "id": "S11-E34",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Qué diferencia las fases de gestión de las fases técnicas?",
+  "o": [
+   "Las técnicas terminan siempre en una decisión de la Junta",
+   "Las de gestión no se solapan y acaban en una decisión",
+   "Las de gestión agrupan el trabajo por especialidad",
+   "No hay diferencia: son lo mismo con dos nombres"
+  ],
+  "c": 1,
+  "e": "Fases de gestión: secuenciales, sin solaparse, cada una acaba en un punto de decisión de la Junta. Fases técnicas: agrupan el trabajo por especialidad, pueden solaparse y cruzar dos fases de gestión. El mínimo son dos fases de gestión: iniciación y entrega.",
+  "w": [
+   "Eso es propio de las de gestión.",
+   "",
+   "Eso es propio de las técnicas.",
+   "Son conceptos distintos."
+  ],
+  "t": "Gestión = decisiones; técnicas = tipo de trabajo.",
+  "s": "Memoria P06 (S11), §1.10 (pág. 6)"
+ },
+ {
+  "id": "S11-E35",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿En qué proceso se elabora el Stage Plan de una fase de entrega?",
+  "o": [
+   "Al cerrar el proyecto (CP)",
+   "Al entregar productos (MP)",
+   "En el límite de la fase anterior (SB)",
+   "Al poner en marcha el proyecto, en el proceso SU"
+  ],
+  "c": 2,
+  "e": "El Stage Plan se prepara al final de la fase anterior, en SB (o en IP si es la primera fase de entrega). Lo prepara el PM, la Junta lo aprueba al autorizar la fase y el PM lo usa después en CS.",
+  "w": [
+   "Al cerrar ya no hay fases siguientes.",
+   "Es el trabajo del equipo técnico.",
+   "",
+   "SU es previo a la iniciación."
+  ],
+  "t": "El plan de la siguiente fase se hace al cerrar la actual.",
+  "s": "Memoria P06 (S11), §2.1 (pág. 8)"
+ },
+ {
+  "id": "S11-E36",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Por qué en PRINCE2 la transición no equivale a «desplegar»?",
+  "o": [
+   "Sin aceptación operativa ni formación no hay transición",
+   "Porque el despliegue se hace después del cierre",
+   "Porque la transición la realiza siempre el proveedor externo",
+   "Porque PRINCE2 no contempla el despliegue"
+  ],
+  "c": 0,
+  "e": "La transición combina el Stage Plan de la última fase, el cierre (entrega y aceptación operativa), el enfoque de gestión de beneficios y el elemento Personas (formación y adopción).",
+  "w": [
+   "",
+   "Forma parte de la última fase y del cierre.",
+   "No es el motivo.",
+   "Lo contempla dentro de la última fase."
+  ],
+  "t": "Transición = desplegar + aceptar + formar + medir beneficios.",
+  "s": "Memoria P06 (S11), §2.2 (pág. 8)"
+ },
+ {
+  "id": "S11-E37",
+  "tema": "S11",
+  "fuente": "practica",
+  "p": "¿Cómo se combinan PRINCE2 y Scrum en un mismo proyecto?",
+  "o": [
+   "Scrum sustituye a la Junta de Proyecto",
+   "PRINCE2 gobierna por fuera y Scrum construye por dentro",
+   "PRINCE2 dicta las tareas diarias de cada miembro del equipo Scrum",
+   "Son incompatibles y no pueden combinarse"
+  ],
+  "c": 1,
+  "e": "PRINCE2 aporta las fases, las tolerancias y el Business Case; Scrum o Kanban organizan la entrega dentro de cada fase. Los Work Packages equivalen a historias del Sprint Backlog y la Sprint Review actúa como control del producto.",
+  "w": [
+   "La Junta sigue autorizando las fases.",
+   "",
+   "El equipo se autoorganiza dentro de su tolerancia.",
+   "PRINCE2 Agile formaliza su combinación."
+  ],
+  "t": "Fuera = gobierno (PRINCE2); dentro = entrega (Scrum).",
+  "s": "Memoria P06 (S11), §1.5 (pág. 3)"
+ }
+]
